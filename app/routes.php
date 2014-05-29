@@ -1,6 +1,5 @@
 <?php
+dd(App::environment()); 
 
-Route::get('/', function ()
-{
-	dd(App::environment());
-});
+//test for environment
+Route::get('/', function (){ dd(App::environment()); });
