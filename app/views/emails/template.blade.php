@@ -81,7 +81,7 @@
                             <!-- START OF LOGO IMAGE TABLE--> 
                             <table class="full" align="left" width="255" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
                               <tr>
-                                <td class="center" align="left" style="padding: 0px; text-transform: uppercase; font-family: 'PT Sans', Helvetica, Arial, sans-serif; color:#444444; font-size:18px; line-height:100%;"> <span> <a href="www.frauccitywide.com" style="color:#3399CC;"> <img src="/img/logoPlusText.png" alt="logo" width="130" height="40" border="0" style="display: inline-block;" /> </a> </span> </td>
+                                <td class="center" align="left" style="padding: 0px; text-transform: uppercase; font-family: 'PT Sans', Helvetica, Arial, sans-serif; color:#444444; font-size:18px; line-height:100%;"> <span> <a href="www.frauccitywide.com" style="color:#3399CC;"> {{ HTML::image("img/logoPlusText.png", "Email Header",['width' => '140', 'style' => 'display: inlne-block;']) }} </a> </span> </td>
                               </tr>
                             </table>
                             <!-- END OF LOGO IMAGE TABLE--> 
