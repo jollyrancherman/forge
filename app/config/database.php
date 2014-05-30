@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => '107.170.219.115',
-			'database'  => 'fraucCityWide',
+			'database'  => 'forge',
 			'username'  => 'forge',
 			'password'  => 'h3MA8CZ1CY3cEzFvIVwQ',
 			'charset'   => 'utf8',
