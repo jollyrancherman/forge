@@ -18,7 +18,8 @@
                             <table class="full" bgcolor="#3399CC" align="left" width="540" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
                               <!-- START OF IMAGE--> 
                               <tr>
-                                <td align="center" style="margin: 0; font-size:13px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;"> <span> <a href="#" style="color:#3399CC;"> <img class="img_scale" src="/img/frauc-city-wide-header.png" alt="header" width="540" height="130" border="0" style="display: inlne-block;" /> </a> </span> </td>
+                                <td align="center" style="margin: 0; font-size:13px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;"> <span> <a href="#" style="color:#3399CC;"> 
+                                {{ HTML::image("img/EmailHeader600x210.png", "Email Header",['width' => '540', 'style' => 'display: inlne-block;']) }} </a> </span> </td>
                               </tr>
                               <!-- END OF IMAGE--> <!-- START OF HEADING--> 
                               <tr>
