@@ -19,7 +19,7 @@
                               <!-- START OF IMAGE--> 
                               <tr>
                                 <td align="center" style="margin: 0; font-size:13px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;"> <span> <a href="#" style="color:#3399CC;"> 
-                                {{ HTML::image("img/EmailHeader600x210.png", "Email Header",['width' => '540', 'style' => 'display: inlne-block;']) }} </a> </span> </td>
+                                {{ HTML::image("img/EmailHeader600x210.png", "Email Header",['width' => '540', 'style' => 'display: inlne-block;', 'class' => 'img_scale']) }} </a> </span> </td>
                               </tr>
                               <!-- END OF IMAGE--> <!-- START OF HEADING--> 
                               <tr>
