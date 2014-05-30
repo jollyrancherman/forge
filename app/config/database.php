@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => '107.170.219.115',
-			'database'  => 'fraucCityWide',
-			'username'  => 'forge',
-			'password'  => 'h3MA8CZ1CY3cEzFvIVwQ',
+			'host'      => $_ENV['DB_HOST'],
+			'database'  => $_ENV['DB_NAME'],
+			'username'  => $_ENV['DB_USER'],
+			'password'  => $_ENV['DB_PASS'],
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
