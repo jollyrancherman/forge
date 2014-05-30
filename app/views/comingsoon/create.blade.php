@@ -27,10 +27,10 @@
         <div class="col-lg-12" style="background-color: #fff;opacity: .9;">
         <img id="header-image" class="img-responsive" src="/img/frauc-city-wide-header.png" alt="">
           <!-- <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image"> -->
-          <h2>Frauc.com teams up with Big Brothers, Big Sisters and Advocates to end Domestic Violence in Northern Nevada!</h2>
+          <h2>Welcome to Frauc CityWide!</h2>
+          <p class="lead">The inaugural Frauc CityWide garage sales will be taking place this summer, with dates to be announced soon for Gardnerville, Carson, Reno and Sparks. If you are interested in hosting a garage sale in one of these cities, or looking for a map of the locations, enter your email address- and we will send you an update as soon as we have it.</p>
+          <p class="lead">Registration is $12 per house participating. $10 of the registration goes to the Big Brothers Big Sisters of Northern Nevada and $2 goes towards garage sale signs.</p>
 
-
-          <p>Frauc.com is hosting a city wide yardsale.</p>
 
           <div class="row" style="margin-bottom: 10px;">
 
