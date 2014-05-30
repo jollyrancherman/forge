@@ -21,63 +21,21 @@
 
 		<script>
 
-      // function initialize() {
-      //   var myLatlng = new google.maps.LatLng(39.45, -119.821812);
-      //   var mapOptions = {
-      //     zoom: 9,
-      //     center: myLatlng
-      //   }
+      function initialize() {
+        var myLatlng = new google.maps.LatLng(39.45, -119.821812);
+        var mapOptions = {
+          zoom: 9,
+          center: myLatlng
+        }
 
-      //   var addresses = ''{{ $data }};
+        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-      //   // console.log(addresses);
+        var bounds = new google.maps.LatLngBounds();
+        var infowindow = new google.maps.InfoWindow();
 
-      //   // var locations = [];
-      //   // var htmlContent = [];
-      //   // var iterator = 0;
-      //   // var markers = [];
+      }
 
-      //   // $.each(addresses, function(key, value){
-      //   //   // locations.push([this.address, this.lat, this.lng, this.id]);
-      //   //   locations.push(new google.maps.LatLng(value.lat, value.lng));
-      //   //   htmlContent.push(value.address);
-      //   // });
-
-      //   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-      //   console.log(htmlContent);
-
-      //   var bounds = new google.maps.LatLngBounds();
-      //   var infowindow = new google.maps.InfoWindow();
-
-      //   // function drop() {
-      //   //   for (var i = 0; i < addresses.length; i++) {
-      //   //     setTimeout(function() {
-      //   //       addMarker();
-      //   //     }, i * 500);
-      //   //   }
-      //   // }
-
-      //   // function addMarker() {
-      //   //     markers.push( marker = new google.maps.Marker({
-      //   //     position: locations[iterator],
-      //   //     map: map,
-      //   //     draggable: false,
-      //   //     animation: google.maps.Animation.DROP
-      //   //   }));
-
-      //   //   var title = htmlContent[iterator];
-      //   //   google.maps.event.addListener(marker, 'click', function() {
-      //   //       infowindow.setContent(title);
-      //   //       infowindow.open(map, this);
-      //   //   });            
-      //   //   iterator++;
-      //   // }
-
-      //   // drop();
-      // }
-
-      // google.maps.event.addDomListener(window, 'load', initialize);
+      google.maps.event.addDomListener(window, 'load', initialize);
 
     
 
