@@ -26,7 +26,7 @@ class ComingSoonController extends \BaseController {
 	{
 		$validator = Validator::make(
 			['city' => Input::get('city'),'email' => Input::get('email')],
-			['city' => 'required', 'email' => "email|required|unique:email_update"]
+			['city' => 'required', 'email' => "email|required|unique:subscription"]
 		);
 
 		if($validator->fails()){
