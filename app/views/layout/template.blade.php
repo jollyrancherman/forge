@@ -55,7 +55,7 @@
       }
 
       .city-inner {
-        background-color: #3399CC;
+        background-color: #666666;
         color: #FFFFFF;
         padding:5px 0;
         margin-bottom: 10px;

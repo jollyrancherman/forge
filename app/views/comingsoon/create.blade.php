@@ -29,7 +29,7 @@
           <!-- <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image"> -->
           <h2>Welcome to Frauc CityWide!</h2>
           <p class="lead">The inaugural Frauc CityWide garage sales will be taking place this summer, with dates to be announced soon for Gardnerville, Carson, Reno and Sparks. If you are interested in hosting a garage sale in one of these cities, or looking for a map of the locations, enter your email address- and we will send you an update as soon as we have it.</p>
-          <p class="lead">Registration is $12 per house participating. $10 of the registration goes to the Big Brothers Big Sisters of Northern Nevada and $2 goes towards garage sale signs.</p>
+          <p class="lead">Registration is $12 per house participating. $10 of the registration goes to the {{ link_to('http://www.bbbsnn.org/site/c.aiINI5NMKeKYF/b.7529395/k.F024/Home_Page.htm', 'Big Brothers and Big Sisters of Northern Nevada',['target' => '_blank']) }} and $2 goes towards garage sale signs.</p>
 
 
           <div class="row" style="margin-bottom: 10px;">
@@ -37,7 +37,7 @@
             <div class="col-md-3 city-container">
               <div class="city-inner">
                 <h3 class="text-center">Gardnerville / Minden</h3>
-                <h4 class="text-center">Saturday July 18th 2014</h4>
+                <h4 class="text-center"></h4>
                 <h4 class="text-center">Interested ( {{ !isset($numbers['douglas']) ? '0' : $numbers['douglas']}} people)</h4>
               </div>
             </div>
@@ -45,7 +45,7 @@
             <div class="col-md-3 city-container">
               <div class="city-inner">
                 <h3 class="text-center">Carson City</h3>
-                <h4 class="text-center">Saturday July 18th 2014</h4>
+                <h4 class="text-center"></h4>
                 <h4 class="text-center">Interested ( {{ !isset($numbers['carson']) ? '0' : $numbers['carson']}} people)</h4>
               </div>            
             </div>
@@ -53,7 +53,7 @@
             <div class="col-md-3 city-container">
               <div class="city-inner">
                 <h3 class="text-center">Reno</h3>
-                <h4 class="text-center">Saturday July 18th 2014</h4>
+                <h4 class="text-center"></h4>
                 <h4 class="text-center">Interested ( {{ !isset($numbers['reno']) ? '0' : $numbers['reno']}} people)</h4>
               </div>            
             </div>
@@ -61,7 +61,7 @@
             <div class="col-md-3 city-container">
               <div class="city-inner">
                 <h3 class="text-center">Sparks</h3>
-                <h4 class="text-center">Saturday July 18th 2014</h4>
+                <h4 class="text-center"></h4>
                 <h4 class="text-center">Interested ( {{ !isset($numbers['sparks']) ? '0' : $numbers['sparks']}} people)</h4>
               </div>            
             </div>
@@ -74,6 +74,7 @@
               Sign up for updates and pre-registration!
             </button>
           </p>
+        <h3>Looking for a site to auction your items for free. {{ link_to('frauc.com', 'frauc.com', ['target' => '_blank']) }} has you covered! Auction, sell, buy and create post locally for free!</h3>
         </div><!-- /.col-lg-2 -->
       </div><!-- /.row -->
 
