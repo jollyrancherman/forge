@@ -115,7 +115,7 @@
           $('#email-error').addClass('error').text('Email is required before submitting form.');
         }
         if(email.val() && city.val() !== null){
-          $.post("/", {city: city.val(), email:email.val()})
+          $.post("/comingsoon", {city: city.val(), email:email.val()})
             .done(function(data){
               console.log('Success!');
               if(data !== 'OK'){
