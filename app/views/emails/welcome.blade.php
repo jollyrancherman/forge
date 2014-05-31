@@ -18,16 +18,19 @@
                             <table class="full" bgcolor="#3399CC" align="left" width="540" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
                               <!-- START OF IMAGE--> 
                               <tr>
+                                <td class="center" bgcolor="#FFFFFF" align="left" style="margin: 0; font-size:13px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> Brought to you by:</span> </td>
+                              </tr>                              
+                              <tr>
                                 <td align="center" style="margin: 0; font-size:13px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;"> <span> <a href="#" style="color:#3399CC;"> 
-                                {{ HTML::image("img/EmailHeader600x210.png", "Email Header",['width' => '540', 'style' => 'display: inlne-block;', 'class' => 'img_scale']) }} </a> </span> </td>
+                                {{ HTML::image("img/EmailHeader600x210v2.png", "Email Header",['width' => '540', 'style' => 'display: inlne-block;', 'class' => 'img_scale']) }} </a> </span> </td>
                               </tr>
                               <!-- END OF IMAGE--> <!-- START OF HEADING--> 
                               <tr>
-                                <td class="featured" align="center" style="padding-top: 20px ; padding-right: 20px ; padding-bottom: 5px ; padding-left: 20px ; text-transform: uppercase; font-family: 'PT Sans', Helvetica, Arial, sans-serif; color:#ffffff; font-size:18px; line-height:24px; mso-line-height-rule: exactly;"> <span> Thank you for supporting this community event! </span> </td>
+                                <td class="featured" align="center" style="padding-top: 20px ; padding-right: 20px ; padding-bottom: 5px ; padding-left: 20px ; text-transform: uppercase; font-family: 'PT Sans', Helvetica, Arial, sans-serif; color:#ffffff; font-size:18px; line-height:24px; mso-line-height-rule: exactly;"> <span> Thank you... </span> </td>
                               </tr>
                               <!-- END OF HEADING--> <!-- START OF TEXT--> 
                               <tr>
-                                <td class="featured" align="center" style="padding-top: 0px ; padding-right: 20px ; padding-bottom: 20px ; padding-left: 20px ; margin: 0; font-size:13px ; color:#ffffff; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, et, eum officiis inventore animi voluptatibus nisi eveniet ad aperiam eligendi facere natus voluptas consequatur enim quas dolor eos! Alias, officia. </span> </td>
+                                <td class="featured" align="center" style="padding-top: 0px ; padding-right: 20px ; padding-bottom: 20px ; padding-left: 20px ; margin: 0; font-size:13px ; color:#ffffff; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> from the bottom of our digital hearts for being interested in FraucCityWide. We are so excited to update you on registration, dates, and maps that we haven't slept (and won't until you are fully informed). We'll be in touch. </span> </td>
                               </tr>
                               <!-- END OF TEXT--> 
                             </table>
@@ -69,11 +72,11 @@
                             <table class="full" align="left" width="540" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
                               <!-- START OF HEADING--> 
                               <tr>
-                                <td class="center" align="left" style="padding-bottom: 10px; text-transform: uppercase; font-family: 'PT Sans', Helvetica, Arial, sans-serif; color:#444444; font-size:18px; line-height:28px; mso-line-height-rule: exactly;"> <span> <a class="heading-link" href="#" style="color:#444444; text-decoration: none; font-style: normal; font-weight: normal;"> totally right choice for your succesful email campaign </a> </span> </td>
+                                <td class="center" align="left" style="padding-bottom: 10px; text-transform: uppercase; font-family: 'PT Sans', Helvetica, Arial, sans-serif; color:#444444; font-size:18px; line-height:28px; mso-line-height-rule: exactly;"> <span> <a class="heading-link" href="#" style="color:#444444; text-decoration: none; font-style: normal; font-weight: normal;"> </a> </span> </td>
                               </tr>
                               <!-- END OF HEADING--> <!-- START OF TEXT--> 
                               <tr>
-                                <td class="center" align="left" style="margin: 0; font-size:13px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> Vel et graece intellegat,in eum minim consulatu interpretaris. Etiam latine constituto ut sea,vix ad etiam signiferumque. Id sea cetero regione nominavi,in movet dictas dissentiunt vim. Possit mediocrem quo in. </span> </td>
+                                <td class="center" align="left" style="margin: 0; font-size:13px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> Registration fee is $12 per household. $10 goes to Big Brothers Big Sisters of Northern Nevada. $2 goes to yard sale signs. </span> </td>
                               </tr>
                               <!-- END OF TEXT--> <!-- START BUTTON--> 
                               <tr>

@@ -46,7 +46,7 @@ class ComingSoonController extends \BaseController {
 			{
 				$message->from('info@frauc.com', 'FraucCityWide.com');
 		  	$message->to(Input::get('email'), Input::get('email'))
-		      ->subject('We recieved your request at frauccitywide.com');		
+		      ->subject('A top-secret message from FraucCityWide');		
 			});
 
 			return 'OK';

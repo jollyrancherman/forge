@@ -81,7 +81,7 @@
                             <!-- START OF LOGO IMAGE TABLE--> 
                             <table class="full" align="left" width="255" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
                               <tr>
-                                <td class="center" align="left" style="padding: 0px; text-transform: uppercase; font-family: 'PT Sans', Helvetica, Arial, sans-serif; color:#444444; font-size:18px; line-height:100%;"> <span> <a href="www.frauccitywide.com" style="color:#3399CC;"> {{ HTML::image("img/logoPlusText.png", "Email Header",['width' => '140', 'style' => 'display: inlne-block;']) }} </a> </span> </td>
+                                <td class="center" align="left" style="padding: 0px; text-transform: uppercase; font-family: 'PT Sans', Helvetica, Arial, sans-serif; color:#444444; font-size:18px; line-height:100%;"> <span> <a href="www.frauccitywide.com" style="color:#3399CC;"> {{ HTML::image("img/frauccitywideLogo200x50.png", "Email Header",['width' => '140', 'style' => 'display: inlne-block;']) }} </a> </span> </td>
                               </tr>
                             </table>
                             <!-- END OF LOGO IMAGE TABLE--> 
@@ -95,7 +95,10 @@
                             <!-- START OF NAVIGATION LINKS TABLE--> 
                             <table class="full" align="right" width="255" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
                               <tr>
-                                <td class="center" align="right" style="margin: 0; padding-top: 7px; font-size:11px ; color:#787878; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 18px;  mso-line-height-rule: exactly;"> <span> <a href="#" style="color:#787878; border-bottom: 1px dotted #787878; text-decoration: none; font-style: normal;"> frauc.com </a> &nbsp;&nbsp;/ &nbsp;&nbsp;<a href="#" style="color:#787878; border-bottom: 1px dotted #787878; text-decoration: none; font-style: normal;"> frauccitywide.com </a> </span> </td>
+                                <td class="center" align="right" style="margin: 0; padding-top: 7px; font-size:11px ; color:#787878; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 18px;  mso-line-height-rule: exactly;"> <span> 
+                                <a href="www.frauccitywide.com" style="color:#787878; border-bottom: 1px dotted #787878; text-decoration: none; font-style: normal;"> frauccitywide.com </a> &nbsp;&nbsp;/ &nbsp;&nbsp;
+                                <a href="www.frauc.com" style="color:#787878; border-bottom: 1px dotted #787878; text-decoration: none; font-style: normal;"> frauc.com </a> &nbsp;&nbsp;/ &nbsp;&nbsp;
+                                <a href="http://www.bbbsnn.org/site/c.aiINI5NMKeKYF/b.7529395/k.F024/Home_Page.htm" style="color:#787878; border-bottom: 1px dotted #787878; text-decoration: none; font-style: normal;"> bbbs.com </a> </span> </td>
                               </tr>
                             </table>
                             <!-- END OF NAVIGATION LINKS TABLE--> 
@@ -149,10 +152,9 @@
                               <tr>
                                 <td class="center" align="center" style="margin: 0; font-size:14px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 100%;"> 
                                 	<span> 
-                                		<a href="#" style="color:#ededed;"> <img src="images/facebook.jpg" alt="facebook" width="32" height="32" border="0" /> </a> &nbsp;
-                                		<a href="#" style="color:#ededed;"> <img src="images/youtube.jpg" alt="youtube" width="32" height="32" border="0" /> </a> &nbsp;
-                                		<a href="#" style="color:#ededed;"> <img src="images/twitter.jpg" alt="twitter" width="32" height="32" border="0" /> </a> &nbsp;
-                                		<a href="#" style="color:#ededed;"> <img src="images/linkedin.jpg" alt="linkedin" width="32" height="32" border="0" /> </a> &nbsp;
+                                		<a href="https://www.facebook.com/fraucfreeauction?ref=stream" style="color:#ededed;"> <img src="img/icons/fb.png" alt="facebook" width="50" height="50" border="0" /> </a> &nbsp &nbsp;
+                                		<a href="https://www.youtube.com/channel/UCnk4b5TVAMkH-jPgbp9yWHg" style="color:#ededed;"> <img src="img/icons/youtube.png" alt="youtube" width="50" height="50" border="0" /> </a> &nbsp &nbsp;
+                                		<a href="https://twitter.com/FraucCom" style="color:#ededed;"> <img src="img/icons/twitter.png" alt="twitter" width="50" height="50" border="0" /> </a> &nbsp &nbsp;
                                 	</span> 
                                 </td>
                               </tr>
@@ -210,10 +212,10 @@
                               <tr>
                                 <td class="center" align="left" style="margin: 0; font-size:13px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> 
 	                                <span> 
-		                                <a href="#" style="color:#aaaaaa; border-bottom: 1px dotted #b8b8b8; text-decoration: none; font-style: normal;"> FraucCityWide.com </a> <br /> 
-		                                <a href="#" style="color:#aaaaaa; border-bottom: 1px dotted #b8b8b8; text-decoration: none; font-style: normal;"> frauc.com </a> <br /> 
-		                                <a href="#" style="color:#aaaaaa; border-bottom: 1px dotted #b8b8b8; text-decoration: none; font-style: normal;"> Edit your post </a>  <br />
-		                                <a href="#" style="color:#aaaaaa; border-bottom: 1px dotted #b8b8b8; text-decoration: none; font-style: normal;"> Unsubscribe </a> 
+		                                <a href="www.frauccitywide.com" style="color:#aaaaaa; border-bottom: 1px dotted #b8b8b8; text-decoration: none; font-style: normal;"> FraucCityWide.com </a> <br /> 
+		                                <a href="www.frauc.com" style="color:#aaaaaa; border-bottom: 1px dotted #b8b8b8; text-decoration: none; font-style: normal;"> frauc.com </a> <br /> 
+		                                <a href="https://www.facebook.com/fraucfreeauction?ref=stream" style="color:#aaaaaa; border-bottom: 1px dotted #b8b8b8; text-decoration: none; font-style: normal;"> Like us on facebook!</a>  <br />
+		                                <a href="https://twitter.com/FraucCom" style="color:#aaaaaa; border-bottom: 1px dotted #b8b8b8; text-decoration: none; font-style: normal;"> Follow us on twitter! </a> 
 	                                </span> 
                                 </td>
                               </tr>
@@ -257,7 +259,7 @@
                               </tr>
                               <!-- END OF HEADING--> <!-- START OF TEXT--> 
                               <tr>
-                                <td class="center" align="left" style="margin: 0; font-size:13px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> You are receiving this email because you expressed interest in promoting a city wide yardsale! </span> </td>
+                                <td class="center" align="left" style="margin: 0; font-size:13px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> You are receiving this email because you expressed interest in promoting a citywide yardsale! </span> </td>
                               </tr>
                               <!-- END OF TEXT--> 
                             </table>

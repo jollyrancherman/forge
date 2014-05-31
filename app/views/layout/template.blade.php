@@ -121,7 +121,7 @@
               if(data !== 'OK'){
                 $('#email-error').addClass('error').text(data.email[0]);
               }else{
-                $('#register-for-emails').html('<div class="alert alert-success"><h2>We happy you are interested! We\'ll send you updates when have them!</h2></div>');
+                $('#register-for-emails').html('<div class="alert alert-success"><h2>We\'ve been wanting to partner with you for the longest time. Go ahead, check your email...we\'ve sent you a top secret message.</h2></div>');
 
                 setTimeout(function(){
                   $('.modal.in').modal('hide').fast();
