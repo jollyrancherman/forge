@@ -125,7 +125,7 @@
 
                 setTimeout(function(){
                   $('.modal.in').modal('hide').fast();
-                    }, 3000);
+                    }, 6000);
               }
             });
         } else {
