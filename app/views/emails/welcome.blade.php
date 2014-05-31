@@ -30,7 +30,7 @@
                               </tr>
                               <!-- END OF HEADING--> <!-- START OF TEXT--> 
                               <tr>
-                                <td class="featured" align="center" style="padding-top: 0px ; padding-right: 20px ; padding-bottom: 20px ; padding-left: 20px ; margin: 0; font-size:13px ; color:#ffffff; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> from the bottom of our digital hearts for being interested in FraucCityWide. We are so excited to update you on registration, dates, and maps that we haven't slept (and won't until you are fully informed). We'll be in touch. </span> </td>
+                                <td class="featured" align="center" style="padding-top: 0px ; padding-right: 20px ; padding-bottom: 20px ; padding-left: 20px ; margin: 0; font-size:13px ; color:#ffffff; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> from the bottom of our digital hearts for being interested in FraucCityWide. We are so excited to update you on registration, dates, maps and that we haven't slept (and won't until you are fully informed). We'll be in touch. </span> </td>
                               </tr>
                               <!-- END OF TEXT--> 
                             </table>
