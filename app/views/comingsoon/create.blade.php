@@ -30,39 +30,6 @@
           <h2>Welcome to Frauc CityWide!</h2>
           <p class="lead">The inaugural Frauc CityWide yard sales will be taking place this summer, with dates to be announced soon for Gardnerville, Carson, Reno and Sparks. If you are interested in hosting a yard sale in one of these cities, or looking for a map of the locations, enter your email address- and we will send you an update as soon as we have it.</p>
           <p class="lead">Registration is $12 per house participating. $10 of the registration goes to the {{ link_to('http://www.bbbsnn.org/site/c.aiINI5NMKeKYF/b.7529395/k.F024/Home_Page.htm', 'Big Brothers and Big Sisters of Northern Nevada',['target' => '_blank']) }} and $2 goes towards yard sale signs.</p>
-
-
-          <div class="row" style="margin-bottom: 10px;">
-
-            <div class="col-md-3 city-container">
-              <div class="city-inner">
-                <h3 class="text-center">Gardnerville / Minden</h3>
-                <h4 class="text-center"></h4>
-              </div>
-            </div>
-
-            <div class="col-md-3 city-container">
-              <div class="city-inner">
-                <h3 class="text-center">Carson City</h3>
-                <h4 class="text-center"></h4>
-              </div>            
-            </div>
-
-            <div class="col-md-3 city-container">
-              <div class="city-inner">
-                <h3 class="text-center">Reno</h3>
-                <h4 class="text-center"></h4>
-              </div>            
-            </div>
-
-            <div class="col-md-3 city-container">
-              <div class="city-inner">
-                <h3 class="text-center">Sparks</h3>
-                <h4 class="text-center"></h4>
-              </div>            
-            </div>
-
-          </div>
             
           <!-- Button trigger modal -->
           <p>
