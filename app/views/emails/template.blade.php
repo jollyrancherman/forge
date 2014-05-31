@@ -152,9 +152,15 @@
                               <tr>
                                 <td class="center" align="center" style="margin: 0; font-size:14px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 100%;"> 
                                 	<span> 
-                                		<a href="https://www.facebook.com/fraucfreeauction?ref=stream" style="color:#ededed;"> <img src="img/icons/fb.png" alt="facebook" width="50" height="50" border="0" /> </a> &nbsp &nbsp;
-                                		<a href="https://www.youtube.com/channel/UCnk4b5TVAMkH-jPgbp9yWHg" style="color:#ededed;"> <img src="img/icons/youtube.png" alt="youtube" width="50" height="50" border="0" /> </a> &nbsp &nbsp;
-                                		<a href="https://twitter.com/FraucCom" style="color:#ededed;"> <img src="img/icons/twitter.png" alt="twitter" width="50" height="50" border="0" /> </a> &nbsp &nbsp;
+                                		<a href="https://www.facebook.com/fraucfreeauction?ref=stream" style="color:#ededed;"> 
+                                      {{ HTML::image("img/icons/fb.png", "facebook icon",['width' => '50', 'height' => '50', 'border' => '0']) }}
+                                    </a> &nbsp; &nbsp;
+                                		<a href="https://www.youtube.com/channel/UCnk4b5TVAMkH-jPgbp9yWHg" style="color:#ededed;"> 
+                                      {{ HTML::image("img/icons/youtube.png", "youtube icon",['width' => '50', 'height' => '50', 'border' => '0']) }}
+                                    </a> &nbsp; &nbsp;
+                                		<a href="https://twitter.com/FraucCom" style="color:#ededed;"> 
+                                      {{ HTML::image("img/icons/twitter.png", "twitter icon",['width' => '50', 'height' => '50', 'border' => '0']) }}
+                                    </a>
                                 	</span> 
                                 </td>
                               </tr>
@@ -237,9 +243,8 @@
                               <tr>
                                 <td class="center" align="left" style="margin: 0; font-size:13px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> 
 	                                <span> 
-		                                <a href="#" style="color:#aaaaaa; border-bottom: 1px dotted #b8b8b8; text-decoration: none; font-style: normal;"> Contact Support </a> <br /> 
-		                                <a href="#" style="color:#aaaaaa; border-bottom: 1px dotted #b8b8b8; text-decoration: none; font-style: normal;"> Big Brothers, Big Sisters</a> <br /> 
-		                                <a href="#" style="color:#aaaaaa; border-bottom: 1px dotted #b8b8b8; text-decoration: none; font-style: normal;"> Advocates to End Domestic Abuse </a> 
+		                                <a href="www.frauccitywide.com/contactus" style="color:#aaaaaa; border-bottom: 1px dotted #b8b8b8; text-decoration: none; font-style: normal;"> Contact Support </a> <br /> 
+		                                <a href="http://www.bbbsnn.org/site/c.aiINI5NMKeKYF/b.7529395/k.F024/Home_Page.htm" style="color:#aaaaaa; border-bottom: 1px dotted #b8b8b8; text-decoration: none; font-style: normal;"> Big Brothers, Big Sisters</a> <br /> 
 	                                </span> 
                                 </td>
                               </tr>
@@ -259,7 +264,7 @@
                               </tr>
                               <!-- END OF HEADING--> <!-- START OF TEXT--> 
                               <tr>
-                                <td class="center" align="left" style="margin: 0; font-size:13px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> You are receiving this email because you expressed interest in promoting a citywide yardsale! </span> </td>
+                                <td class="center" align="left" style="margin: 0; font-size:13px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> You are receiving this email because you expressed interest in a citywide yardsale! </span> </td>
                               </tr>
                               <!-- END OF TEXT--> 
                             </table>
