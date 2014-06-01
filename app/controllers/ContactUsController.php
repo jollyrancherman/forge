@@ -23,7 +23,7 @@ class ContactUsController extends \BaseController {
 	{
 		$email = Input::get('email');
 		$msg = Input::get('message');
-		$name = Input::get('name');
+		$name = Input::get('cname');
 
 		$validator = Validator::make(
 			['message' => Input::get('message'),'email' =>Input::get('email')],

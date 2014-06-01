@@ -132,7 +132,7 @@
       });
     </script>
     <script>
-      var name = $('#contact_name');
+      var cname = $('#contact_name');
       var email = $('#contact_email');
       var message = $('#contact_message');
       var emailErrMsgContact = $('#contact-email-error');
@@ -148,7 +148,7 @@
           messageErrMsgContact.addClass('error').text('What do you want to say! This field is required.');
         }
         if(email.val() && message.val()){
-          $.post("/contactus", {message: message.val(), email:email.val(), name:name.val()})
+          $.post("/contactus", {message: message.val(), email:email.val(), cname:cname.val()})
             .done(function(data){
               console.log('Success!');
               if(data !== 'OK'){
