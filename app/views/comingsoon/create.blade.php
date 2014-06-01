@@ -74,12 +74,10 @@
           <!-- Email -->
           <div class="form-group">
             {{ Form::label('email', 'Email:', ['class' => 'control_label']) }}
-            {{ Form::text('email', null, ['class' => 'form-control','id' => 'email']) }}
+            {{ Form::text('email', null, ['class' => 'form-control', 'id' => 'email']) }}
             <span class="help-block" id="email-error"></span>
           </div>
           
-
-
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

@@ -111,6 +111,8 @@
           cityErrMsg.text('');
         }
 
+        console.log('email = ' + email.val());
+
         if(!email.val()){
           $('#email-error').addClass('error').text('Email is required before submitting form.');
         }
@@ -133,7 +135,7 @@
     </script>
     <script>
       var cname = $('#contact_name');
-      var email = $('#contact_email');
+      var cemail = $('#contact_email');
       var message = $('#contact_message');
       var emailErrMsgContact = $('#contact-email-error');
       var messageErrMsgContact = $('#contact-message-error');
@@ -141,14 +143,14 @@
       $("#submit_contact").submit(function (event) {
         event.preventDefault();
 
-        if(!email.val()){
+        if(!cemail.val()){
           emailErrMsgContact.addClass('error').text('Email is required before submitting form.');
         }
         if(!message.val()){
           messageErrMsgContact.addClass('error').text('What do you want to say! This field is required.');
         }
-        if(email.val() && message.val()){
-          $.post("/contactus", {message: message.val(), email:email.val(), cname:cname.val()})
+        if(cemail.val() && message.val()){
+          $.post("/contactus", {message: message.val(), email:cemail.val(), cname:cname.val()})
             .done(function(data){
               console.log('Success!');
               if(data !== 'OK'){
