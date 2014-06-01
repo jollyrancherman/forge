@@ -38,9 +38,9 @@
             </button>
           </p>
           <p> 
-            <h3 style="margin-top: 40px;">Wanna talk! <a href="#contactModal" role="button" data-toggle="modal">click here</a> to send us a message!</h3>          
+            <h3 style="margin-top: 40px;">Wanna talk? <a href="#contactModal" role="button" data-toggle="modal">Click here</a> to send us a message!</h3>          
           </p>
-        <h4 style="margin-top: 40px;">Our shameless plug: Looking for a place to sell or auction online for free? Visit us at {{ link_to('www.frauc.com', 'Frauc.com', ['target' => '_blank']) }}... this is an offer you can't refuse.</h4>
+        <h4 style="margin-top: 40px;">Our shameless plug: Looking for a place to sell or auction online for free? Visit us at {{ link_to('http://frauc.com/', 'Frauc.com', ['target' => '_blank']) }}... this is an offer you can't refuse.</h4>
         </div><!-- /.col-lg-2 -->
       </div><!-- /.row -->
 

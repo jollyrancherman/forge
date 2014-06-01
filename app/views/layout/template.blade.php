@@ -111,8 +111,6 @@
           cityErrMsg.text('');
         }
 
-        console.log('email = ' + email.val());
-
         if(!email.val()){
           $('#email-error').addClass('error').text('Email is required before submitting form.');
         }
@@ -129,7 +127,7 @@
               }
             });
         } else {
-          console.log('failed');
+
         }
       });
     </script>
@@ -157,7 +155,7 @@
                 $('#contact-email-error').addClass('error').text(data.email[0]);
                 $('#contact-message-error').addClass('error').text(data.email[0]);
               }else{
-                $('#contact-us-message').html('<div class="alert alert-success"><h3>We\'ve recieved your message and we thank you!</h3></div>');
+                $('#contact-us-message').html('<div class="alert alert-success"><h3>We\'ve received your message and we thank you!</h3></div>');
 
                 setTimeout(function() {$('.modal').modal('hide');}, 6000);
 
