@@ -15,3 +15,6 @@ Route::post('/comingsoon', ['as' => 'comingsoon.store', 'uses' => 'ComingSoonCon
 Route::get('/email', function(){
 	return View::make('emails.welcome');
 });
+
+Route::get('/contactus', ['as' => 'contactus', 'uses' => 'ContactUsController@create']);
+Route::post('/contactus', ['as' => 'contactus.store', 'uses' => 'ContactUsController@store']);

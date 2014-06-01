@@ -123,9 +123,42 @@
               }else{
                 $('#register-for-emails').html('<div class="alert alert-success"><h3>We\'ve been wanting to partner with you for the longest time. Go ahead, check your email...we\'ve sent you a top secret message.</h3></div>');
 
-                setTimeout(function(){
-                  $('.modal.in').modal('hide').fast();
-                    }, 6000);
+                setTimeout(function() {$('.modal').modal('hide');}, 6000);
+              }
+            });
+        } else {
+          console.log('failed');
+        }
+      });
+    </script>
+    <script>
+      var name = $('#contact_name');
+      var email = $('#contact_email');
+      var message = $('#contact_message');
+      var emailErrMsgContact = $('#contact-email-error');
+      var messageErrMsgContact = $('#contact-message-error');
+
+      $("#submit_contact").submit(function (event) {
+        event.preventDefault();
+
+        if(!email.val()){
+          emailErrMsgContact.addClass('error').text('Email is required before submitting form.');
+        }
+        if(!message.val()){
+          messageErrMsgContact.addClass('error').text('What do you want to say! This field is required.');
+        }
+        if(email.val() && message.val()){
+          $.post("/contactus", {message: message.val(), email:email.val(), name:name.val()})
+            .done(function(data){
+              console.log('Success!');
+              if(data !== 'OK'){
+                $('#contact-email-error').addClass('error').text(data.email[0]);
+                $('#contact-message-error').addClass('error').text(data.email[0]);
+              }else{
+                $('#contact-us-message').html('<div class="alert alert-success"><h3>We\'ve recieved your message and we thank you!</h3></div>');
+
+                setTimeout(function() {$('.modal').modal('hide');}, 6000);
+
               }
             });
         } else {

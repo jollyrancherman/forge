@@ -37,7 +37,10 @@
               Sign up for updates and pre-registration!
             </button>
           </p>
-        <h3>Our shameless plug: Looking for a place to sell or auction online for free? Visit us at {{ link_to('www.frauc.com', 'Frauc.com', ['target' => '_blank']) }}... this is an offer you can't refuse.</h3>
+          <p> 
+            <h3 style="margin-top: 40px;">Wanna talk! <a href="#contactModal" role="button" data-toggle="modal">click here</a> to send us a message!</h3>          
+          </p>
+        <h4 style="margin-top: 40px;">Our shameless plug: Looking for a place to sell or auction online for free? Visit us at {{ link_to('www.frauc.com', 'Frauc.com', ['target' => '_blank']) }}... this is an offer you can't refuse.</h4>
         </div><!-- /.col-lg-2 -->
       </div><!-- /.row -->
 
@@ -87,5 +90,52 @@
         {{ Form::close() }}
     </div>
   </div>
-</div>  
+</div>
+
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" id="contact-us-message">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">We'd love to hear from you!</h4>
+      </div>
+        {{ Form::open(['id'=>'submit_contact']) }}
+      <div class="modal-body">
+        <p class="lead">Need help? Have a question? Do you want to suggest an idea? We would love to hear from you!</p>      
+
+          <!-- Name -->
+          <div class="form-group">
+            {{ Form::label('name', 'Name:', ['class' => 'control_label']) }} <span style="color:#CCC">optional</span>
+            {{ Form::text('name', null, ['class' => 'form-control', 'id' => 'contact_name']) }}
+          </div>
+          
+          
+          <!-- Email -->
+          <div class="form-group">
+            {{ Form::label('email', 'Email:', ['class' => 'control_label']) }}
+            {{ Form::text('email', null, ['class' => 'form-control','id' => 'contact_email', 'placeholder' => 'email@you.com (so that we can contact you)']) }}
+            <span class="help-block" id="contact-email-error"></span>
+          </div>
+
+          <!-- message -->
+          <div class="form-group">
+            {{ Form::label('message', 'Message:', ['class' => 'control_label']) }}
+            <span class="help-block" id="contact-message-error"></span>
+            {{ Form::textarea('message', null, ['class' => 'form-control', 'id' => 'contact_message']) }}
+          </div>
+          
+          
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!-- SUBMIT -->
+        {{ Form::submit('Send Message', array('class' => 'btn btn-primary')) }}
+        
+      </div>
+        {{ Form::close() }}
+    </div>
+  </div>
+</div>
 @stop
