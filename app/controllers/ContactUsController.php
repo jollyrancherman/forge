@@ -48,7 +48,7 @@ class ContactUsController extends \BaseController {
 			Mail::send('emails.contactus', $data, function($message) use ($data)
 			{
 				$message->from($data['email'], $data['name']);
-		  	$message->to('contactus@frauc.com', 'frauccitywide-contact_us_form')
+		  	$message->to('contactus@frauc.com', 'frauccitywide contact-us form')
 		      ->subject('fraucCityWide-Contact_us_form');		
 			});
 
