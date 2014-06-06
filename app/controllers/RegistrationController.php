@@ -70,7 +70,7 @@ class RegistrationController extends \BaseController {
 			{
 				$message->from('info@frauc.com', 'FraucCityWide.com');
 		  	$message->to(Input::get('email'), Input::get('email'))
-		      ->subject('A top-secret message from FraucCityWide');		
+		      ->subject('Your activation email.');		
 			});	    
 
 	    //redirect user to homepage
