@@ -82,8 +82,8 @@ Yo! This is your activation email!
                               </tr>
                               <!-- END BUTTON--> <!-- START OF TEXT--> 
                               <tr>
-                                <td class="center" align="left" style="margin: 0; font-size:13px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> or cut and paste this code: <br />
-																	{{ print_r($activationLink) }}	
+                                <td class="center" align="left" style="margin: 0; font-size:13px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> <br /><br />or cut and paste this code: <br />
+																	{{ $activationLink }}	
                                 </span> </td>
                               </tr>
                               <!-- END OF TEXT--> 

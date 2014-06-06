@@ -48,7 +48,7 @@
                 </div>
               </div>
               <div class="col-md-6 col-md-offset-3" style="margin-top: 25px;">
-                <a href="" class="btn btn-lg btn-primary btn-block">Sign up and list your yardsale.</a>
+                <a href="/signup" class="btn btn-lg btn-primary btn-block">Sign up and list your yardsale.</a>
               </div>
             </div>
             </div>
