@@ -1,17 +1,6 @@
 @extends('layout.main_layout')
 
 @section('content')
-        <div id="page-content-wrapper">
-          <div class="content-header">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1">
-                <h1>
-                    <a id="menu-toggle" href="#" class="btn btn-default">Menu</i></a>
-                    {{ HTML::image("img/frauccitywideLogo200x50.png", "Email Header",['width' => '200', 'style' => 'display: inlne-block;']) }}
-                </h1>               
-              </div>
-            </div>
-           </div>
             
           <!-- Keep all page content within the page-content inset div! -->
           <div class="page-content inset">
@@ -31,12 +20,15 @@
                 <div class="form-group">
                   {{ Form::label('email', 'Email', ['class' => 'control_label']) }}
                   {{ Form::text('email', null, ['class' => 'form-control']) }}
+                  {{ $errors->first('email', '<p class="error-msg">:message</p>'); }}
+                  <span class="error"></span>
                 </div>
                 
                 <!-- PASSWORD -->
                 <div class="form-group">
                   {{ Form::label('password', 'Password', array('class' => 'control_label')) }}
                   {{ Form::password('password', array('class' => 'form-control')) }}
+                  {{ $errors->first('password', '<p class="error-msg">:message</p>'); }}
                 </div>
                 
                 <!-- SUBMIT -->
