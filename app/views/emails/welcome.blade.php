@@ -1,9 +1,5 @@
 @extends('emails.template')
 
-@section('catchPhrase')
-Thank you for subscribing! This is going to be sweet!
-@stop
-
 @section('content')
     <!-- START OF FEATURED AREA BLOCK--> 
     <table width="100%" align="center" bgcolor="#f5f5f6" cellpadding="0" cellspacing="0" border="0">

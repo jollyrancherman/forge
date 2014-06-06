@@ -29,9 +29,7 @@
                                 <td align="left" valign="top" style="padding: 0px;">
                                   <table border="0" align="left" cellpadding="0" cellspacing="0" bgcolor="#3399CC" style="margin: 0;">
                                     <tr>
-                                      <td align="left" valign="middle" bgcolor="#3399CC" style="padding: 5px 20px; font-size:12px ; font-style:italic; color:#ffffff; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 22px; font-style: italic; mso-line-height-rule: exactly;">
-                                        @yield('catchPhrase')
-                                      </td>
+                                      <td align="left" valign="middle" bgcolor="#3399CC" style="padding: 5px 20px; font-size:12px ; font-style:italic; color:#ffffff; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 22px; font-style: italic; mso-line-height-rule: exactly;"> Thanks for checking us out! </td>
                                     </tr>
                                   </table>
                                 </td>

@@ -1,7 +1,18 @@
 <?php
 
 class UserController extends \BaseController {
-	
+
+	/**
+	 * Display a listing of the resource.
+	 * GET /user
+	 *
+	 * @return Response
+	 */
+	public function index()
+	{
+		//
+	}
+
 	/**
 	 * Show the form for creating a new resource.
 	 * GET /user/create
@@ -10,7 +21,7 @@ class UserController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('user.create');
 	}
 
 	/**
