@@ -1,7 +1,7 @@
 @extends('emails.template')
 
 @section('catchPhrase')
-Thank you for subscribing! This is going to be sweet!
+Yo! This is your activation email!
 @stop
 
 @section('content')
@@ -20,21 +20,13 @@ Thank you for subscribing! This is going to be sweet!
                           <td class="spacer" width="30"> </td>
                           <td width="540">
                             <table class="full" bgcolor="#3399CC" align="left" width="540" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
-                              <!-- START OF IMAGE--> 
+                              <!-- START OF HEADING--> 
                               <tr>
-                                <td class="center" bgcolor="#FFFFFF" align="left" style="margin: 0; font-size:13px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> Brought to you by:</span> </td>
-                              </tr>                              
-                              <tr>
-                                <td align="center" style="margin: 0; font-size:13px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;"> <span> <a href="#" style="color:#3399CC;"> 
-                                {{ HTML::image("img/EmailHeader600x210v2.png", "Email Header",['width' => '540', 'style' => 'display: inlne-block;', 'class' => 'img_scale']) }} </a> </span> </td>
-                              </tr>
-                              <!-- END OF IMAGE--> <!-- START OF HEADING--> 
-                              <tr>
-                                <td class="featured" align="center" style="padding-top: 20px ; padding-right: 20px ; padding-bottom: 5px ; padding-left: 20px ; text-transform: uppercase; font-family: 'PT Sans', Helvetica, Arial, sans-serif; color:#ffffff; font-size:18px; line-height:24px; mso-line-height-rule: exactly;"> <span> Thank you... </span> </td>
+                                <td class="featured" align="center" style="padding-top: 20px ; padding-right: 20px ; padding-bottom: 5px ; padding-left: 20px ; text-transform: uppercase; font-family: 'PT Sans', Helvetica, Arial, sans-serif; color:#ffffff; font-size:18px; line-height:24px; mso-line-height-rule: exactly;"> <span> This is it....</span> </td>
                               </tr>
                               <!-- END OF HEADING--> <!-- START OF TEXT--> 
                               <tr>
-                                <td class="featured" align="center" style="padding-top: 0px ; padding-right: 20px ; padding-bottom: 20px ; padding-left: 20px ; margin: 0; font-size:13px ; color:#ffffff; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> from the bottom of our digital hearts for being interested in FraucCityWide. We are so excited to update you on registration, dates, maps and that we haven't slept (and won't until you are fully informed). We'll be in touch. </span> </td>
+                                <td class="featured" align="center" style="padding-top: 0px ; padding-right: 20px ; padding-bottom: 20px ; padding-left: 20px ; margin: 0; font-size:13px ; color:#ffffff; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> Blah blah blah activation.</span> </td>
                               </tr>
                               <!-- END OF TEXT--> 
                             </table>
@@ -87,7 +79,7 @@ Thank you for subscribing! This is going to be sweet!
                                 <td bgcolor="#ffffff" align="left" valign="top" style="padding-top: 20px;">
                                   <table border="0" align="left" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="margin: 0;">
                                     <tr>
-                                      <td align="center" valign="middle" bgcolor="#ffffff" style="border: 2px solid #3399CC; padding: 5px 20px; text-transform: uppercase; font-size: 12px; line-height: 18px; font-family: 'PT Sans', Helvetica, Arial, sans-serif; color:#3399CC; margin: 0 !important; "> <a href="www.fraucCityWide.com" style="border: none; font-weight: bold; font-style: normal; color:#3399CC; text-decoration: none;"> Visit Site</a> </td>
+                                      <td align="center" valign="middle" bgcolor="#ffffff" style="border: 2px solid #3399CC; padding: 5px 20px; text-transform: uppercase; font-size: 12px; line-height: 18px; font-family: 'PT Sans', Helvetica, Arial, sans-serif; color:#3399CC; margin: 0 !important; "> <a href="{{ $activationLink }}" style="border: none; font-weight: bold; font-style: normal; color:#3399CC; text-decoration: none;">Activate your account!</a> </td>
                                     </tr>
                                   </table>
                                 </td>

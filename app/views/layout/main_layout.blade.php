@@ -5,10 +5,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Helping coordinate a city wide yardsale in northern nevada including Reno, Sparks, Carson City, Gardnerville and Minden">
+    <meta name="author" content="Anthony Sullivan">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>FraucCityWide.com</title>
 
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
@@ -143,6 +143,46 @@
   border-radius: 8px;
   height: 100%;
 }
+
+/* Base styles (regardless of theme) */
+.bs-callout {
+  margin: 20px 0;
+  padding: 15px 30px 15px 15px;
+  border-left: 5px solid #eee;
+}
+.bs-callout h4 {
+  margin-top: 0;
+}
+.bs-callout p:last-child {
+  margin-bottom: 0;
+}
+  .bs-callout code,
+  .bs-callout .highlight {
+  background-color: #fff;
+}
+
+/* Themes for different contexts */
+.bs-callout-danger {
+  background-color: #fcf2f2;
+  border-color: #d9534f;
+}
+.bs-callout-warning {
+  background-color: #fefbed;
+  border-color: #f0ad4e;
+}
+.bs-callout-info {
+  background-color: #f0f7fd;
+  border-color: #5bc0de;
+}
+
+.bs-callout-success {
+  background-color: #dff0d8;
+  border-color: #3c763d;
+}
+
+.error-msg {
+  color: red;
+}
     </style>
 
 </head>
@@ -155,6 +195,35 @@
         @include('layout._navbar')
 
         <!-- Page content -->
+        <div id="page-content-wrapper">
+          <div class="content-header">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <h1>
+                    <a id="menu-toggle" href="#" class="btn btn-primary">Menu</i></a>
+                    {{ HTML::image("img/frauccitywideLogo200x50.png", "Email Header",['width' => '200', 'style' => 'display: inlne-block;']) }}
+                </h1>               
+              </div>
+            </div>
+          </div>
+
+          <div class="content-header">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                @if(Session::has('message'))         
+                    <div  class="{{ Session::get('messageType') }} ">
+                      <h4>
+                        {{ Session::get('message') }}
+                      </h4>
+                      @if(Session::get('message2'))
+                        <p>{{ Session::get('message2') }}</p>
+                      @endif
+                    </div>
+                @endif               
+              </div>
+            </div>
+          </div>
+
         @yield('content')
 
     </div>
