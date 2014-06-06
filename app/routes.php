@@ -26,7 +26,7 @@ Route::post('/contactus', ['as' => 'contactus.store', 'uses' => 'ContactUsContro
 Route::get('/signup', ['as' => 'signup', 'uses' => 'RegistrationController@create']);
 Route::post('/signup', ['as' => 'signup.store', 'uses' => 'RegistrationController@store']);
 
-Route::get('activation/{id}/{code}', function(){
+Route::get('/activation/{id}/{code}', function(){
 
 	try
 	{
