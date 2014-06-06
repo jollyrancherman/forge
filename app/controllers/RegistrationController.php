@@ -25,7 +25,6 @@ class RegistrationController extends \BaseController {
 	 */
 	public function store()
 	{
-		dd('test');
     $validator = Validator::make(Input::all(), Registration::$rules);
     $errorMessage = false;
  
