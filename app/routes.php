@@ -2,13 +2,6 @@
 
 //test for environment
 
-
-
-
-Route::get('/', function(){
-	return Redirect::to('comingsoon');
-});
-
 Route::get('/home', function(){
 	return View::make('homepage.create');
 });
@@ -23,7 +16,7 @@ Route::get('/email', function(){
 Route::get('/contactus', ['as' => 'contactus', 'uses' => 'ContactUsController@create']);
 Route::post('/contactus', ['as' => 'contactus.store', 'uses' => 'ContactUsController@store']);
 
-Route::get('/signup', ['as' => 'signup', 'uses' => 'RegistrationController@create']);
+Route::get('/signup', ['as' => 'signup.create', 'uses' => 'RegistrationController@create']);
 Route::post('/signup', ['as' => 'signup.store', 'uses' => 'RegistrationController@store']);
 
 Route::get('/activation/{id}/{code}', function(){
@@ -52,4 +45,8 @@ Route::get('/activation/{id}/{code}', function(){
 	    echo 'User is already activated.';
 	}
 
+});
+
+Route::get('/', function(){
+	return Redirect::to('comingsoon');
 });
