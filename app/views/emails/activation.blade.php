@@ -70,21 +70,23 @@ Yo! This is your activation email!
                               <tr>
                                 <td class="center" align="left" style="padding-bottom: 10px; text-transform: uppercase; font-family: 'PT Sans', Helvetica, Arial, sans-serif; color:#444444; font-size:18px; line-height:28px; mso-line-height-rule: exactly;"> <span> <a class="heading-link" href="#" style="color:#444444; text-decoration: none; font-style: normal; font-weight: normal;"> </a> </span> </td>
                               </tr>
-                              <!-- END OF HEADING--> <!-- START OF TEXT--> 
-                              <tr>
-                                <td class="center" align="left" style="margin: 0; font-size:13px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> Registration fee is $12 per household. $10 goes to Big Brothers Big Sisters of Northern Nevada. $2 goes to yard sale signs. </span> </td>
-                              </tr>
-                              <!-- END OF TEXT--> <!-- START BUTTON--> 
+                              <!-- END OF HEADING--> <!-- START BUTTON--> 
                               <tr>
                                 <td bgcolor="#ffffff" align="left" valign="top" style="padding-top: 20px;">
                                   <table border="0" align="left" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="margin: 0;">
                                     <tr>
-                                      <td align="center" valign="middle" bgcolor="#ffffff" style="border: 2px solid #3399CC; padding: 5px 20px; text-transform: uppercase; font-size: 12px; line-height: 18px; font-family: 'PT Sans', Helvetica, Arial, sans-serif; color:#3399CC; margin: 0 !important; "> <a href="{{ $activationLink }}" style="border: none; font-weight: bold; font-style: normal; color:#3399CC; text-decoration: none;">Activate your account!</a> </td>
+                                      <td align="center" valign="middle" bgcolor="#ffffff" style="border: 2px solid #3399CC; padding: 5px 20px; text-transform: uppercase; font-size: 12px; line-height: 18px; font-family: 'PT Sans', Helvetica, Arial, sans-serif; color:#3399CC; margin: 0 !important; "> <a href="{{ $activationLink }}" style="border: none; font-weight: bold; font-style: normal; color:#3399CC; text-decoration: none;">Click here to activate your account!</a> </td>
                                     </tr>
                                   </table>
                                 </td>
                               </tr>
-                              <!-- END BUTTON--> 
+                              <!-- END BUTTON--> <!-- START OF TEXT--> 
+                              <tr>
+                                <td class="center" align="left" style="margin: 0; font-size:13px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> or cut and paste this code: <br />
+																	{{ print_r($activationLink) }}	
+                                </span> </td>
+                              </tr>
+                              <!-- END OF TEXT--> 
                             </table>
                           </td>
                           <td class="spacer" width="30"> </td>

@@ -29,36 +29,33 @@ class RegistrationController extends \BaseController {
     $errorMessage = false;
  
     if ($validator->passes()) {
-	   //  $user = new User;
-	   //  $user->email = Input::get('email');
-	   //  $user->password = Hash::make(Input::get('password'));
-	   //  $user->save();
-		try
-		{
-		    // Let's register a user.
-		    $user = Sentry::register(array(
-		        'email'    => Input::get('email'),
-		        'password' => Input::get('password'),
-		    ));
 
-		    // Let's get the activation code
-		    $userId = $user->id;
-		    $activationCode = $user->getActivationCode();
+			try
+			{
+			    // Let's register a user.
+			    $user = Sentry::register(array(
+			        'email'    => Input::get('email'),
+			        'password' => Input::get('password'),
+			    ));
 
-		    // Send activation code to the user so he can activate the account
-		}
-		catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
-		{
-		    $errorMessage = 'Login field is required.';
-		}
-		catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
-		{
-		    $errorMessage = 'Password field is required.';
-		}
-		catch (Cartalyst\Sentry\Users\UserExistsException $e)
-		{
-		    $errorMessage = 'User with this login already exists.';
-		}
+			    // Let's get the activation code
+			    $userId = $user->id;
+			    $activationCode = $user->getActivationCode();
+
+			    // Send activation code to the user so he can activate the account
+			}
+			catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
+			{
+			    $errorMessage = 'Login field is required.';
+			}
+			catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
+			{
+			    $errorMessage = 'Password field is required.';
+			}
+			catch (Cartalyst\Sentry\Users\UserExistsException $e)
+			{
+			    $errorMessage = 'User with this login already exists.';
+			}
 
 		if($errorMessage !== false){
 			return Redirect::to('signup')->withMessage('The following errors occurred: '.$errorMessage)->with('messageType', 'bs-callout bs-callout-danger')->withErrors($validator)->withInput();  
