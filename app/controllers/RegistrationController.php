@@ -110,7 +110,7 @@ class RegistrationController extends \BaseController {
 		}
 		catch (Cartalyst\Sentry\Users\UserAlreadyActivatedException $e)
 		{
-		    $errorMessage = 'that user is already activated, try signing in.';
+		    $errorMessage = 'that user is already activated, try .'.link_to('/signin', 'signing in.');
 		}
 
 		if($errorMessage !== false){
