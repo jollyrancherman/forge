@@ -101,21 +101,21 @@ class RegistrationController extends \BaseController {
 		    }
 		    else
 		    {
-		        $errorMessage 'An error occurred, please contact us if the problem persists.';
+		        $errorMessage = 'an error occurred, please contact us if the problem persists.';
 		    }
 		}
 		catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
 		{
-		    $errorMessage 'User was not found.';
+		    $errorMessage = 'that user was not found.';
 		}
 		catch (Cartalyst\Sentry\Users\UserAlreadyActivatedException $e)
 		{
-		    $errorMessage 'User is already activated.';
+		    $errorMessage = 'that user is already activated, try signing in.';
 		}
 
-		return Redirect::to('/home')
-			->withMessage($errorMessage)
-			->with('messageType', 'bs-callout bs-callout-error');
+		if($errorMessage !== false){
+			return Redirect::to('home')->withMessage('Don\'t shoot the messanger but '.$errorMessage)->with('messageType', 'bs-callout bs-callout-danger');  
+		}	
 	}
 
 }
