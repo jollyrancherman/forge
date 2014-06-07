@@ -20,7 +20,7 @@ Route::post('/contactus', ['as' => 'contactus.store', 'uses' => 'ContactUsContro
 =================================*/
 Route::group(['before' => 'auth'], function()
 {
-    Route::get('/dashboard', 'DashboardController@index');
+    Route::get('/dashboard', ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
 
     Route::get('/dashboard/yardsale', 'YardsaleController@create');
     Route::post('/dashboard/yardsale', 'YardsaleController@store');
@@ -43,6 +43,8 @@ Route::get('/activation/{id}/{code}', 'RegistrationController@activate');
 ================================*/
 Route::get('/logout', ['as' => 'logout', 'uses' => 'SessionController@destroy']);
 
+Route::get('/signin', ['as' => 'signin', 'uses' => 'SessionController@create']);
+Route::post('/signin', ['as' => 'signin.store', 'uses' => 'SessionController@store']);
 
 
 

@@ -95,7 +95,7 @@ class RegistrationController extends \BaseController {
 		    if ($user->attemptActivation($code))
 		    {
 		    		Sentry::login($user, true);
-		        Redirect::route('/dashboard');
+		        return Redirect::to('dashboard');
 		    }
 		    else
 		    {
