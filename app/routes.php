@@ -2,9 +2,6 @@
 
 //test for environment
 
-Route::get('/home', function(){
-	return View::make('homepage.create');
-});
 
 
 Route::get('/email', function(){
@@ -24,36 +21,44 @@ Route::group(['before' => 'auth'], function()
 
     Route::get('/dashboard/yardsale', 'YardsaleController@create');
     Route::post('/dashboard/yardsale', 'YardsaleController@store');
+
+		Route::get('/logout', ['as' => 'logout', 'uses' => 'SessionController@destroy']);
+});
+
+
+Route::group(['before' => 'guest'], function()
+{
+	Route::get('/home', function(){
+		return View::make('homepage.create');
+	});
+	
+	/*====================================
+	=            REGISTRATION            =
+	====================================*/
+	Route::get('/signup', ['as' => 'signup.create', 'uses' => 'RegistrationController@create']);
+	Route::post('/signup', ['as' => 'signup.store', 'uses' => 'RegistrationController@store']);
+
+	Route::get('/activation/{id}/{code}', 'RegistrationController@activate');
+
+ 	/*================================
+	=            SESSIONS            =
+	================================*/
+	Route::get('/signin', ['as' => 'signin', 'uses' => 'SessionController@create']);
+	Route::post('/signin', ['as' => 'signin.store', 'uses' => 'SessionController@store']);
+
+	/*========================================
+	=            Pages Controller            =
+	========================================*/
+	Route::get('/passwordreset', ['as' => 'passwordreset', 'uses' => 'PagesController@passwordReset']);
+	Route::post('/passwordreset', ['as' => 'passwordreset', 'uses' => 'PagesController@passwordResetPost']);
+
+	Route::get('/resetpassword/{resetcode}', 'PagesController@resetPassword');
+	Route::post('/resetpassword/{resetcode}', 'PagesController@resetPasswordPost');
+
 });
 
 
 
-
-/*====================================
-=            REGISTRATION            =
-====================================*/
-Route::get('/signup', ['as' => 'signup.create', 'uses' => 'RegistrationController@create']);
-Route::post('/signup', ['as' => 'signup.store', 'uses' => 'RegistrationController@store']);
-
-Route::get('/activation/{id}/{code}', 'RegistrationController@activate');
-
-
-/*================================
-=            SESSIONS            =
-================================*/
-Route::get('/logout', ['as' => 'logout', 'uses' => 'SessionController@destroy']);
-
-Route::get('/signin', ['as' => 'signin', 'uses' => 'SessionController@create']);
-Route::post('/signin', ['as' => 'signin.store', 'uses' => 'SessionController@store']);
-
-/*========================================
-=            Pages Controller            =
-========================================*/
-Route::get('/passwordreset', ['as' => 'passwordreset', 'uses' => 'PagesController@passwordReset']);
-Route::post('/passwordreset', ['as' => 'passwordreset', 'uses' => 'PagesController@passwordResetPost']);
-
-Route::get('/resetpassword/{resetcode}', 'PagesController@resetPassword');
-Route::post('/resetpassword/{resetcode}', 'PagesController@resetPasswordPost');
 
 
 

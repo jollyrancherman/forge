@@ -38,6 +38,10 @@ Route::filter('auth', function()
 	if (!Sentry::check()) return Redirect::guest('signin');
 });
 
+Route::filter('guest', function()
+{
+	if (Sentry::check()) return Redirect::guest('dashboard');
+});
 
 Route::filter('auth.basic', function()
 {
