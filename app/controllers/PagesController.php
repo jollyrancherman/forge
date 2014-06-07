@@ -45,12 +45,12 @@ class PagesController extends \BaseController {
 		}
 		catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
 		{
-		    $errorMessage = 'Email address was not found.';
+		    $errorMessage = 'that email address was not found.';
 		}
 
 		if($errorMessage !== false){
-			return Redirect::to('signup')
-			->withMessage('The following errors occurred: '.$errorMessage)
+			return Redirect::to('passwordreset')
+			->withMessage('Hmmmm....'.$errorMessage)
 			->with('messageType', 'bs-callout bs-callout-danger')->withInput();  
 		}	
 	}
