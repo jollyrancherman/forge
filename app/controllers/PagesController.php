@@ -62,7 +62,33 @@ class PagesController extends \BaseController {
 
 	public function resetPasswordPost($resetcode)
 	{
-		dd($resetcode);
+		try
+		{
+		    // Find the user using the user id
+		    $user = Sentry::findUserByResetPasswordCode($resetcode);
+
+		    // Check if the reset password code is valid
+		    if ($user->checkResetPasswordCode($resetcode))
+		    {
+		        // Attempt to reset the user password
+		        if ($user->attemptResetPassword($resetcode, Input::get('password')))
+		        {
+		           dd('passed');
+		        }
+		        else
+		        {
+		           dd('failed');
+		        }
+		    }
+		    else
+		    {
+		           dd('password is lame');
+		    }
+		}
+		catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
+		{
+		    echo 'User was not found.';
+		}		
 	}
 
 }

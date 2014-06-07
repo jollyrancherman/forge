@@ -12,16 +12,16 @@
             <div class="row">
               <div class="col-lg-6 col-lg-offset-3">
                 {{ Form::open() }}
-                  <!-- Email -->
+                  <!-- PASSWORD -->
                   <div class="form-group">
-                    {{ Form::label('email', 'Email:', ['class' => 'control_label']) }}
-                    {{ Form::text('email', null, ['class' => 'form-control']) }}
+                    {{ Form::label('password', 'Password', array('class' => 'control_label')) }}
+                    {{ Form::password('password', array('class' => 'form-control')) }}
                   </div>
                   
                   <!-- SUBMIT -->
                   {{ Form::submit('Reset Password', array('class' => 'btn btn-primary')) }}
                   
-                 {{ Form::close() }} 
+                {{ Form::close() }} 
                 
               </div>
             </div>
