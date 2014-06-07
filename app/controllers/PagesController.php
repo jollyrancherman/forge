@@ -27,7 +27,7 @@ class PagesController extends \BaseController {
 		    $resetCode = $user->getResetPasswordCode();
 
 				$data = [
-					'activationLink' => 'http://frauccitywide.com/pages/resetpassword/'.$resetCode
+					'activationLink' => 'http://frauccitywide.com/resetpassword/'.$resetCode
 				];
 
 		    //send email
