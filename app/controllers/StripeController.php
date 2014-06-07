@@ -1,10 +1,10 @@
 <?php
 
-class SessionController extends \BaseController {
+class StripeController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
-	 * GET /session
+	 * GET /stripe
 	 *
 	 * @return Response
 	 */
@@ -15,7 +15,7 @@ class SessionController extends \BaseController {
 
 	/**
 	 * Show the form for creating a new resource.
-	 * GET /session/create
+	 * GET /stripe/create
 	 *
 	 * @return Response
 	 */
@@ -26,7 +26,7 @@ class SessionController extends \BaseController {
 
 	/**
 	 * Store a newly created resource in storage.
-	 * POST /session
+	 * POST /stripe
 	 *
 	 * @return Response
 	 */
@@ -37,7 +37,7 @@ class SessionController extends \BaseController {
 
 	/**
 	 * Display the specified resource.
-	 * GET /session/{id}
+	 * GET /stripe/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -49,7 +49,7 @@ class SessionController extends \BaseController {
 
 	/**
 	 * Show the form for editing the specified resource.
-	 * GET /session/{id}/edit
+	 * GET /stripe/{id}/edit
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -61,7 +61,7 @@ class SessionController extends \BaseController {
 
 	/**
 	 * Update the specified resource in storage.
-	 * PUT /session/{id}
+	 * PUT /stripe/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -73,7 +73,7 @@ class SessionController extends \BaseController {
 
 	/**
 	 * Remove the specified resource from storage.
-	 * DELETE /session/{id}
+	 * DELETE /stripe/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response

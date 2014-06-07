@@ -84,4 +84,32 @@ class RegistrationController extends \BaseController {
     }
 	}
 
+	public function activate($id, $code)
+	{
+		try
+		{
+		    // Find the user using the user id
+		    $user = Sentry::findUserById($id);
+
+		    // Attempt to activate the user
+		    if ($user->attemptActivation($code))
+		    {
+		    		Sentry::login($user, true);
+		        Redirect::route('/dashboard');
+		    }
+		    else
+		    {
+		        echo 'oh no!';
+		    }
+		}
+		catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
+		{
+		    echo 'User was not found.';
+		}
+		catch (Cartalyst\Sentry\Users\UserAlreadyActivatedException $e)
+		{
+		    echo 'User is already activated.';
+		}
+	}
+
 }
