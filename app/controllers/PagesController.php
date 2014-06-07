@@ -73,21 +73,37 @@ class PagesController extends \BaseController {
 		        // Attempt to reset the user password
 		        if ($user->attemptResetPassword($resetcode, Input::get('password')))
 		        {
-		           dd('passed');
+							if($errorMessage !== false){
+								return Redirect::to('signin')
+								->withMessage('Success! Try out your new password!')
+								->with('messageType', 'bs-callout bs-callout-success');  
+							}	
 		        }
 		        else
 		        {
-		           dd('failed');
+							if($errorMessage !== false){
+								return Redirect::to('passwordreset')
+								->withMessage('Hmmmm....something went wrong. Try again or contact us.')
+								->with('messageType', 'bs-callout bs-callout-danger')->withInput();  
+							}	
 		        }
 		    }
 		    else
 		    {
-		           dd('password is lame');
+					if($errorMessage !== false){
+						return Redirect::to('passwordreset')
+						->withMessage('Hmmmm....try a different password. Maybe one between 6-30 alphanumeric characters?')
+						->with('messageType', 'bs-callout bs-callout-danger')->withInput();  
+					}	
 		    }
 		}
 		catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
 		{
-		    echo 'User was not found.';
+			if($errorMessage !== false){
+				return Redirect::to('passwordreset')
+				->withMessage('Hmmmm....no records were found.')
+				->with('messageType', 'bs-callout bs-callout-danger')->withInput();  
+			}	
 		}		
 	}
 
