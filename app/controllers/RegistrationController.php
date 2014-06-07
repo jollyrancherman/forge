@@ -68,7 +68,7 @@ class RegistrationController extends \BaseController {
 	    //send email
 			Mail::send('emails.activation', $data, function($message)
 			{
-				$message->from('info@frauc.com', 'FraucCityWide.com');
+				$message->from('contactus@frauc.com', 'FraucCityWide.com');
 		  	$message->to(Input::get('email'), Input::get('email'))
 		      ->subject('Your activation email.');		
 			});	    
@@ -110,7 +110,7 @@ class RegistrationController extends \BaseController {
 		}
 		catch (Cartalyst\Sentry\Users\UserAlreadyActivatedException $e)
 		{
-		    $errorMessage = 'that user is already activated, try .'.link_to('/signin', 'signing in.');
+		    $errorMessage = 'that user is already activated, try '.link_to('/signin', 'signing in.');
 		}
 
 		if($errorMessage !== false){

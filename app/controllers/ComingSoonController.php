@@ -44,7 +44,7 @@ class ComingSoonController extends \BaseController {
 
 			Mail::send('emails.welcome', $data, function($message)
 			{
-				$message->from('info@frauc.com', 'FraucCityWide.com');
+				$message->from('contactus@frauc.com', 'FraucCityWide.com');
 		  	$message->to(Input::get('email'), Input::get('email'))
 		      ->subject('A top-secret message from FraucCityWide');		
 			});

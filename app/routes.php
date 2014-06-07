@@ -52,6 +52,9 @@ Route::post('/signin', ['as' => 'signin.store', 'uses' => 'SessionController@sto
 Route::get('/passwordreset', ['as' => 'passwordreset', 'uses' => 'PagesController@passwordReset']);
 Route::post('/passwordreset', ['as' => 'passwordreset', 'uses' => 'PagesController@passwordResetPost']);
 
+Route::get('/resetpassword/{resetcode}', 'PagesController@resetPassword');
+Route::post('/resetpassword/{resetcode}', 'PagesController@resetPasswordPost');
+
 
 
 

@@ -5,8 +5,8 @@
           <div class="page-content inset">
             <div class="row">
               <div class="col-md-6 col-md-offset-3">
-                <h3>Password Reset</h3>
-                <p class="lead">Need a your password reset? We can help! Just enter the email address you used to register with us and we will send you an email with instructions on how to reset your password. It's that simple.</p>
+                <h3>Enter your new password</h3>
+                <p class="lead">After you complete this step you may log in with your new password!</p>
               </div>
             </div>
             <div class="row">
