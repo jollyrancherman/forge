@@ -6,10 +6,15 @@
           <div class="page-content inset">
             <div class="row">
               <div class="col-md-8 col-md-offset-2">
-                <h2>Sign in</h2>
+                <h2>Hosts with the most, sign in here!</h2>
               </div>
               <div class="col-md-8 col-md-offset-2">
-                <p>More details on what is going on. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, commodi, delectus, labore veritatis eveniet possimus error distinctio alias aut dicta minima accusantium illo unde officiis ut dolorum deleniti laboriosam similique?</p>
+                <p class="lead">If you have already created your account, then you are </p>
+                  <ul  class="list-unstyled" style="padding-left: 20px;">
+                    <li class="lead">1) awesome, and</li>
+                    <li class="lead">2) in the right place.</li>
+                  </ul>
+              <p  class="lead">If you want to change any of your information, then you came to the right place. You know what to do. Thanks again for supporting the event and the Big Brothers Big Sisters of Northern Nevada.</p>
               </div>
             </div>
             <div class="row">
@@ -33,7 +38,7 @@
                 
                 <!-- SUBMIT -->
                 {{ Form::submit('Submit', array('class' => 'btn btn-primary')) }}
-                
+
                 {{ link_to('/passwordreset', 'Reset your password here',['class' => 'pull-right']) }}
 
                 {{ Form::close() }}

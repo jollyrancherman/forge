@@ -5,15 +5,15 @@
           <!-- Keep all page content within the page-content inset div! -->
           <div class="page-content inset">
             <div class="row">
-              <div class="col-md-10 col-md-offset-1">
-                <h2>Why not sign up?</h2>
+              <div class="col-md-8 col-md-offset-2">
+                <h2>Be an Insider!</h2>
               </div>
-              <div class="col-md-10 col-md-offset-1">
-                <p>More details on what is going on. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, commodi, delectus, labore veritatis eveniet possimus error distinctio alias aut dicta minima accusantium illo unde officiis ut dolorum deleniti laboriosam similique?</p>
+              <div class="col-md-8 col-md-offset-2">
+                <p class="lead">Sign up now to become one of the privileged. Thinking about shopping the yard sale event or can’t yet commit to hosting? We will keep you up to date with everything FraucCityWide, including maps, news, and donating information. We’ll catch you on the flip side.</p>
               </div>
             </div>
             <div class="row">
-              <div class="col-md-6 col-md-offset-3">           
+              <div class="col-md-4 col-md-offset-2">           
                 {{ Form::open() }}
       
                 <!-- Email -->
