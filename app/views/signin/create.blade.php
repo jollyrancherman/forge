@@ -5,15 +5,15 @@
           <!-- Keep all page content within the page-content inset div! -->
           <div class="page-content inset">
             <div class="row">
-              <div class="col-md-10 col-md-offset-1">
+              <div class="col-md-8 col-md-offset-2">
                 <h2>Sign in</h2>
               </div>
-              <div class="col-md-10 col-md-offset-1">
+              <div class="col-md-8 col-md-offset-2">
                 <p>More details on what is going on. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, commodi, delectus, labore veritatis eveniet possimus error distinctio alias aut dicta minima accusantium illo unde officiis ut dolorum deleniti laboriosam similique?</p>
               </div>
             </div>
             <div class="row">
-              <div class="col-md-6 col-md-offset-3">           
+              <div class="col-md-4 col-md-offset-2">           
                 {{ Form::open() }}
       
                 <!-- Email -->
@@ -33,6 +33,8 @@
                 
                 <!-- SUBMIT -->
                 {{ Form::submit('Submit', array('class' => 'btn btn-primary')) }}
+                
+                {{ link_to('/passwordreset', 'Reset your password here',['class' => 'pull-right']) }}
 
                 {{ Form::close() }}
               </div>

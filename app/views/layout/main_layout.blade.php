@@ -198,7 +198,7 @@
         <div id="page-content-wrapper">
           <div class="content-header">
             <div class="row">
-              <div class="col-md-10 col-md-offset-1">
+              <div class="col-md-8 col-md-offset-2">
                 <h1>
                     <a id="menu-toggle" href="#" class="btn btn-primary">Menu</i></a>
                     {{ HTML::image("img/frauccitywideLogo200x50.png", "Email Header",['width' => '200', 'style' => 'display: inlne-block;']) }}

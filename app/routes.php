@@ -46,6 +46,13 @@ Route::get('/logout', ['as' => 'logout', 'uses' => 'SessionController@destroy'])
 Route::get('/signin', ['as' => 'signin', 'uses' => 'SessionController@create']);
 Route::post('/signin', ['as' => 'signin.store', 'uses' => 'SessionController@store']);
 
+/*========================================
+=            Pages Controller            =
+========================================*/
+Route::get('/passwordreset', ['as' => 'passwordreset', 'uses' => 'PagesController@passwordReset']);
+Route::post('/passwordreset', ['as' => 'passwordreset', 'uses' => 'PagesController@passwordResetPost']);
+
+
 
 
 /*===================================

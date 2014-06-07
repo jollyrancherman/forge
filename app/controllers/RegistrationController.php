@@ -86,6 +86,8 @@ class RegistrationController extends \BaseController {
 
 	public function activate($id, $code)
 	{
+		$errorMessage = false;
+
 		try
 		{
 		    // Find the user using the user id
@@ -99,17 +101,21 @@ class RegistrationController extends \BaseController {
 		    }
 		    else
 		    {
-		        echo 'oh no!';
+		        $errorMessage 'An error occurred, please contact us if the problem persists.';
 		    }
 		}
 		catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
 		{
-		    echo 'User was not found.';
+		    $errorMessage 'User was not found.';
 		}
 		catch (Cartalyst\Sentry\Users\UserAlreadyActivatedException $e)
 		{
-		    echo 'User is already activated.';
+		    $errorMessage 'User is already activated.';
 		}
+
+		return Redirect::to('/home')
+			->withMessage($errorMessage)
+			->with('messageType', 'bs-callout bs-callout-error');
 	}
 
 }
