@@ -54,4 +54,15 @@ class PagesController extends \BaseController {
 			->with('messageType', 'bs-callout bs-callout-danger')->withInput();  
 		}	
 	}
+
+	public function resetPassword()
+	{
+		return View::make('pages.resetpassword');
+	}
+
+	public function resetPasswordPost($resetcode)
+	{
+		dd($resetcode);
+	}
+
 }
