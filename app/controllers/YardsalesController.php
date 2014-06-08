@@ -1,10 +1,10 @@
 <?php
 
-class YardsaleController extends \BaseController {
+class YardsalesController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
-	 * GET /yardsale
+	 * GET /yardsales
 	 *
 	 * @return Response
 	 */
@@ -15,18 +15,20 @@ class YardsaleController extends \BaseController {
 
 	/**
 	 * Show the form for creating a new resource.
-	 * GET /yardsale/create
+	 * GET /yardsales/create
 	 *
 	 * @return Response
 	 */
 	public function create()
 	{
-		//
+		$userid = Sentry::getUser()->id;
+
+		return View::make('yardsales.create')->with('postID',$userid);		
 	}
 
 	/**
 	 * Store a newly created resource in storage.
-	 * POST /yardsale
+	 * POST /yardsales
 	 *
 	 * @return Response
 	 */
@@ -37,7 +39,7 @@ class YardsaleController extends \BaseController {
 
 	/**
 	 * Display the specified resource.
-	 * GET /yardsale/{id}
+	 * GET /yardsales/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -49,7 +51,7 @@ class YardsaleController extends \BaseController {
 
 	/**
 	 * Show the form for editing the specified resource.
-	 * GET /yardsale/{id}/edit
+	 * GET /yardsales/{id}/edit
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -61,7 +63,7 @@ class YardsaleController extends \BaseController {
 
 	/**
 	 * Update the specified resource in storage.
-	 * PUT /yardsale/{id}
+	 * PUT /yardsales/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -73,7 +75,7 @@ class YardsaleController extends \BaseController {
 
 	/**
 	 * Remove the specified resource from storage.
-	 * DELETE /yardsale/{id}
+	 * DELETE /yardsales/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response

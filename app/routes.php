@@ -8,6 +8,12 @@ Route::get('/email', function(){
 	return View::make('emails.activation');
 });
 
+Route::get('/test',function() {
+
+	dd($actual_link = "http://$_SERVER[HTTP_HOST]");
+	return View::make('test');
+});
+
 Route::get('/contactus', ['as' => 'contactus', 'uses' => 'ContactUsController@create']);
 Route::post('/contactus', ['as' => 'contactus.store', 'uses' => 'ContactUsController@store']);
 
@@ -23,6 +29,13 @@ Route::group(['before' => 'auth'], function()
     Route::post('/dashboard/yardsale', 'YardsaleController@store');
 
 		Route::get('/logout', ['as' => 'logout', 'uses' => 'SessionController@destroy']);
+
+
+		/*================================
+		=            Yardsale            =
+		================================*/
+		Route::get('yardsale/create', 'YardsalesController@create');
+		Route::post('yardsale/create', 'YardsalesController@store');
 });
 
 

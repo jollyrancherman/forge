@@ -7,7 +7,7 @@
                     <li><a href="/signup">Create an account</a></li>
                 @else
                     <li><a href="/home">Dashboard</a></li>
-                    <li><a href="/signup">My Yardsale</a></li>
+                    <li><a href="/yardsale/create">My Yardsale</a></li>
                     <li><a href="/logout">Logout</a></li>
                 @endif
                 <li style="margin-top: 100px;"><a href="http://frauc.com">frauc.com</a></li>

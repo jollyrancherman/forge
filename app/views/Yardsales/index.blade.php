@@ -1,0 +1,1 @@
+/Applications/XAMPP/xamppfiles/htdocs/forge/app/views/Yardsales/index.blade.php

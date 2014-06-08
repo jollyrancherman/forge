@@ -10,13 +10,11 @@
 
     <title>FraucCityWide.com</title>
 
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-
-    <!-- Custom styles for this template -->
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>    
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">  
 
     <!-- Add custom CSS here -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    @yield('scripts-top')
     <style>
 #wrapper {
   padding-left: 250px;
@@ -208,6 +206,7 @@
           </div>
 
           <div class="content-header">
+
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 @if(Session::has('message'))         
@@ -222,6 +221,7 @@
                 @endif               
               </div>
             </div>
+
           </div>
 
         @yield('content')
@@ -412,6 +412,7 @@
         }
       });
     </script>
+    @yield('scripts-bot')
 </body>
 
 </html>
