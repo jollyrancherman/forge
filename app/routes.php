@@ -10,7 +10,7 @@ Route::get('/email', function(){
 
 Route::get('/test',function() {
 
-	dd($actual_link = "http://$_SERVER[HTTP_HOST]");
+	dd($actual_link = "http://$_SERVER[HTTP_HOST]/garageSale/");
 	return View::make('test');
 });
 

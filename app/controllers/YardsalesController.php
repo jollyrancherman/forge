@@ -23,7 +23,7 @@ class YardsalesController extends \BaseController {
 	{
 		$userid = Sentry::getUser()->id;
 
-		return View::make('yardsales.create')->with('postID',$userid);		
+		return View::make('Yardsales.create')->with('postID',$userid);		
 	}
 
 	/**
