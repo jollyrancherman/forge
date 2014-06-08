@@ -25,17 +25,11 @@ Route::group(['before' => 'auth'], function()
 {
     Route::get('/dashboard', ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
 
-    Route::get('/dashboard/yardsale', 'YardsaleController@create');
-    Route::post('/dashboard/yardsale', 'YardsaleController@store');
+    Route::get('/dashboard/yardsale', 'YardsalesController@create');
+    Route::post('/dashboard/yardsale', 'YardsalesController@store');
 
 		Route::get('/logout', ['as' => 'logout', 'uses' => 'SessionController@destroy']);
 
-
-		/*================================
-		=            Yardsale            =
-		================================*/
-		Route::get('/yardsale/create', 'YardsalesController@create');
-		Route::post('/yardsale/create', 'YardsalesController@store');
 });
 
 
