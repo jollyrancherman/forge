@@ -228,6 +228,51 @@
 
     </div>
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" id="register-for-emails">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Frauc.com City Wide Garage Sale Reminder</h4>
+      </div>
+        {{ Form::open(['id'=>'submit_email']) }}
+      <div class="modal-body">
+        <p class="lead">Would you like to follow us. Give us your email address and we will keep you updated on 
+          the current status. Also, follow us on facebook and twitter!</p>
+          <!-- FIELD -->
+          <div class="form-group">
+            {{ Form::label('city', 'Select Your City', ['class' => 'control_label']) }}
+            {{ Form::select('city', [
+              'null' => 'Please select a city', 
+              'douglas' => 'Minden/Gardnerville', 
+              'carson' => 'Carson City', 
+              'reno' => 'Reno',
+              'sparks' => 'Sparks',
+              ],null, ['class' => 'form-control','id' => 'city']); 
+            }}
+            <span class="help-block error-msg" id="city-error"></span>   
+          </div>        
+
+          <!-- Email -->
+          <div class="form-group">
+            {{ Form::label('email', 'Email:', ['class' => 'control_label']) }}
+            {{ Form::text('email', null, ['class' => 'form-control', 'id' => 'sub_email']) }}
+            <span class="help-block error-msg" id="email-error"></span>
+          </div>
+          
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!-- SUBMIT -->
+        {{ Form::submit('Submit', array('class' => 'btn btn-primary')) }}
+        
+      </div>
+        {{ Form::close() }}
+    </div>
+  </div>
+</div>
+
 <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" id="contact-us-message">
     <div class="modal-content">
@@ -250,13 +295,13 @@
           <div class="form-group">
             {{ Form::label('email', 'Email:', ['class' => 'control_label']) }}
             {{ Form::text('email', null, ['class' => 'form-control','id' => 'contact_email', 'placeholder' => 'email@you.com (so that we can contact you)']) }}
-            <span class="help-block" id="contact-email-error"></span>
+            <span class="help-block error-msg" id="contact-email-error"></span>
           </div>
 
           <!-- message -->
           <div class="form-group">
             {{ Form::label('message', 'Message:', ['class' => 'control_label']) }}
-            <span class="help-block" id="contact-message-error"></span>
+            <span class="help-block error-msg" id="contact-message-error"></span>
             {{ Form::textarea('message', null, ['class' => 'form-control', 'id' => 'contact_message']) }}
           </div>
           
@@ -287,6 +332,51 @@
         $("#wrapper").toggleClass("active");
     });
     </script>
+    <script>
+      var sub_email = $('#sub_email');
+      var city = $('#city');
+      var emailErrMsg = $('#email-error');
+      var cityErrMsg = $('#city-error');
+
+      city.change(function(){
+        if(city.val() == "null"){
+          cityErrMsg.text('Please Select a city');
+        }else{
+          cityErrMsg.text('');
+        }
+      });
+
+      $("#submit_email").submit(function (event) {
+        event.preventDefault();
+
+        //validate emails address and city selected
+        if(city.val() == "null"){
+          cityErrMsg.text('Please Select a city');
+        }else{
+          cityErrMsg.text('');
+        }
+
+        if(!sub_email.val()){
+          console.log(sub_email.val());
+          $('#email-error').addClass('error').text('Email is required before submitting form.');
+        }
+        if(sub_email.val() && city.val() !== null){
+          $.post("/comingsoon", {city: city.val(), email:sub_email.val()})
+            .done(function(data){
+              console.log('Success!');
+              if(data !== 'OK'){
+                $('#email-error').addClass('error').text(data.email[0]);
+              }else{
+                $('#register-for-emails').html('<div class="alert alert-success"><h3>We\'ve been wanting to partner with you for the longest time. Go ahead, check your email...we\'ve sent you a top secret message.</h3></div>');
+
+                setTimeout(function() {$('.modal').modal('hide');}, 6000);
+              }
+            });
+        } else {
+
+        }
+      });
+    </script>    
     <script>
       var cname = $('#contact_name');
       var cemail = $('#contact_email');

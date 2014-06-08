@@ -12,7 +12,7 @@
                 @endif
                 <li style="margin-top: 100px;"><a href="http://frauc.com">frauc.com</a></li>
                 <li><a href="http://www.bbbsnn.org/site/c.aiINI5NMKeKYF/b.7529395/k.F024/Home_Page.htm">bbbs.com</a></li>
-                <li><a href="#contactModal" role="button" data-toggle="modal">Email Updates!</a></li>
+                <li><a href="#myModal" role="button" data-toggle="modal">Email Updates!</a></li>
                 <li><a href="#contactModal" role="button" data-toggle="modal">Contact us</a></li>
 
             </ul>
