@@ -34,8 +34,8 @@ Route::group(['before' => 'auth'], function()
 		/*================================
 		=            Yardsale            =
 		================================*/
-		Route::get('yardsale/create', 'YardsalesController@create');
-		Route::post('yardsale/create', 'YardsalesController@store');
+		Route::get('/yardsale/create', 'YardsalesController@create');
+		Route::post('/yardsale/create', 'YardsalesController@store');
 });
 
 
