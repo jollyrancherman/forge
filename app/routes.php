@@ -5,8 +5,7 @@ Route::get('/email', function(){
 });
 
 Route::get('/test',function() {
-	dd(Session::all());
-	return View::make('test');
+	//return View::make('test');
 });
 
 Route::get('/contactus', ['as' => 'contactus', 'uses' => 'ContactUsController@create']);
