@@ -16,7 +16,7 @@ class ImageController extends \BaseController {
 		$userid = Sentry::getUser()->id;
 
 		$options = [
-			'upload_dir' => "/public/garageSale/$userid/",
+			'upload_dir' => "/garageSale/$userid/",
 			'upload_url' => "http://frauccitywide.com/garageSale/$userid/",
 		];
 		error_reporting(E_ALL | E_STRICT);
