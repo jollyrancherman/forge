@@ -72,7 +72,7 @@ class SessionController extends \BaseController {
 		if($errorMessage !== false){
 			return Redirect::to('signin')->withMessage('The following errors occurred: '.$errorMessage)->with('messageType', 'bs-callout bs-callout-danger')->withInput();  
 		}else{
-			return Redirect::to('dashboard');
+			return Redirect::to('/dash');
 		}		
 	}
 

@@ -6,7 +6,7 @@
                     <li><a href="/signin">Sign in </a></li>
                     <li><a href="/signup">Create an account</a></li>
                 @else
-                    <li><a href="/home">Dashboard</a></li>
+                    <li><a href="/dash">Dashboard</a></li>
                     <li><a href="/dashboard/yardsale">My Yardsale</a></li>
                     <li><a href="/logout">Logout</a></li>
                 @endif

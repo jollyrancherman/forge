@@ -24,7 +24,6 @@
 								  {{ Form::label('address', 'Select address from drop-down', ['class' => 'control_label']) }}
 								  {{ Form::text('address', null, ['class' => 'form-control', 'id' => 'pac-input']) }}
 								</div>
-								
 								<!-- Title -->
 								<div class="form-group">
 								  {{ Form::label('title', 'Title', ['class' => 'control_label']) }}
@@ -80,7 +79,7 @@
 								<p>terms and condtions / No refunds / still need to pay if they have not</p>
 								
 								<!-- HIDDEN -->
-				        {{ Form::hidden('folder_id', $postID, ['class' => 'form-control']) }}
+				        {{ Form::hidden('folder_id', $postID, ['class' => 'form-control', 'id' => 'folder-id']) }}
 				        {{ Form::hidden('lat',null, ['class' => 'form-control', 'id' =>'lat']) }}
 				        {{ Form::hidden('lng',null, ['class' => 'form-control', 'id' => 'lng']) }}
 

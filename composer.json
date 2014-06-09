@@ -16,8 +16,12 @@
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds",
-			"app/tests/TestCase.php"
-		]
+			"app/tests/TestCase.php",
+			"app/Acme/UploadHandler.php"
+		],
+		"psr-4": {
+			"Acme\\": "app/Acme"
+		}
 	},
 	"scripts": {
 		"post-install-cmd": [

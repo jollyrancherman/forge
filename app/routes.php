@@ -1,14 +1,11 @@
 <?php
 
-//test for environment
-
-
-
 Route::get('/email', function(){
 	return View::make('emails.activation');
 });
 
 Route::get('/test',function() {
+	dd(Session::all());
 	return View::make('test');
 });
 
@@ -21,12 +18,16 @@ Route::post('/contactus', ['as' => 'contactus.store', 'uses' => 'ContactUsContro
 =================================*/
 Route::group(['before' => 'auth'], function()
 {
-    Route::get('/dashboard', ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
+    Route::get('/dash', ['as' => 'dash', 'uses' => 'DashboardController@index']);
 
 		Route::get('/logout', ['as' => 'logout', 'uses' => 'SessionController@destroy']);
 
     Route::get('/dashboard/yardsale', 'YardsalesController@create');
     Route::post('/dashboard/yardsale', 'YardsalesController@store');
+
+    Route::post('/blueimp', 'ImageController@index');
+    Route::get('/blueimp', 'ImageController@index');
+    Route::delete('/blueimp', 'ImageController@index');
 });
 
 
