@@ -16,12 +16,12 @@ class ImageController extends \BaseController {
 
 		$options = [
 			//production
-			// 'upload_dir' => "garageSale/$userid/",
-			// 'upload_url' => "http://frauccitywide.com/garageSale/$userid/",
+			'upload_dir' => "garageSale/$userid/",
+			'upload_url' => "http://frauccitywide.com/garageSale/$userid/",
 			
 			//local 
-			'upload_dir' => $_ENV['BLUEIMP_DIR']."$userid/",
-			'upload_url' => $_ENV['CURRENT_BASE_ADDRESS']."garageSale/$userid/",
+			// 'upload_dir' => $_ENV['BLUEIMP_DIR']."$userid/",
+			// 'upload_url' => $_ENV['CURRENT_BASE_ADDRESS']."garageSale/$userid/",
 		];
 		
 		error_reporting(E_ALL | E_STRICT);
