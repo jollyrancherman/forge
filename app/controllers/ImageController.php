@@ -17,7 +17,7 @@ class ImageController extends \BaseController {
 
 		$options = [
 			'upload_dir' => "public/garageSale/$userid/",
-			'upload_url' => "http://localhost:8000/garageSale/$userid/",
+			'upload_url' => "http://frauccitywide.com/garageSale/$userid/",
 		];
 		error_reporting(E_ALL | E_STRICT);
 		$upload_handler = new UploadHandler($options);
