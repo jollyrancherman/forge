@@ -97,7 +97,7 @@ class RegistrationController extends \BaseController {
 		    if ($user->attemptActivation($code))
 		    {
 		    		Sentry::login($user, true);
-		        return Redirect::to('dashboard');
+		        return Redirect::to('dashboard')->withMessage('Your account has been activated and you are currently logged in! Try '.link_to('/dashboard/yardsale', 'updating your yard sale information.'))->with('messageType', 'bs-callout bs-callout-success');
 		    }
 		    else
 		    {
