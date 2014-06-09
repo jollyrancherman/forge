@@ -15,6 +15,7 @@ class ImageController extends \BaseController {
 		$userid = Sentry::getUser()->id;
 
 		$options = [
+<<<<<<< HEAD
 			//production
 			// 'upload_dir' => "garageSale/$userid/",
 			// 'upload_url' => "http://frauccitywide.com/garageSale/$userid/",
@@ -22,6 +23,10 @@ class ImageController extends \BaseController {
 			//local 
 			'upload_dir' => $_ENV['BLUEIMP_DIR']."$userid/",
 			'upload_url' => $_ENV['CURRENT_BASE_ADDRESS']."garageSale/$userid/",
+=======
+			'upload_dir' => "garageSale/$userid/",
+			'upload_url' => "http://frauccitywide.com/garageSale/$userid/",
+>>>>>>> FETCH_HEAD
 		];
 		error_reporting(E_ALL | E_STRICT);
 		$upload_handler = new UploadHandler($options);
