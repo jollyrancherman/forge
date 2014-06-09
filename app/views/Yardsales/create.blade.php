@@ -1,7 +1,6 @@
 @extends('layout.main_layout')
 
 @section('content')
-            
           <!-- Keep all page content within the page-content inset div! -->
           <div class="page-content inset"> 
 						
