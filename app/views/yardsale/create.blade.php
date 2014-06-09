@@ -14,7 +14,7 @@
 						<div class="row">
 							<div class="col-md-6 col-md-offset-2">
 								
-								{{ Form::open(['id' => 'fileupload']) }}
+								{{ Form::open(['id' => 'fileupload', 'files' => true]) }}
 
 								<p>Dropdown</p>
 									
