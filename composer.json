@@ -6,7 +6,8 @@
 	"require": {
 		"laravel/framework": "4.1.*",
 		"mandrill/mandrill": "1.0.*",
-		"cartalyst/sentry": "2.1.*"
+		"cartalyst/sentry": "2.1.*",
+		"blueimp/jquery-file-upload": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
