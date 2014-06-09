@@ -18,7 +18,7 @@ Route::post('/contactus', ['as' => 'contactus.store', 'uses' => 'ContactUsContro
 =================================*/
 Route::group(['before' => 'auth'], function()
 {
-    Route::get('/dashboard', ['as' => 'dash', 'uses' => 'DashboardController@index']);
+    Route::get('/dash', ['as' => 'dash', 'uses' => 'DashboardController@index']);
 
 		Route::get('/logout', ['as' => 'logout', 'uses' => 'SessionController@destroy']);
 
