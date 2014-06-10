@@ -90,6 +90,7 @@
 
 .content-header h1 {
   margin: 0;
+  margin-top: 10px;
   margin-left: 20px;
   line-height: 65px;
   display: inline-block;
@@ -126,6 +127,7 @@
 
 #menu-toggle {
   display: inline-block;
+  margin-left: 15px;
 }
 
 .inset {
@@ -196,11 +198,21 @@
         <div id="page-content-wrapper">
           <div class="content-header">
             <div class="row">
-              <div class="col-md-8 col-md-offset-2">
-                <h1>
-                    <a id="menu-toggle" href="#" class="btn btn-primary">Menu</i></a>
-                    {{ HTML::image("img/frauccitywideLogo200x50.png", "Email Header",['width' => '200', 'style' => 'display: inlne-block;']) }}
-                </h1>               
+              <div class="col-xs-2">
+                <a id="menu-toggle" href="#" class="btn btn-primary">Menu</i></a>
+              </div>
+              <div class="col-xs-7">
+                {{ HTML::image("img/logoWithShadowLarge.png", "Email Header",['class' => 'img-responsive pull-left', 'width' => '600', 'style' => 'display: inlne-block;']) }}                  
+
+            
+              </div>
+              <div class="col-xs-2">
+              <div class="row">
+                <p class="small" style="margin: 5px; line-height: 12px;">Brought to you by:</p>
+              </div>
+              <div class="row">
+                {{ HTML::image("img/logoPlusText.png", "Email Header",['class' => 'img-responsive', 'width' => '200', 'style' => 'display: inlne-block;']) }}                                  
+              </div>
               </div>
             </div>
           </div>
