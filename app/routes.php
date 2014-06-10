@@ -5,7 +5,8 @@ Route::get('/email', function(){
 });
 
 Route::get('/test',function() {
-	//return View::make('test');
+	echo $_ENV['BLUEIMP_DIR'];
+	echo $_ENV['CURRENT_BASE_ADDRESS'];
 });
 
 Route::get('/contactus', ['as' => 'contactus', 'uses' => 'ContactUsController@create']);
