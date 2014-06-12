@@ -55,7 +55,7 @@ class YardsalesController extends \BaseController {
 
 		// dd($yardsale->first());
 
-		if($yardsale == NULL){
+		if(!$yardsale){
 			$yardsale = new Yardsale();
 		}
 
@@ -74,8 +74,7 @@ class YardsalesController extends \BaseController {
 			if($error == true){
 				return Redirect::to('/dashboard/yardsale')->withMessage('The following errors occurred')->with('messageType', 'bs-callout bs-callout-danger')->withErrors($messageBag)->withInput();  
 			}
-
-
+ 
 			$yardsale->area = Input::get('area');
 			$yardsale->address = Input::get('address');
 			$yardsale->title = Input::get('title');
