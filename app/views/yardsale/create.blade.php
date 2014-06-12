@@ -141,7 +141,7 @@ function initialize() {
 
   var mapOptions = {
     center: myLatlng,
-    zoom: 10
+    zoom: 15
   };
   var map = new google.maps.Map(document.getElementById('yardsale-map'),
     mapOptions);
@@ -162,12 +162,27 @@ function initialize() {
     anchorPoint: new google.maps.Point(0, -29)
   });
 
+    // marker.setIcon(/** @type {google.maps.Icon} */({
+    //   url: place.icon,
+    //   size: new google.maps.Size(71, 71),
+    //   origin: new google.maps.Point(0, 0),
+    //   anchor: new google.maps.Point(17, 34),
+    //   scaledSize: new google.maps.Size(35, 35)
+    // }));
+
   if(lat !== '' && lng !== ''){
-    var marker = new google.maps.Marker({
-        position: myLatlng,
-        map: map,
-        title: '{{ $yardsale->address }}'
-    });    
+    marker.setIcon(/** @type {google.maps.Icon} */({
+      url: '/img/signWithShadow.png',
+      // This marker is 20 pixels wide by 32 pixels tall.
+      size: new google.maps.Size(400, 300),
+      // The origin for this image is 0,0.
+      origin: new google.maps.Point(0,0),
+      // The anchor for this image is the base of the flagpole at 0,32.
+      anchor: new google.maps.Point(20,60),
+      scaledSize: new google.maps.Size(80, 60)
+    }));
+    marker.setPosition(myLatlng);
+    marker.setVisible(true);   
   }
 
   google.maps.event.addListener(autocomplete, 'place_changed', function() {
@@ -193,11 +208,14 @@ function initialize() {
       map.setZoom(17);  // Why 17? Because it looks good.
     }
     marker.setIcon(/** @type {google.maps.Icon} */({
-      url: place.icon,
-      size: new google.maps.Size(71, 71),
-      origin: new google.maps.Point(0, 0),
-      anchor: new google.maps.Point(17, 34),
-      scaledSize: new google.maps.Size(35, 35)
+      url: '/img/signWithShadow.png',
+      // This marker is 20 pixels wide by 32 pixels tall.
+      size: new google.maps.Size(400, 300),
+      // The origin for this image is 0,0.
+      origin: new google.maps.Point(0,0),
+      // The anchor for this image is the base of the flagpole at 0,32.
+      anchor: new google.maps.Point(20,60),
+      scaledSize: new google.maps.Size(80, 60)
     }));
     marker.setPosition(place.geometry.location);
     marker.setVisible(true);
