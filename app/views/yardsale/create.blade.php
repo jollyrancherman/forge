@@ -14,7 +14,21 @@
 						<div class="row">
 							<div class="col-md-6 col-md-offset-2">
 								
-								{{ Form::open(['id' => 'fileupload', 'files' => true]) }}
+								{{ Form::model($yardsale, ['id' => 'fileupload', 'files' => true]) }}
+
+                <!-- FIELD -->
+                <div class="form-group">
+                  {{ Form::label('city', 'Select Your City', ['class' => 'control_label']) }}
+                  {{ Form::select('area', [
+                    '' => 'Please select a city', 
+                    'douglas' => 'Minden/Gardnerville', 
+                    'carson' => 'Carson City', 
+                    'reno' => 'Reno',
+                    'sparks' => 'Sparks',
+                    ],null, ['class' => 'form-control','id' => 'city']); 
+                  }}
+                  {{ $errors->first('area', '<p class="error-msg">:message</p>'); }} 
+                </div> 
 
 								<p>Dropdown</p>
 									
@@ -23,17 +37,20 @@
 									<div id="yardsale-map" style="height: 300px;"></div>
 								  {{ Form::label('address', 'Select address from drop-down', ['class' => 'control_label']) }}
 								  {{ Form::text('address', null, ['class' => 'form-control', 'id' => 'pac-input']) }}
+                  {{ $errors->first('address', '<p class="error-msg">:message</p>'); }}
 								</div>
 								<!-- Title -->
 								<div class="form-group">
 								  {{ Form::label('title', 'Title', ['class' => 'control_label']) }}
 								  {{ Form::text('title', null, ['class' => 'form-control']) }}
+                  {{ $errors->first('title', '<p class="error-msg">:message</p>'); }}
 								</div>
 								
 								<!-- Description -->
 								<div class="form-group">
 								  {{ Form::label('description', 'Description', ['class' => 'control_label']) }}
 								  {{ Form::textarea('description', null, ['class' => 'form-control']) }}
+                  {{ $errors->first('description', '<p class="error-msg">:message</p>'); }}
 								</div>
 								
 				        <!-- Redirect browsers with JavaScript disabled to the origin page -->
@@ -76,10 +93,10 @@
 				        <!-- The table listing the files available for upload/download -->
 				        <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
 
-								<p>terms and condtions / No refunds / still need to pay if they have not</p>
+								<p><span class="lead">By clicking submit you are</span> agreeing to our terms and conditions. Uploading this form does not register your yard sale. In order for your yardsale to be registered, you must pay the registration fee. All proceeds go to Big Brothers, Big Sisters of Northern Nevada. </p>
+
 								
 								<!-- HIDDEN -->
-				        {{ Form::hidden('folder_id', $postID, ['class' => 'form-control', 'id' => 'folder-id']) }}
 				        {{ Form::hidden('lat',null, ['class' => 'form-control', 'id' =>'lat']) }}
 				        {{ Form::hidden('lng',null, ['class' => 'form-control', 'id' => 'lng']) }}
 

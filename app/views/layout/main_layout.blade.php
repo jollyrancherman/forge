@@ -84,13 +84,12 @@
 }
 
 .content-header {
+  padding: 20px 0 0 0;
   height: 65px;
   line-height: 65px;
 }
 
 .content-header h1 {
-  margin: 0;
-  margin-top: 10px;
   margin-left: 20px;
   line-height: 65px;
   display: inline-block;
@@ -198,8 +197,8 @@
         <div id="page-content-wrapper">
           <div class="content-header">
             <div class="row">
-              <div class="col-xs-2">
-                <a id="menu-toggle" href="#" class="btn btn-primary">Menu</i></a>
+              <div class="col-xs-2" style="line-height: 0;">
+                <a id="menu-toggle" href="#" class="btn btn-primary btn-xs">Menu</i></a>
               </div>
               <div class="col-xs-7">
                 {{ HTML::image("img/logoWithShadowLarge.png", "Email Header",['class' => 'img-responsive pull-left', 'width' => '600', 'style' => 'display: inlne-block;']) }}                  
