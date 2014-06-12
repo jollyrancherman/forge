@@ -97,8 +97,8 @@
 
 								
 								<!-- HIDDEN -->
-				        {{ Form::hidden('lat',null, ['class' => 'form-control', 'id' =>'lat']) }}
-				        {{ Form::hidden('lng',null, ['class' => 'form-control', 'id' => 'lng']) }}
+                {{ Form::hidden('lng', $yardsale->lng , ['class' => 'form-control', 'id' => 'lng']) }}
+				        {{ Form::hidden('lat', $yardsale->lat , ['class' => 'form-control', 'id' =>'lat']) }}
 
 								<!-- SUBMIT -->
 								{{ Form::submit('Submit', array('class' => 'btn btn-primary')) }}
@@ -133,12 +133,20 @@
 @section('scripts-bot')
 <script>
 function initialize() {
+
+  var lat = $('#lat').val();
+  var lng = $('#lng').val();
+
+  var myLatlng = new google.maps.LatLng(lat,lng);
+
   var mapOptions = {
-    center: new google.maps.LatLng(-33.8688, 151.2195),
-    zoom: 13
+    center: myLatlng,
+    zoom: 10
   };
   var map = new google.maps.Map(document.getElementById('yardsale-map'),
     mapOptions);
+
+  console.log('{{ $yardsale->lng }}');
 
   var input = /** @type {HTMLInputElement} */(
       document.getElementById('pac-input'));
@@ -153,6 +161,14 @@ function initialize() {
     map: map,
     anchorPoint: new google.maps.Point(0, -29)
   });
+
+  if(lat !== '' && lng !== ''){
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: '{{ $yardsale->address }}'
+    });    
+  }
 
   google.maps.event.addListener(autocomplete, 'place_changed', function() {
     infowindow.close();
