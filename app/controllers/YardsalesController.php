@@ -51,7 +51,7 @@ class YardsalesController extends \BaseController {
 
 		$userid = Sentry::getUser()->id;
 
-		$yardsale = Yardsale::where('user_id', '=', $userid)->first();
+		// $yardsale = Yardsale::where('user_id', '=', $userid)->first();
 
 		// dd($yardsale->first());
 
