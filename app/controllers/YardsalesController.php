@@ -31,7 +31,15 @@ class YardsalesController extends \BaseController {
 	{
 		$userid = Sentry::getUser()->id;
 
+
+
 		$yardsale = DB::table('Yardsales')->where('user_id', $userid)->first();
+
+		if($yardsale == NULL){
+			$yardsale = new Yardsale();
+			$yardsale->user_id = $userid;
+			$yardsale->save();
+		}
 
 		Session::put('folder.id', $userid);
 		return View::make('yardsale.create')->with('postID',$userid)->with('yardsale', $yardsale);		
