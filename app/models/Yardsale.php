@@ -10,4 +10,6 @@ class Yardsale extends \Elegant {
 		"title" => 'required',
 		"description" => 'required',
 	];
+
+	public $table = 'Yardsales';
 }
