@@ -10,7 +10,8 @@
 
     <title>FraucCityWide.com</title>
 
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Add custom CSS here -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -182,6 +183,10 @@
 .error-msg {
   color: red;
 }
+
+.control_label.small{
+  color: #AAA;
+}
     </style>
 
 </head>
@@ -210,7 +215,9 @@
                 <p class="small" style="margin: 5px; line-height: 12px;">Brought to you by:</p>
               </div>
               <div class="row">
-                {{ HTML::image("img/logoPlusText.png", "Email Header",['class' => 'img-responsive', 'width' => '200', 'style' => 'display: inlne-block;']) }}                                  
+                <a href="http://frauc.com/" target="_blank">
+                  {{ HTML::image("img/logoPlusText.png", "Email Header",['class' => 'img-responsive', 'width' => '200', 'style' => 'display: inlne-block;']) }}
+                </a>                                 
               </div>
               </div>
             </div>

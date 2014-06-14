@@ -13,11 +13,26 @@ class YardsalesController extends \BaseController {
 		//
 	}
 
-	public function findByCity($city)
+	public function findById($id = '')
+	{
+		$yardsale = Yardsale::where('id','=',$id)->first();
+
+		$path = "public/garageSale/$yardsale->user_id";
+
+		$images = glob("$path/*.{jpg,JPG,jpeg,JPEG,gif,GIF,png,PNG}",GLOB_BRACE);
+		// $images = File::allFiles($path);
+
+		//dd($images);
+
+		return View::make('yardsale.findById')->with('data', $yardsale)->with('images', $images);
+
+	}
+
+	public function findByCity($city = '')
 	{
 		$yardsale = Yardsale::where('area', '=', $city)->get();
 
-		echo $yardsale;
+		return View::make('yardsale.find')->with('data', $yardsale);
 
 	}
 

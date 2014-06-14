@@ -35,7 +35,12 @@
 								<!-- Google Maps -->
 								<div class="form-group">
 									<div id="yardsale-map" style="height: 300px;"></div>
-								  {{ Form::label('address', 'Select address from drop-down', ['class' => 'control_label']) }}
+
+                  <label for="address" class="control_label">Address
+                    <span class="small">
+                      (Type in and pick your address from the dropdown menu)
+                    </span>
+                  </label>
 								  {{ Form::text('address', null, ['class' => 'form-control', 'id' => 'pac-input']) }}
                   {{ $errors->first('address', '<p class="error-msg">:message</p>'); }}
 								</div>
@@ -49,7 +54,7 @@
 								<!-- Description -->
 								<div class="form-group">
 								  {{ Form::label('description', 'Description', ['class' => 'control_label']) }}
-								  {{ Form::textarea('description', null, ['class' => 'form-control']) }}
+								  {{ Form::textarea('description', null, ['class' => 'form-control', 'id' => 'textarea-return']) }}
                   {{ $errors->first('description', '<p class="error-msg">:message</p>'); }}
 								</div>
 								
@@ -108,6 +113,17 @@
 						</div>
 
           </div>
+        </div>
+        
+        <!-- The blueimp Gallery widget -->
+        <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-filter=":even">
+            <div class="slides"></div>
+            <h3 class="title"></h3>
+            <a class="prev">‹</a>
+            <a class="next">›</a>
+            <a class="close">×</a>
+            <a class="play-pause"></a>
+            <ol class="indicator"></ol>
         </div>
 @stop
 
@@ -172,14 +188,13 @@ function initialize() {
 
   if(lat !== '' && lng !== ''){
     marker.setIcon(/** @type {google.maps.Icon} */({
-      url: '/img/signWithShadow.png',
+      url: '/img/signWithShadowMarker.png',
       // This marker is 20 pixels wide by 32 pixels tall.
-      size: new google.maps.Size(400, 300),
+      size: new google.maps.Size(99, 66),
       // The origin for this image is 0,0.
       origin: new google.maps.Point(0,0),
       // The anchor for this image is the base of the flagpole at 0,32.
-      anchor: new google.maps.Point(20,60),
-      scaledSize: new google.maps.Size(80, 60)
+      anchor: new google.maps.Point(20,60)
     }));
     marker.setPosition(myLatlng);
     marker.setVisible(true);   
@@ -208,14 +223,13 @@ function initialize() {
       map.setZoom(17);  // Why 17? Because it looks good.
     }
     marker.setIcon(/** @type {google.maps.Icon} */({
-      url: '/img/signWithShadow.png',
+    url: '/img/signWithShadowMarker.png',
       // This marker is 20 pixels wide by 32 pixels tall.
-      size: new google.maps.Size(400, 300),
+      size: new google.maps.Size(99, 66),
       // The origin for this image is 0,0.
       origin: new google.maps.Point(0,0),
       // The anchor for this image is the base of the flagpole at 0,32.
-      anchor: new google.maps.Point(20,60),
-      scaledSize: new google.maps.Size(80, 60)
+      anchor: new google.maps.Point(20,60)
     }));
     marker.setPosition(place.geometry.location);
     marker.setVisible(true);
@@ -236,13 +250,33 @@ function initialize() {
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
-$('#fileupload').bind("keyup keypress", function(e) {
-  var code = e.keyCode || e.which; 
-  if (code  == 13) {               
-    e.preventDefault();
-    return false;
-  }
-});
+// $('#fileupload').bind("keyup keypress", function(e) {
+//   var code = e.keyCode || e.which; 
+//   if (code  == 13) {               
+//     e.preventDefault();
+//     return false;
+//   }
+// });
+function preventEnterSubmit(e) {
+    if (e.which == 13) {
+        var $targ = $(e.target);
+
+        if (!$targ.is("textarea") && !$targ.is(":button,:submit")) {
+            var focusNext = false;
+            $(this).find(":input:visible:not([disabled],[readonly]), a").each(function(){
+                if (this === e.target) {
+                    focusNext = true;
+                }
+                else if (focusNext){
+                    $(this).focus();
+                    return false;
+                }
+            });
+
+            return false;
+        }
+    }
+}
 </script>
 
 <!-- The template to display files available for upload -->
