@@ -19,8 +19,8 @@
 							<div class="col-md-6 col-md-offset-2">
                 <div id="links">
                 @foreach($images as $image)
-                    <a href="public/garageSale/{{ $data->user_id }}/{{ basename($image) }}" title="{{ $data->address }}" data-gallery>
-                        <img src="public/garageSale/{{ $data->user_id }}/thumbnail/{{ basename($image) }}" alt="{{ $data->address }}">
+                    <a href="/garageSale/{{ $data->user_id }}/{{ basename($image) }}" title="{{ $data->address }}" data-gallery>
+                        {{ HTML::image("/garageSale/$data->user_id/thumbnail/".basename($image), "Logo",['alt' => $data->address])}}
                     </a>
                 @endforeach
                 </div>
