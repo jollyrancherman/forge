@@ -17,7 +17,8 @@ class YardsalesController extends \BaseController {
 	{
 		$yardsale = Yardsale::where('id','=',$id)->first();
 
-		$path = "http://frauccitywide.com/garageSale/$yardsale->user_id";
+		$path = public_path()."/garageSale/$yardsale->user_id";
+		dd($path);
 
 		$images = glob("$path/*.{jpg,JPG,jpeg,JPEG,gif,GIF,png,PNG}",GLOB_BRACE);
 		// $images = File::allFiles($path);
