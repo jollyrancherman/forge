@@ -36,15 +36,8 @@
 
 function initialize() {
   var myLatlng = new google.maps.LatLng(39.45, -119.821812);
-  // var mapOptions = {
-  //   zoom: 11,
-  //   center: myLatlng
-  // }
 
   var addresses = {{ $data }};
-
-  console.log(addresses);
-
   var locations = [];
   var htmlContent = [];
   var iterator = 0;

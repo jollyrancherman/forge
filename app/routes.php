@@ -12,6 +12,7 @@ Route::get('/test',function() {
 Route::get('/contactus', ['as' => 'contactus', 'uses' => 'ContactUsController@create']);
 Route::post('/contactus', ['as' => 'contactus.store', 'uses' => 'ContactUsController@store']);
 
+Route::get('/yardsale/find/{city}/listView', 'YardsalesController@listView');
 Route::get('/yardsale/find/{city}', 'YardsalesController@findByCity');
 Route::get('/yardsale/find/', 'YardsalesController@findByCity');
 Route::get('/yardsale/{id}', 'YardsalesController@findById');

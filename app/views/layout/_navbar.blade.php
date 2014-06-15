@@ -10,7 +10,15 @@
                     <li><a href="/dashboard/yardsale">My Yardsale</a></li>
                     <li><a href="/logout">Logout</a></li>
                 @endif
-                <li style="margin-top: 100px;"><a href="http://frauc.com">frauc.com</a></li>
+
+                <hr />
+                <li><a href="/yardsale/find/douglas">Gardnerville/Minden</a></li>
+                <li><a href="/yardsale/find/carson">Carson</a></li>
+                <li><a href="/yardsale/find/reno">Reno</a></li>
+                <li><a href="/yardsale/find/sparks">Sparks</a></li>
+                <hr />
+
+                <li><a href="http://frauc.com">frauc.com</a></li>
                 <li><a href="http://www.bbbsnn.org/site/c.aiINI5NMKeKYF/b.7529395/k.F024/Home_Page.htm">bbbs.com</a></li>
                 <li><a href="#myModal" role="button" data-toggle="modal">Email Updates!</a></li>
                 <li style="margin-bottom:50px;"><a href="#contactModal" role="button" data-toggle="modal">Contact us</a></li>

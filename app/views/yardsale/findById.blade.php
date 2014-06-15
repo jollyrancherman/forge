@@ -10,7 +10,7 @@
 								<h2>{{ $data->title }}</h2>
 								<p class="lead">{{ $data->address }}</p>
 								<p>{{nl2br($data->description)}}</p>
-								<div id="yardsale-map" style="height: 400px;"></div>
+								<div id="yardsale-map" style="height: 400px; margin-bottom:20px;"></div>
 							</div>
 
 						</div>	

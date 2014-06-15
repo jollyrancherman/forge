@@ -2,28 +2,16 @@
 
 class YardsalesController extends \BaseController {
 
-	/**
-	 * Display a listing of the resource.
-	 * GET /yardsales
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-		//
-	}
-
 	public function findById($id = '')
 	{
+		//find yardsale by id
 		$yardsale = Yardsale::where('id','=',$id)->first();
 
+		//image folder path for yard sale.
 		$path = public_path()."/garageSale/$yardsale->user_id";
-		// dd($path);
 
+		//Grab all images
 		$images = glob("$path/*.{jpg,JPG,jpeg,JPEG,gif,GIF,png,PNG}",GLOB_BRACE);
-		// $images = File::allFiles($path);
-
-		//dd($images);
 
 		return View::make('yardsale.findById')->with('data', $yardsale)->with('images', $images);
 
@@ -34,15 +22,8 @@ class YardsalesController extends \BaseController {
 		$yardsale = Yardsale::where('area', '=', $city)->get();
 
 		return View::make('yardsale.find')->with('data', $yardsale);
-
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 * GET /yardsales/create
-	 *
-	 * @return Response
-	 */
 	public function create()
 	{
 		$userid = Sentry::getUser()->id;
@@ -61,12 +42,6 @@ class YardsalesController extends \BaseController {
 		return View::make('yardsale.create')->with('postID',$userid)->with('yardsale', $yardsale);		
 	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 * POST /yardsales
-	 *
-	 * @return Response
-	 */
 	public function store()
 	{
 		$input = Input::all();
@@ -120,54 +95,6 @@ class YardsalesController extends \BaseController {
 
       return Redirect::to('/dashboard/yardsale')->withMessage('The following errors occurred')->with('messageType', 'bs-callout bs-callout-danger')->withErrors($yardsale->errors())->withInput();   			
 		}
-	}
-
-	/**
-	 * Display the specified resource.
-	 * GET /yardsales/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
-
-	/**
-	 * Show the form for editing the specified resource.
-	 * GET /yardsales/{id}/edit
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-	/**
-	 * Update the specified resource in storage.
-	 * PUT /yardsales/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 * DELETE /yardsales/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
 	}
 
 }
