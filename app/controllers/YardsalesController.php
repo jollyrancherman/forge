@@ -2,6 +2,13 @@
 
 class YardsalesController extends \BaseController {
 
+	public function listView($city = '')
+	{
+		$yardsale = Yardsale::where('area', '=', $city)->get();
+
+		return View::make('yardsale.listview')->with('data', $yardsale);
+	}
+
 	public function findById($id = '')
 	{
 		//find yardsale by id
@@ -21,7 +28,7 @@ class YardsalesController extends \BaseController {
 	{
 		$yardsale = Yardsale::where('area', '=', $city)->get();
 
-		return View::make('yardsale.find')->with('data', $yardsale);
+		return View::make('yardsale.find')->with('data', $yardsale)->with('city', $city);
 	}
 
 	public function create()

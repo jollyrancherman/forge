@@ -4,6 +4,7 @@
           <!-- Keep all page content within the page-content inset div! -->
           <div class="page-content inset"> 
           	<div class="row">
+              <div class="col-xs-12"><a href="/yardsale/find/{{ $city }}/listview"><i class="fa fa-list"></i> Printer Friendly List View</a></div>
           		<div class="col-xs-12" id="yardsale-map"></div>
           	</div>
 						
