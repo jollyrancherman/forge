@@ -6,10 +6,10 @@
           <div class="page-content inset">
             <div class="row">
               <div class="col-md-8 col-md-offset-2">
-                <h2>Be an Insider!</h2>
+                <h2>Host a Yard Sale </h2>
               </div>
               <div class="col-md-8 col-md-offset-2">
-                <p class="lead">Sign up now to become one of the privileged. Thinking about shopping the yard sale event or can’t yet commit to hosting? We will keep you up to date with everything FraucCityWide, including maps, news, and donating information. We’ll catch you on the flip side.</p>
+                <p class="lead">It seems you are ready to commit to a yard sale in your city! Register by entering your email and create a password below. We will send you a confirmation email to finish up this easy process."</p>
               </div>
             </div>
             <div class="row">

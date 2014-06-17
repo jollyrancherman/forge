@@ -9,13 +9,36 @@ Route::get('/test',function() {
 	echo $_ENV['CURRENT_BASE_ADDRESS'];
 });
 
+/*==================================
+=            Contact Us            =
+==================================*/
 Route::get('/contactus', ['as' => 'contactus', 'uses' => 'ContactUsController@create']);
 Route::post('/contactus', ['as' => 'contactus.store', 'uses' => 'ContactUsController@store']);
 
+
+/*================================
+=            Yardsale            =
+================================*/
 Route::get('/yardsale/find/{city}/listview', 'YardsalesController@listView');
 Route::get('/yardsale/find/{city}', 'YardsalesController@findByCity');
 Route::get('/yardsale/find/', 'YardsalesController@findByCity');
 Route::get('/yardsale/{id}', 'YardsalesController@findById');
+
+/*===================================
+=            COMING SOON            =
+===================================*/
+Route::get('/comingsoon', ['as' => 'comingsoon', 'uses' => 'ComingSoonController@create']);
+Route::post('/comingsoon', ['as' => 'comingsoon.store', 'uses' => 'ComingSoonController@store']);
+
+Route::get('/', function(){
+	return Redirect::to('comingsoon');
+});
+
+
+/*========================================
+=            Pages Controller            =
+========================================*/
+Route::get('/tos', ['as' => 'tos', 'uses' => 'PagesController@tos']);
 
 
 /*=================================
@@ -34,6 +57,14 @@ Route::group(['before' => 'auth'], function()
     Route::get('/blueimp', 'ImageController@index');
     Route::delete('/blueimp', 'ImageController@index');
 });
+
+
+
+/*==================================
+=            Guest Only            =
+==================================*/
+
+
 
 
 Route::group(['before' => 'guest'], function()
@@ -71,14 +102,3 @@ Route::group(['before' => 'guest'], function()
 
 
 
-
-
-/*===================================
-=            COMING SOON            =
-===================================*/
-Route::get('/comingsoon', ['as' => 'comingsoon', 'uses' => 'ComingSoonController@create']);
-Route::post('/comingsoon', ['as' => 'comingsoon.store', 'uses' => 'ComingSoonController@store']);
-
-Route::get('/', function(){
-	return Redirect::to('comingsoon');
-});

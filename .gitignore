@@ -2,6 +2,7 @@
 /vendor
 /lib
 /public/garageSale
+/bower_components
 composer.phar
 composer.lock
 .env.*.php

@@ -2,12 +2,12 @@
 
 class PagesController extends \BaseController {
 
-	/**
-	 * Display a listing of the resource.
-	 * GET /pages
-	 *
-	 * @return Response
-	 */
+
+	public function tos()
+	{
+		return View::make('pages.tos');
+	}
+
 	public function passwordReset()
 	{
 		return View::make('pages.passwordreset');
