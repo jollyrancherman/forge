@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://laracasts.com/series/billing-with-stripe/episodes/3 -->
+<html class="wf-museosanscondensed-n3-active wf-museosanscondensed-n5-active wf-museosanscondensed-n9-active wf-active" id="sv"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><script src="./Laracasts   Stripe.js_files/analytics.js"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o?o:n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({D5DuLP:[function(t,n){function e(t,n){var e=r[t];return e?e.apply(this,n):(o[t]||(o[t]=[]),void o[t].push(n))}var r={},o={};n.exports=e,e.queues=o,e.handlers=r},{}],handle:[function(t,n){n.exports=t("D5DuLP")},{}],G9z0Bl:[function(t,n){function e(){var t=l.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&p&&p.body){l.proto="https"===f.split(":")[0]||t.sslForHttp?"https://":"http://",i("mark",["onload",a()]);var n=p.createElement("script");n.src=l.proto+t.agent,p.body.appendChild(n)}}function r(){"complete"===p.readyState&&o()}function o(){i("mark",["domContent",a()])}function a(){return(new Date).getTime()}var i=t("handle"),u=window,p=u.document,s="addEventListener",c="attachEvent",f=(""+location).split("?")[0],l=n.exports={offset:a(),origin:f,features:[]};p[s]?(p[s]("DOMContentLoaded",o,!1),u[s]("load",e,!1)):(p[c]("onreadystatechange",r),u[c]("onload",e)),i("mark",["firstbyte",a()])},{handle:"D5DuLP"}],loader:[function(t,n){n.exports=t("G9z0Bl")},{}]},{},["G9z0Bl"]);</script>
+        <meta name="description" content="Let&#39;s now move on to the JavaScript portion of the series. We need to fetch the user&#39;s data from the form, and submit an AJAX request to Stripe&#39;s servers, at which point, if the card is billable, a unique one-time token will be returned.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="stripe-key" content="pk_live_42cAcd2OvCDs4hpErd5ZscBT">
+
+        <title>Laracasts | Stripe.js</title>
+        <link rel="alternate" type="application/atom+xml" title="Laracasts" href="https://laracasts.com/feed">
+
+        <link href="https://laracasts.com/css/min.css?v=79" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+        <script src="./Laracasts   Stripe.js_files/zjb5wvv.js"></script>
+        <style type="text/css">.tk-museo-sans-condensed{font-family:"museo-sans-condensed",sans-serif;}</style><link rel="stylesheet" href="https://use.typekit.net/c/8b4efb/museo-sans-condensed:n3:n5:n9.XS6:P:2,XS8:P:2,XSD:P:2/d?3bb2a6e53c9684ffdc9a9bf31f5b2a62623a71fdbda06dee3874e56ac6aa1f0f5612bf0e4fa96f9d400b3139a8c7b3f455b375736ca088690d685d098900aa3ceeec492d7e946fb78458921d6d2251f1a172060d202fa83b31d037cef878222955f50b797f3acaaa6b9a6619726b2b202f09e3bb52c81b92263071addb94b5b4a65f0aaf73e5438e1d71f58eefb9a704de58955f1039a2524cb6d0"><script>try{Typekit.load();}catch(e){}</script>
+        <link href="https://laracasts.com/webfonts/ss-steedicons.css" rel="stylesheet">
+            <script async="" src="./Laracasts   Stripe.js_files/embed.js"></script><style id="clearly_highlighting_css" type="text/css">/* selection */ html.clearly_highlighting_enabled ::-moz-selection { background: rgba(246, 238, 150, 0.99); } html.clearly_highlighting_enabled ::selection { background: rgba(246, 238, 150, 0.99); } /* cursor */ html.clearly_highlighting_enabled {    /* cursor and hot-spot position -- requires a default cursor, after the URL one */    cursor: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--cursor.png") 14 16, text; } /* highlight tag */ em.clearly_highlight_element {    font-style: inherit !important; font-weight: inherit !important;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow.png");    background-repeat: repeat-x; background-position: top left; background-size: 100% 100%; } /* the delete-buttons are positioned relative to this */ em.clearly_highlight_element.clearly_highlight_first { position: relative; } /* delete buttons */ em.clearly_highlight_element a.clearly_highlight_delete_element {    display: none; cursor: pointer;    padding: 0; margin: 0; line-height: 0;    position: absolute; width: 34px; height: 34px; left: -17px; top: -17px;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite.png"); background-repeat: no-repeat; background-position: 0px 0px; } em.clearly_highlight_element a.clearly_highlight_delete_element:hover { background-position: -34px 0px; } /* retina */ @media (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {    em.clearly_highlight_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow@2x.png"); }    em.clearly_highlight_element a.clearly_highlight_delete_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite@2x.png"); background-size: 68px 34px; } } </style><script type="text/javascript" src="./Laracasts   Stripe.js_files/sa.js" async=""></script><script type="text/javascript" src="./Laracasts   Stripe.js_files/si1yxxq3.js" async=""></script><style type="text/css">#sv .sublimevideo-TextField{border:none!important;overflow:auto!important;padding:0!important;margin:0!important;background:none!important;cursor:auto!important;resize:none!important;outline:none!important;box-shadow:none!important;-webkit-box-shadow:none!important;-moz-box-shadow:none!important;-o-box-shadow:none!important;transition:none!important;-webkit-transition:none!important;-moz-transition:none!important;-o-transition:none!important;} #sv .sublimevideo-Label{overflow:hidden!important;text-align:left!important;} #sv .sublimevideo-Button{background:none!important;border:none!important;margin:0!important;outline:none!important;padding:0!important;font-size:0!important;line-height:0!important;overflow:visible!important;cursor:pointer!important;} #sv .sublimevideo-View{-webkit-tap-highlight-color:rgba(0,0,0,0)!important;display:block!important;position:absolute!important;text-shadow:none!important;border:none!important;z-index:auto!important;} #sv .sublimevideo-VideoView{line-height:0!important;background:rgba(0, 0, 0, 0.99)!important;direction:ltr!important;padding:0!important;text-align:center!important;-webkit-user-select:none!important;-moz-user-select:none!important;} #sv .sublimevideo-VideoView * {padding:0!important;margin:0!important;border:none!important;overflow:visible!important;background:none!important;float:none!important;z-index:auto!important;-moz-border-radius:0!important;-webkit-border-radius:0!important;border-radius:0!important;-moz-box-shadow:none!important;-webkit-box-shadow:none!important;box-shadow:none!important;text-transform:none!important;text-decoration:none!important;max-width:none!important;top:auto!important;bottom:auto!important;left:auto!important;right:auto!important;} </style><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style><style type="text/css">#sv .sublimevideo-subtitles0 * {font-size:12px!important;font-family:HelveticaNeue,Helvetica,Arial,sans-serif!important;padding:0!important;margin:0!important;border:none!important;overflow:visible!important;float:none!important;-moz-border-radius:0!important;-webkit-border-radius:0!important;border-radius:0!important;-moz-box-shadow:none!important;-webkit-box-shadow:none!important;box-shadow:none!important;text-transform:none!important;text-decoration:none!important;max-width:none!important;} </style></head>
+
+    <body class=" ">
+
+        
+        <div class="page  logged-in">
+                        <div id="navbar-search-form" style="display: block;">
+    <div class="container">
+        <form role="search" action="https://laracasts.com/search" method="GET">
+            <select id="q" name="q" class="demo-default selectized" placeholder="Search for a topic..." tabindex="-1" style="display: none;"><option value="" selected="selected"></option></select><div class="selectize-control demo-default single"><div class="selectize-input items not-full has-options"><input type="text" autocomplete="off" tabindex="" placeholder="Search for a topic..." style="width: 164px;"></div></div>
+        </form>
+    </div>
+</div>
+
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a href="https://laracasts.com/lessons" class="navbar-brand logo">
+                Laracasts
+            </a>
+        </div> <!-- navbar-header -->
+
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <!-- Learning -->
+                <li class="dropdown animated slideInDown">
+                    <a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="dropdown-toggle navbar-link" data-toggle="dropdown">Learn</a>
+                    <ul class="dropdown-menu">
+                        <li class=""><a href="https://laracasts.com/lessons">Lessons</a></li>
+                        <li class=""><a href="https://laracasts.com/series">Series</a></li>
+                        <li class=""><a href="https://laracasts.com/latest">What's New?</a></li>
+                        <li class=""><a href="https://laracasts.com/glossary">Glossary</a></li>
+                    </ul>
+                </li>
+
+                <!-- Tags -->
+                <li class="dropdown animated slideInDown">
+                    <a href="https://laracasts.com/index" class="navbar-link">Browse</a>
+                </li>
+
+                <!-- Community -->
+                <li class="dropdown animated slideInDown">
+                    <a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="dropdown-toggle navbar-link" data-toggle="dropdown">Socialize</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="http://laracasts.com/forum">Forum</a></li>
+                        <li><a href="http://facebook.com/laracasts">Facebook</a></li>
+                        <li><a href="http://twitter.com/laracasts">Twitter</a></li>
+                    </ul>
+                </li>
+
+                            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                                    <li class="dropdown" id="user-options">
+                        <a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="./Laracasts   Stripe.js_files/9c75fcb7c092d59c0385aaca9db7ac64" class="nav-gravatar" alt="underwor">                            underwor <b class="caret"></b>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-with-icons">
+                            <li>
+                                <a href="https://laracasts.com/@underwor">
+                                    <i class="icon-eye-open"></i> Profile
+                                </a>
+                            </li>
+
+                                                            <li>
+                                    <a href="https://laracasts.com/all">
+                                        <i class="icon-tasks"></i> Checklist
+                                    </a>
+                                </li>
+                            
+                                                            <li>
+                                    <a href="https://laracasts.com/saves">
+                                        <i class="ss-clock"></i> Watch Later
+                                    </a>
+                                </li>
+                            
+                            <li>
+                                                                    <a href="https://laracasts.com/admin/subscription/plan">
+                                        <i class="icon-pencil"></i> Settings
+                                    </a>
+                                                            </li>
+
+                            <li>
+                                <a href="https://laracasts.com/logout">
+                                    <i class="icon-signout"></i> Log Out
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                
+                <!-- Search Bubble -->
+                <li>
+                    <button class="navbar-search-button"><i class="icon-search"></i></button>
+                </li>
+            </ul>
+        </div> <!-- collapse -->
+    </div> <!-- container -->
+</nav>
+            <div class="video video__episode">
+    <div class="container">
+        <div class="row">
+    <!-- The Video Wrapper -->
+    <div class="col-md-9">
+        <article class="article clearfix">
+            <div><span class="sublimevideo-View sublimevideo-VideoView" id="sv_player_0" style="position: relative !important; cursor: default !important; top: 0px !important; height: 530.8781065088757px !important; left: 0px !important; width: 848px !important;"><span class="sublimevideo-View sublimevideo-Video sublimevideo-Html5Video sublimevideo-ChromeVideo" style="top: 0px !important; bottom: 0px !important; margin: 0px 0px 0.8781065088757032px !important; height: auto !important; left: 0px !important; right: 0px !important; width: 100% !important; max-width: 848px !important;"><video width="845" height="529" preload="auto" data-autoresize="fit" data-sharing-url="https://laracasts.com/series/billing-with-stripe/episodes/3" style="position: absolute !important; top: 0px !important; left: 0px !important; width: 100% !important; height: 100% !important; visibility: visible !important; display: block !important;">
+        <source src="http://player.vimeo.com/external/76620267.hd.mp4?s=3a5acee8f499d523ccd7d9232c69681f" data-quality="hd">
+                    <source src="">
+            </video></span><span class="sublimevideo-View sublimevideo-ImageView" style="opacity: 0 !important; pointer-events: none !important; overflow: hidden !important; top: 0px !important; bottom: 0px !important; margin: 0px !important; height: 100% !important; left: 0px !important; right: 0px !important; width: 100% !important; display: none !important; background: black !important;"><img src="./Laracasts   Stripe.js_files/never-stop-learning-poster.jpg" width="848" height="0" style="position: absolute !important; display: block !important; width: 848px !important; height: 530px !important; top: 0.4px !important; left: 0px !important; max-width: 848px !important; max-height: none !important;"></span><span class="sublimevideo-View" style="top: 0px !important; bottom: 0px !important; margin: 0px !important; height: 100% !important; left: 0px !important; right: 0px !important; width: 100% !important;"><span class="sublimevideo-View sublimevideo-AbstractControlsView sublimevideo-InlineControlsView sublimevideo-ControlsView" style="z-index: 99 !important; height: 32px !important; bottom: 0px !important; left: 0px !important; right: 0px !important; margin-left: 0px !important; margin-right: 0px !important; width: 100% !important; opacity: 1 !important; display: block !important;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="848" height="32" style="pointer-events: none !important; position: absolute !important; top: 0px !important; left: 0px !important; width: 848px !important; height: 32px !important; background: transparent !important;"><g><g><path d="M0 0 L848 0 L848 32 L0 32 L0 0 Z" transform="" fill="rgba(0,0,0,0.55)"></path></g></g></svg><span class="sublimevideo-View sublimevideo-Button sublimevideo-Slider sublimevideo-ProgressBar" style="z-index: 2 !important; top: 3px !important; height: 26px !important; left: 0px !important; right: 0px !important; margin-left: 79px !important; margin-right: 119.62800000000004px !important; width: auto !important;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="649.372" height="26" style="pointer-events: none !important; position: absolute !important; top: 0px !important; left: 0px !important; width: 649.372px !important; height: 26px !important; background: transparent !important;"><g><g><path d="M1.5 12 L647.872 12 A1.5, 1.5, 90, 0, 1, 649.372, 13.5 A1.5, 1.5, 90, 0, 1, 647.8720000000006, 15 L1.5 15 A1.5, 1.5, 90, 0, 1, 0, 13.5 A1.5, 1.5, 90, 0, 1, 1.5, 12 Z" transform="" fill="rgba(255,255,255,0.15)"></path></g></g></svg><span class="sublimevideo-View" style="display: none !important; opacity: 0 !important; top: 0px !important; height: 26px !important; left: 0px !important; width: 649.372px !important;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="649.372" height="26" style="pointer-events: none !important; position: absolute !important; top: 0px !important; left: 0px !important; width: 649.372px !important; height: 26px !important; background: transparent !important;"><g><g clip-path="url(&quot;https://laracasts.com/series/billing-with-stripe/episodes/3#sublimeClip298&quot;)"><path d="M1.599999733033762 9 L11.599999733033762 9 L3.599999733033762 17 L-6.400000266966238 17 L1.599999733033762 9 M21.599999733033762 9 L31.599999733033762 9 L23.599999733033762 17 L13.599999733033762 17 L21.599999733033762 9 M41.59999973303376 9 L51.59999973303376 9 L43.59999973303376 17 L33.59999973303376 17 L41.59999973303376 9 M61.59999973303376 9 L71.59999973303377 9 L63.59999973303376 17 L53.59999973303376 17 L61.59999973303376 9 M81.59999973303377 9 L91.59999973303377 9 L83.59999973303377 17 L73.59999973303377 17 L81.59999973303377 9 M101.59999973303377 9 L111.59999973303377 9 L103.59999973303377 17 L93.59999973303377 17 L101.59999973303377 9 M121.59999973303377 9 L131.59999973303377 9 L123.59999973303377 17 L113.59999973303377 17 L121.59999973303377 9 M141.59999973303377 9 L151.59999973303377 9 L143.59999973303377 17 L133.59999973303377 17 L141.59999973303377 9 M161.59999973303377 9 L171.59999973303377 9 L163.59999973303377 17 L153.59999973303377 17 L161.59999973303377 9 M181.59999973303377 9 L191.59999973303377 9 L183.59999973303377 17 L173.59999973303377 17 L181.59999973303377 9 M201.59999973303377 9 L211.59999973303377 9 L203.59999973303377 17 L193.59999973303377 17 L201.59999973303377 9 M221.59999973303377 9 L231.59999973303377 9 L223.59999973303377 17 L213.59999973303377 17 L221.59999973303377 9 M241.59999973303377 9 L251.59999973303377 9 L243.59999973303377 17 L233.59999973303377 17 L241.59999973303377 9 M261.59999973303377 9 L271.59999973303377 9 L263.59999973303377 17 L253.59999973303377 17 L261.59999973303377 9 M281.59999973303377 9 L291.59999973303377 9 L283.59999973303377 17 L273.59999973303377 17 L281.59999973303377 9 M301.59999973303377 9 L311.59999973303377 9 L303.59999973303377 17 L293.59999973303377 17 L301.59999973303377 9 M321.59999973303377 9 L331.59999973303377 9 L323.59999973303377 17 L313.59999973303377 17 L321.59999973303377 9 M341.59999973303377 9 L351.59999973303377 9 L343.59999973303377 17 L333.59999973303377 17 L341.59999973303377 9 M361.59999973303377 9 L371.59999973303377 9 L363.59999973303377 17 L353.59999973303377 17 L361.59999973303377 9 M381.59999973303377 9 L391.59999973303377 9 L383.59999973303377 17 L373.59999973303377 17 L381.59999973303377 9 M401.59999973303377 9 L411.59999973303377 9 L403.59999973303377 17 L393.59999973303377 17 L401.59999973303377 9 M421.59999973303377 9 L431.59999973303377 9 L423.59999973303377 17 L413.59999973303377 17 L421.59999973303377 9 M441.59999973303377 9 L451.59999973303377 9 L443.59999973303377 17 L433.59999973303377 17 L441.59999973303377 9 M461.59999973303377 9 L471.59999973303377 9 L463.59999973303377 17 L453.59999973303377 17 L461.59999973303377 9 M481.59999973303377 9 L491.59999973303377 9 L483.59999973303377 17 L473.59999973303377 17 L481.59999973303377 9 M501.59999973303377 9 L511.59999973303377 9 L503.59999973303377 17 L493.59999973303377 17 L501.59999973303377 9 M521.5999997330338 9 L531.5999997330338 9 L523.5999997330338 17 L513.5999997330338 17 L521.5999997330338 9 M541.5999997330338 9 L551.5999997330338 9 L543.5999997330338 17 L533.5999997330338 17 L541.5999997330338 9 M561.5999997330338 9 L571.5999997330338 9 L563.5999997330338 17 L553.5999997330338 17 L561.5999997330338 9 M581.5999997330338 9 L591.5999997330338 9 L583.5999997330338 17 L573.5999997330338 17 L581.5999997330338 9 M601.5999997330338 9 L611.5999997330338 9 L603.5999997330338 17 L593.5999997330338 17 L601.5999997330338 9 M621.5999997330338 9 L631.5999997330338 9 L623.5999997330338 17 L613.5999997330338 17 L621.5999997330338 9 M641.5999997330338 9 L651.5999997330338 9 L643.5999997330338 17 L633.5999997330338 17 L641.5999997330338 9 M661.5999997330338 9 L671.5999997330338 9 L663.5999997330338 17 L653.5999997330338 17 L661.5999997330338 9 M681.5999997330338 9 L691.5999997330338 9 L683.5999997330338 17 L673.5999997330338 17 L681.5999997330338 9 M701.5999997330338 9 L711.5999997330338 9 L703.5999997330338 17 L693.5999997330338 17 L701.5999997330338 9 M721.5999997330338 9 L731.5999997330338 9 L723.5999997330338 17 L713.5999997330338 17 L721.5999997330338 9 M741.5999997330338 9 L751.5999997330338 9 L743.5999997330338 17 L733.5999997330338 17 L741.5999997330338 9 Z" transform="" fill="rgba(0,0,0,0.2)"></path></g></g><defs><clippath id="sublimeClip298"><path d="M1.5 12 L647.872 12 A1.5, 1.5, 90, 0, 1, 649.372, 13.5 A1.5, 1.5, 90, 0, 1, 647.8720000000006, 15 L1.5 15 A1.5, 1.5, 90, 0, 1, 0, 13.5 A1.5, 1.5, 90, 0, 1, 1.5, 12 Z"></path></clippath></defs></svg></span><span class="sublimevideo-View" style="top: 0px !important; height: 26px !important; left: 0px !important; width: 649.372px !important;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="649.372" height="26" style="pointer-events: none !important; position: absolute !important; top: 0px !important; left: 0px !important; width: 649.372px !important; height: 26px !important; background: transparent !important;"><g><g><path d="M1.5 12 L647.8720223960141 12 A1.5, 1.5, 90, 0, 1, 649.372022396014, 13.49999999999981 A1.5, 1.5, 90, 0, 1, 647.8720223960146, 15 L1.4999999999998863 15 A1.5, 1.5, 90, 0, 1, 0, 13.5 A1.5, 1.5, 90, 0, 1, 1.5, 12 Z" transform="" fill="rgba(255,255,255,0.15)"></path></g></g></svg></span><span class="sublimevideo-View" style="top: 0px !important; bottom: 0px !important; margin: 0px !important; height: 100% !important; left: 0px !important; right: 0px !important; width: 100% !important;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="649.372" height="26" style="pointer-events: none !important; position: absolute !important; top: 0px !important; left: 0px !important; width: 649.372px !important; height: 26px !important; background: transparent !important;"><g><g><path d="M1.5 12 L222.17538087301114 12 A1.5, 1.5, 90, 0, 1, 223.67538087301114, 13.5 A1.5, 1.5, 90, 0, 1, 222.17538087301122, 15 L1.5 15 A1.5, 1.5, 90, 0, 1, 0, 13.5 A1.5, 1.5, 90, 0, 1, 1.4999999999999998, 12 Z" transform="" fill="rgba(255,255,255,1)"></path></g></g></svg></span><span class="sublimevideo-View sublimevideo-Button" style="display: none !important; top: -13px !important; height: 39px !important; left: 149px !important; width: 46px !important; opacity: 0 !important;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="46" height="39" style="pointer-events: none !important; position: absolute !important; top: 0px !important; left: 0px !important; width: 46px !important; height: 39px !important; background: transparent !important;"><g><g><path d="M0 0 L0 3.28 C0 1.469, 1.484 0, 3.315 0 L42.684 0 C44.515 0, 46 1.469, 46 3.28 L46 10 L0 10 Z" transform="" fill="rgba(0,0,0,0.55)"></path></g></g></svg><span class="sublimevideo-View sublimevideo-Label" style="font-family: HelveticaNeue, Helvetica, Arial, sans-serif !important; font-style: normal !important; color: rgb(255, 255, 255) !important; text-align: center !important; font-size: 11px !important; font-weight: bold !important; line-height: 22px !important; padding: 0px !important; border: none !important; overflow: visible !important; float: none !important; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important; border-bottom-right-radius: 0px !important; border-bottom-left-radius: 0px !important; -webkit-box-shadow: none !important; box-shadow: none !important; text-transform: none !important; text-decoration: none !important; max-width: none !important; top: 0px !important; bottom: 0px !important; margin: 0px !important; height: 100% !important; left: 0px !important; right: 0px !important; width: 100% !important;">03:49</span></span></span><span class="sublimevideo-View sublimevideo-Button sublimevideo-TimeButton" style="top: 0px !important; height: 32px !important; left: 34px !important; width: 31px !important;"><span class="sublimevideo-View sublimevideo-Label" style="font-size: 11px !important; font-family: Helvetica, Arial, sans-serif !important; font-weight: bold !important; line-height: 34px !important; padding: 0px !important; border: none !important; overflow: visible !important; float: none !important; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important; border-bottom-right-radius: 0px !important; border-bottom-left-radius: 0px !important; -webkit-box-shadow: none !important; box-shadow: none !important; text-transform: none !important; text-decoration: none !important; max-width: none !important; font-style: normal !important; color: rgb(255, 255, 255) !important; text-align: center !important; top: 0px !important; bottom: 0px !important; margin: 0px !important; height: 100% !important; left: 0px !important; right: 0px !important; width: 100% !important;">04:59</span></span><span class="sublimevideo-View sublimevideo-Button sublimevideo-Slider" style="top: 12px !important; height: 8px !important; width: 42px !important; right: 38px !important;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="42" height="8" style="pointer-events: none !important; position: absolute !important; top: 0px !important; left: 0px !important; width: 42px !important; height: 8px !important; background: transparent !important;"><g><g><path d="M1.5 3 L40.50000000000001 3 A1.5, 1.5, 90, 0, 1, 42, 4.500000000000003 A1.5, 1.5, 90, 0, 1, 40.49999999999999, 6 L1.5 6 A1.5, 1.5, 90, 0, 1, 0, 4.5 A1.5, 1.5, 90, 0, 1, 1.5, 3 Z" transform="" fill="rgba(255,255,255,0.15)"></path></g></g></svg><span class="sublimevideo-View" style="top: 0px !important; bottom: 0px !important; margin: 0px !important; height: 100% !important; left: 0px !important; right: 0px !important; width: 100% !important;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="42" height="8" style="pointer-events: none !important; position: absolute !important; top: 0px !important; left: 0px !important; width: 42px !important; height: 8px !important; background: transparent !important;"><g><g><path d="M1.5 3 L40.50000000000001 3 A1.5, 1.5, 90, 0, 1, 42, 4.500000000000003 A1.5, 1.5, 90, 0, 1, 40.49999999999999, 6 L1.5 6 A1.5, 1.5, 90, 0, 1, 0, 4.5 A1.5, 1.5, 90, 0, 1, 1.5, 3 Z" transform="" fill="rgba(255,255,255,1)"></path></g></g></svg></span></span><span class="sublimevideo-View sublimevideo-Button sublimevideo-VolumeButton" style="top: 0px !important; height: 32px !important; width: 32px !important; right: 80px !important;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="pointer-events: none !important; position: absolute !important; top: 0px !important; left: 0px !important; width: 32px !important; height: 32px !important; background: transparent !important;"><g><g><path d="M7 14 L11 14 L16 10 L16 22 L11 18 L7 18 L7 14 M22.139 20.987000000000002 C21.863 20.987000000000002, 21.639 20.762999999999998, 21.639 20.487000000000002 C21.639 20.21, 21.863 19.987000000000002, 22.139 19.987000000000002 C23.488 19.987000000000002, 24.628 18.158, 24.628 15.993 C24.628 13.829, 23.488 12, 22.139 12 C21.863 12, 21.639 11.776, 21.639 11.5 C21.639 11.224, 21.863 11, 22.139 11 C24.096 11, 25.628 13.193, 25.628 15.993 C25.628 18.793, 24.096 20.987000000000002, 22.139 20.987000000000002 M19.995 19.075 C19.719 19.075, 19.495 18.851, 19.495 18.575 C19.495 18.298000000000002, 19.719 18.075, 19.995 18.075 C20.883 18.075, 21.605 17.183, 21.605 16.088 C21.605 14.993, 20.883 14.102, 19.995 14.102 C19.719 14.102, 19.495 13.878, 19.495 13.602 C19.495 13.326, 19.719 13.102, 19.995 13.102 C21.434 13.102, 22.605 14.440999999999999, 22.605 16.088 C22.605 17.735, 21.434 19.075, 19.995 19.075 M18.861 15.186 C19.338 15.186, 19.723 15.572, 19.723 16.047 C19.723 16.524, 19.338 16.911, 18.861 16.911 C18.384999999999998 16.911, 18 16.524, 18 16.047 C18 15.572, 18.384999999999998 15.186, 18.861 15.186 Z" transform="" fill="rgba(255,255,255,1)"></path></g></g></svg></span><span class="sublimevideo-View sublimevideo-Button" style="top: 0px !important; height: 32px !important; width: 32px !important; right: 1px !important;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="pointer-events: none !important; position: absolute !important; top: 0px !important; left: 0px !important; width: 32px !important; height: 32px !important; background: transparent !important;"><g><g><path d="M10 10 L16 10 L13.6 12.4 L16 14.8 L14.8 16 L12.4 13.6 L10 16 L10 10 M23 23 L17 23 L19.4 20.6 L17 18.200000000000003 L18.2 17 L20.6 19.4 L23 17 L23 23 Z" transform="" fill="rgba(255,255,255,1)"></path></g></g></svg></span><span class="sublimevideo-View sublimevideo-Button" style="top: 0px !important; height: 32px !important; left: 0px !important; width: 32px !important;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="pointer-events: none !important; position: absolute !important; top: 0px !important; left: 0px !important; width: 32px !important; height: 32px !important; background: transparent !important;"><g><g><path d="M11 11 L21 16.5 L11 22 L11 11 Z" transform="" fill="rgba(255,255,255,1)"></path></g></g></svg></span></span><span class="sublimevideo-View sublimevideo-Button" style="top: 10px !important; height: 46px !important; width: 46px !important; right: 10px !important; opacity: 1 !important; display: block !important;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="46" height="46" style="pointer-events: none !important; position: absolute !important; top: 0px !important; left: 0px !important; width: 46px !important; height: 46px !important; background: transparent !important;"><g><g><path d="M4 0 L42 0 A4, 4, 90, 0, 1, 46, 4 L46 42 A4, 4, 90, 0, 1, 42, 46 L4 46 A4, 4, 90, 0, 1, 0, 42 L0 4 A4, 4, 90, 0, 1, 4, 0 Z" transform="" fill="rgba(0,0,0,0.55)"></path></g><g><path d="M16.65228 26.094559999999998 C16.65228 26.094559999999998, 17.96304 22.9496, 22.97676 22.35416 C23.79684 22.25624, 25.04316 22.16048, 27.01776 22.16048 L27.01776 26.09384 L36.000119999999995 20.04692 L27.014519999999997 14 L27.014519999999997 17.63672 C27.014519999999997 17.63672, 16.65228 18.43196, 16.65228 26.094559999999998 M29.996039999999997 29.00192 L14.99916 29.00192 L14.99916 20.00696 L16.97844 20.00696 C18.00696 18.86828, 19.35948 17.90708, 21.01764 17.16692 C21.14256 17.11148, 21.26748 17.06, 21.392760000000003 17.00816 L12 17.00816 L12 32 L32.99628 32 L32.99628 24.479599999999998 L29.996039999999997 26.49812 L29.996039999999997 29.00192 Z" transform="" fill="rgba(255,255,255,1)"></path></g></g></svg></span></span></span>
+                                    <video id="laracasts-video" class="sublime" width="845" height="529" preload="auto" data-autoresize="fit" data-sharing-url="https://laracasts.com/series/billing-with-stripe/episodes/3" poster="https://s3.amazonaws.com/laracasts/images/never-stop-learning-poster.jpg" src="" style="display: none !important;">
+        <source src="http://player.vimeo.com/external/76620267.hd.mp4?s=3a5acee8f499d523ccd7d9232c69681f" data-quality="hd">
+                    <source src="">
+            </video>
+
+                            </div>
+
+            <div class="lesson-body col-sm-12">
+                <p>Let's now move on to the JavaScript portion of the series. We need to fetch the user's data from the form, and submit an AJAX request to Stripe's servers, at which point, if the card is billable, a unique one-time token will be returned.</p>            </div>
+
+                            <ul class="lesson-tags">
+                                            <li>
+                            <i class="ss-tag"></i>
+                            <a href="https://laracasts.com/index/stripe">stripe</a>                        </li>
+                                    </ul>
+                    </article>
+    </div>
+
+    <!-- Lesson Sidebar -->
+    <aside class="col-md-3 lesson-sidebar">
+        <h1>Stripe.js</h1>
+
+        <ul class="lesson-meta zeroed">
+
+            <li class="lesson-meta__length">
+                <i class="ss-clock"></i>
+                <span>9:23</span>
+            </li>
+
+                            <li>
+                    <a href="https://laracasts.com/downloads/9?type=episode" title="Download Video" class="">
+                        <i class="icon-download-alt"></i> Download Lesson
+                    </a>
+                </li>
+            
+            <li id="playback-rate">
+                <i class="ss-fastforward"></i>
+                <!-- Single button -->
+                <div class="btn-group">
+                    <button type="button" class="dropdown-toggle naked-btn" data-toggle="dropdown">
+                        Playback Speed
+                    </button>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-playback-speed=".75">.75x</a></li>
+                        <li><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="active" data-playback-speed="1">1x</a></li>
+                        <li><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-playback-speed="1.5">1.5x</a></li>
+                        <li><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-playback-speed="2">2x</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="lesson-meta__completed-button">
+                <form method="POST" action="https://laracasts.com/lessons/complete" accept-charset="UTF-8" class="watched-form lesson-watched-toggle"><input name="_token" type="hidden" value="HykbReVjqzKlYeCuCEtQIlswxZA6YM7qhy5WONNX">        <input name="lesson-id" type="hidden" value="9">        <input name="completed" type="hidden" value="">        <input name="type" type="hidden" value="episode">
+        <button type="submit" class="naked-btn lesson-completed-checkbox tt" title="" data-delay="500" data-original-title="Mark as Watched">
+            <i class="ss-clipboard"></i>
+
+                                                <span data-toggle-text="Watched">Mark as Complete</span>
+                                    </button>
+    </form>            </li>
+
+            <div class="lesson-watch-later lesson-meta-item">
+        <form method="POST" action="https://laracasts.com/lessons/9/save" accept-charset="UTF-8" id="watch-later-9"><input name="_token" type="hidden" value="HykbReVjqzKlYeCuCEtQIlswxZA6YM7qhy5WONNX">            <input name="type" type="hidden" value="Laracasts\Episode">            <button type="submit" class="naked-btn lesson-watch-later-button tt text-muted" title="" data-delay="500" data-original-title="Watch Later">
+                <i class="ss-clock "></i>
+                                    Watch Later
+                            </button>
+        </form>    </div>
+
+            <!-- This displays the favorited form and heart icon thing -->
+
+                            <li>
+        <i class="icon-arrow-left"></i>
+        <a id="episode-prev-link" href="https://laracasts.com/series/billing-with-stripe/episodes/2" title="Previous Episode - or press the left-arrow key">
+            Previous Lesson
+        </a>
+    </li>
+
+    <li>
+        <i class="icon-arrow-right"></i>
+        <a id="episode-next-link" href="https://laracasts.com/series/billing-with-stripe/episodes/4" title="Next Episode - or press the right-arrow key">
+            Next Lesson
+        </a>
+    </li>
+            
+        </ul>
+    </aside>
+</div>    </div>
+</div>
+
+<div class="episode-outline-wrap">
+    <div class="container wrap">
+        <h2 class="heading-top" style="margin-bottom:1em">
+            <a href="https://laracasts.com/series/billing-with-stripe">Billing With Stripe</a>
+        </h2>
+
+        <table class="episode-outline table table-bordered table-hover episode-outline-striped">
+    <tbody>
+                    <tr class="episode-wrap ">
+                <td class="episode-index">1</td>
+
+                <td class="episode-title">
+                                            <a href="https://laracasts.com/series/billing-with-stripe/episodes/1" class="">
+                            The Stripe Dashboard
+                                                    </a>
+                                    </td>
+
+                <td class="episode-length">
+                                            6:04                                    </td>
+
+                                    <td class="episode-status">
+                        <form method="POST" action="https://laracasts.com/lessons/complete" accept-charset="UTF-8" class="watched-form lesson-watched-toggle"><input name="_token" type="hidden" value="HykbReVjqzKlYeCuCEtQIlswxZA6YM7qhy5WONNX">        <input name="lesson-id" type="hidden" value="5">        <input name="completed" type="hidden" value="">        <input name="type" type="hidden" value="episode">
+        <button type="submit" class="naked-btn lesson-completed-checkbox tt" title="" data-delay="500" data-original-title="Mark as Watched">
+            <i class="ss-clipboard"></i>
+
+                    </button>
+    </form>                    </td>
+
+                    <td class="episode-watch-later">
+                        <div class="lesson-watch-later lesson-meta-item">
+        <form method="POST" action="https://laracasts.com/lessons/5/save" accept-charset="UTF-8" id="watch-later-5"><input name="_token" type="hidden" value="HykbReVjqzKlYeCuCEtQIlswxZA6YM7qhy5WONNX">            <input name="type" type="hidden" value="Laracasts\Episode">            <button type="submit" class="naked-btn lesson-watch-later-button tt text-muted" title="" data-delay="500" data-original-title="Watch Later">
+                <i class="ss-clock "></i>
+                            </button>
+        </form>    </div>
+                    </td>
+                
+            </tr>
+                    <tr class="episode-wrap ">
+                <td class="episode-index">2</td>
+
+                <td class="episode-title">
+                                            <a href="https://laracasts.com/series/billing-with-stripe/episodes/2" class="">
+                            Building the Form
+                                                    </a>
+                                    </td>
+
+                <td class="episode-length">
+                                            8:38                                    </td>
+
+                                    <td class="episode-status">
+                        <form method="POST" action="https://laracasts.com/lessons/complete" accept-charset="UTF-8" class="watched-form lesson-watched-toggle"><input name="_token" type="hidden" value="HykbReVjqzKlYeCuCEtQIlswxZA6YM7qhy5WONNX">        <input name="lesson-id" type="hidden" value="6">        <input name="completed" type="hidden" value="">        <input name="type" type="hidden" value="episode">
+        <button type="submit" class="naked-btn lesson-completed-checkbox tt" title="" data-delay="500" data-original-title="Mark as Watched">
+            <i class="ss-clipboard"></i>
+
+                    </button>
+    </form>                    </td>
+
+                    <td class="episode-watch-later">
+                        <div class="lesson-watch-later lesson-meta-item">
+        <form method="POST" action="https://laracasts.com/lessons/6/save" accept-charset="UTF-8" id="watch-later-6"><input name="_token" type="hidden" value="HykbReVjqzKlYeCuCEtQIlswxZA6YM7qhy5WONNX">            <input name="type" type="hidden" value="Laracasts\Episode">            <button type="submit" class="naked-btn lesson-watch-later-button tt text-muted" title="" data-delay="500" data-original-title="Watch Later">
+                <i class="ss-clock "></i>
+                            </button>
+        </form>    </div>
+                    </td>
+                
+            </tr>
+                    <tr class="episode-wrap active">
+                <td class="episode-index">3</td>
+
+                <td class="episode-title">
+                                            <a href="./Laracasts   Stripe.js_files/Laracasts   Stripe.js.html" class="">
+                            Stripe.js
+                                                    </a>
+                                    </td>
+
+                <td class="episode-length">
+                                            9:23                                    </td>
+
+                                    <td class="episode-status">
+                        <form method="POST" action="https://laracasts.com/lessons/complete" accept-charset="UTF-8" class="watched-form lesson-watched-toggle"><input name="_token" type="hidden" value="HykbReVjqzKlYeCuCEtQIlswxZA6YM7qhy5WONNX">        <input name="lesson-id" type="hidden" value="9">        <input name="completed" type="hidden" value="">        <input name="type" type="hidden" value="episode">
+        <button type="submit" class="naked-btn lesson-completed-checkbox tt" title="" data-delay="500" data-original-title="Mark as Watched">
+            <i class="ss-clipboard"></i>
+
+                    </button>
+    </form>                    </td>
+
+                    <td class="episode-watch-later">
+                        <div class="lesson-watch-later lesson-meta-item">
+        <form method="POST" action="https://laracasts.com/lessons/9/save" accept-charset="UTF-8" id="watch-later-9"><input name="_token" type="hidden" value="HykbReVjqzKlYeCuCEtQIlswxZA6YM7qhy5WONNX">            <input name="type" type="hidden" value="Laracasts\Episode">            <button type="submit" class="naked-btn lesson-watch-later-button tt text-muted" title="" data-delay="500" data-original-title="Watch Later">
+                <i class="ss-clock "></i>
+                            </button>
+        </form>    </div>
+                    </td>
+                
+            </tr>
+                    <tr class="episode-wrap ">
+                <td class="episode-index">4</td>
+
+                <td class="episode-title">
+                                            <a href="https://laracasts.com/series/billing-with-stripe/episodes/4" class="">
+                            Finally, Charging
+                                                    </a>
+                                    </td>
+
+                <td class="episode-length">
+                                            14:36                                    </td>
+
+                                    <td class="episode-status">
+                        <form method="POST" action="https://laracasts.com/lessons/complete" accept-charset="UTF-8" class="watched-form lesson-watched-toggle"><input name="_token" type="hidden" value="HykbReVjqzKlYeCuCEtQIlswxZA6YM7qhy5WONNX">        <input name="lesson-id" type="hidden" value="10">        <input name="completed" type="hidden" value="">        <input name="type" type="hidden" value="episode">
+        <button type="submit" class="naked-btn lesson-completed-checkbox tt" title="" data-delay="500" data-original-title="Mark as Watched">
+            <i class="ss-clipboard"></i>
+
+                    </button>
+    </form>                    </td>
+
+                    <td class="episode-watch-later">
+                        <div class="lesson-watch-later lesson-meta-item">
+        <form method="POST" action="https://laracasts.com/lessons/10/save" accept-charset="UTF-8" id="watch-later-10"><input name="_token" type="hidden" value="HykbReVjqzKlYeCuCEtQIlswxZA6YM7qhy5WONNX">            <input name="type" type="hidden" value="Laracasts\Episode">            <button type="submit" class="naked-btn lesson-watch-later-button tt text-muted" title="" data-delay="500" data-original-title="Watch Later">
+                <i class="ss-clock "></i>
+                            </button>
+        </form>    </div>
+                    </td>
+                
+            </tr>
+                    <tr class="episode-wrap ">
+                <td class="episode-index">5</td>
+
+                <td class="episode-title">
+                                            <a href="https://laracasts.com/series/billing-with-stripe/episodes/5" class="">
+                            Customers and Exceptions
+                                                    </a>
+                                    </td>
+
+                <td class="episode-length">
+                                            9:48                                    </td>
+
+                                    <td class="episode-status">
+                        <form method="POST" action="https://laracasts.com/lessons/complete" accept-charset="UTF-8" class="watched-form lesson-watched-toggle"><input name="_token" type="hidden" value="HykbReVjqzKlYeCuCEtQIlswxZA6YM7qhy5WONNX">        <input name="lesson-id" type="hidden" value="20">        <input name="completed" type="hidden" value="">        <input name="type" type="hidden" value="episode">
+        <button type="submit" class="naked-btn lesson-completed-checkbox tt" title="" data-delay="500" data-original-title="Mark as Watched">
+            <i class="ss-clipboard"></i>
+
+                    </button>
+    </form>                    </td>
+
+                    <td class="episode-watch-later">
+                        <div class="lesson-watch-later lesson-meta-item">
+        <form method="POST" action="https://laracasts.com/lessons/20/save" accept-charset="UTF-8" id="watch-later-20"><input name="_token" type="hidden" value="HykbReVjqzKlYeCuCEtQIlswxZA6YM7qhy5WONNX">            <input name="type" type="hidden" value="Laracasts\Episode">            <button type="submit" class="naked-btn lesson-watch-later-button tt text-muted" title="" data-delay="500" data-original-title="Watch Later">
+                <i class="ss-clock "></i>
+                            </button>
+        </form>    </div>
+                    </td>
+                
+            </tr>
+            </tbody>
+</table>
+
+    </div>
+</div>
+
+
+
+<div class="container wrap">
+    <div class="row">
+
+        <div class="col-md-12 content">
+                <div class="row">
+    <div class="comments col-md-12">
+        <div id="disqus_thread"><iframe id="dsq-2" data-disqus-uid="2" allowtransparency="true" frameborder="0" tabindex="0" title="Disqus" width="100%" src="./Laracasts   Stripe.js_files/saved_resource.html" scrolling="no" horizontalscrolling="no" verticalscrolling="no" style="width: 100% !important; border: none !important; overflow: hidden !important; height: 3290px !important;"></iframe><iframe id="dsq-indicator-north" data-disqus-uid="indicator-north" allowtransparency="true" frameborder="0" tabindex="0" title="Disqus" scrolling="no" style="width: 1140px !important; border: none !important; overflow: hidden !important; top: 0px !important; min-width: 1140px !important; max-width: 1140px !important; position: fixed !important; z-index: 2147483646 !important; height: 29px !important; min-height: 29px !important; max-height: 29px !important; display: none !important;"></iframe><iframe id="dsq-indicator-south" data-disqus-uid="indicator-south" allowtransparency="true" frameborder="0" tabindex="0" title="Disqus" scrolling="no" style="width: 1140px !important; border: none !important; overflow: hidden !important; bottom: 0px !important; min-width: 1140px !important; max-width: 1140px !important; position: fixed !important; z-index: 2147483646 !important; height: 29px !important; min-height: 29px !important; max-height: 29px !important; display: none !important;"></iframe></div>
+
+        <script>
+            var disqus_shortname = 'laracast';
+
+            (function() {
+                var dsq = document.createElement('script'); dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+    </div>
+</div>
+        </div>
+
+    </div>
+</div>
+
+<footer id="footer" class="wrap piece ">
+    <div class="container">
+        <ul class="col-md-4 naked footer-nav" style="padding-left: 0; margin-bottom: 5em;">
+            <li>Laracasts — 2014</li>
+            <li class="divider"></li>
+            <li><a href="https://laracasts.com/about">About</a></li>
+            <li><a href="https://laracasts.com/testimonials">Testimonials</a></li>
+            <li><a href="https://laracasts.com/faq">FAQ</a></li>
+            <li><a href="https://laracasts.com/all">All Lessons</a></li>
+            <li><a href="https://laracasts.uservoice.com/">Requests</a></li>
+            <li><a href="https://laracasts.com/support/create">Customer Support</a></li>
+            <li><a href="https://laracasts.com/feed">RSS</a></li>
+            <li><a href="https://laracasts.com/stats">Statistics</a></li>
+
+            <li class="divider"></li>
+
+                    </ul>
+
+        <div class="inline-nav col-md-4 text-center footer-hosting">
+            <p>Proudly hosted with <a href="https://forge.laravel.com/">Laravel Forge</a> and <a href="https://www.digitalocean.com/?refcode=d2070a2d5f35">DigitalOcean</a></p>
+        </div>
+
+        <ul class="inline-nav inline-nav-right nav-icons col-md-4 footer-social">
+            <li class="pull-right"><a href="http://www.youtube.com/user/laracasts/videos?flow=list&live_view=500&sort=dd&view=0"><i class="icon-youtube icon-2x"></i></a></li>
+            <li class="pull-right"><a href="http://facebook.com/laracasts"><i class="icon-facebook icon-2x"></i></a></li>
+            <li class="pull-right"><a href="http://twitter.com/laracasts"><i class="icon-twitter icon-2x"></i></a></li>
+        </ul>
+    </div>
+</footer>
+
+</div> <!-- close page div -->
+
+<script>var Views = {};</script>
+<script src="./Laracasts   Stripe.js_files/all.js"></script><div class="selectize-dropdown demo-default single" style="display: none; width: 100px; top: 12px; left: 0px;"><div class="selectize-dropdown-content"></div></div>
+<script>new WOW().init(); </script>
+<script src="./Laracasts   Stripe.js_files/si1yxxq3(1).js"></script>
+
+<!-- Google Analytics -->
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+
+    ga('create','UA-44120322-1');ga('send','pageview');
+</script>
+
+<script>
+    (function() {
+        var visitEpisode = function(href) {
+            href && (location = href);
+        };
+
+        $(document).on('keyup', function(e) {
+            // 37 = left, 39 = right
+            if ( ! $(e.target).is('input')) {
+                if (e.keyCode === 37) {
+                    visitEpisode($('#episode-prev-link').attr('href'));
+                }
+                if (e.keyCode === 39) {
+                    visitEpisode($('#episode-next-link').attr('href'));
+                }
+            }
+        });
+    })();
+</script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-3.newrelic.com","licenseKey":"63eeee14d0","applicationID":"3670257","transactionName":"ZARTYhYAWBJQW0ReVl1OcFUQCFkPHl1AXkpcBVQ=","queueTime":0,"applicationTime":214,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-411.min.js"}</script>
+
+
+<script src="./Laracasts   Stripe.js_files/nr-411.min.js"></script><script type="text/javascript" src="./Laracasts   Stripe.js_files/63eeee14d0"></script></body></html>

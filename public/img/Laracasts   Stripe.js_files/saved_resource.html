@@ -1,0 +1,4208 @@
+<!DOCTYPE html>
+<!-- saved from url=(0238)https://disqus.com/embed/comments/?base=default&disqus_version=5aea6fe1&f=laracast&t_u=https%3A%2F%2Flaracasts.com%2Fseries%2Fbilling-with-stripe%2Fepisodes%2F3&t_d=Laracasts%20%7C%20Stripe.js&t_t=Laracasts%20%7C%20Stripe.js&s_o=default#2 -->
+<html lang="en" dir="ltr" class="js no-touch localstorage sessionstorage contenteditable use-opacity-transitions"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Disqus Comments</title>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <style>
+        html {
+            overflow: hidden;
+        }
+        
+    </style>
+
+<link rel="stylesheet" href="https://a.disquscdn.com/next/styles/lounge.87e3488f65dceb4823567fa78e450fea.css"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="remote/config" src="config.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common.bundle" src="common.588831d8e413555526950a1a64fcf2b6.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="lounge.bundle" src="lounge.b8109e77dd806c0011ad453cbbbb8a36.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://ssl.google-analytics.com/ga.js" src="ga.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://sb.scorecardresearch.com/beacon.js" src="beacon.js"></script><style id="css_1403087571345"></style><!--<base target="_parent" href="https://laracasts.com/series/billing-with-stripe/episodes/3">--><base href="." target="_parent"><link rel="stylesheet" href="https://a.disquscdn.com/next/styles/discovery.2e8fcbb9a5f15e554ff5def263c47481.css"><script src="event.js" async="" charset="UTF-8"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="//a.disquscdn.com/next/discovery.6d8c85b48e91bd2d0f232b2e789d3b40.js" src="discovery.6d8c85b48e91bd2d0f232b2e789d3b40.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="highlight" src="highlight.0faa05361b05582ff85f4eff7fda997e.js"></script><script src="event(1).js" async="" charset="UTF-8"></script><script src="event(2).js" async="" charset="UTF-8"></script></head>
+<body style="">
+    
+    <!--[if lte IE 8]>
+<script src="//a.disquscdn.com/1402432716/build/vendor/ie8.js"></script>
+<![endif]-->
+<!--[if IE 9]>
+<script src="//a.disquscdn.com/1402432716/build/vendor/ie9.js"></script>
+<![endif]-->
+
+    
+<script type="text/json" id="disqus-urls">{
+    "root":"//disqus.com",
+    "next":"//a.disquscdn.com/next/5aea6fe1"
+}</script>
+
+    
+
+    <div id="error" style="display:none; text-align: center">
+        <p>We were unable to load Disqus. If you are a moderator please see our <a href="http://docs.disqus.com/help/83/"> troubleshooting guide</a>. </p>
+    </div>
+
+    
+    <script type="text/json" id="disqus-forumData">{"session":{"canModerate":false,"isReadOnly":null,"audienceSyncVerified":false,"canReply":true,"notificationCount":null,"mustVerifyEmail":false},"features":{},"forum":{"name":"Laracasts","founder":"1881344","settings":{"canEnableSponsoredComments":false,"discoveryVariant":"default","allowAnonPost":true,"allowMedia":true,"moderatorText":"","typeface":"sans-serif","promotedDiscoveryEnabled":false,"discoveryMax":false,"ssoRequired":false,"discoveryLocked":false,"audienceSyncEnabled":false,"hasCustomAvatar":true,"organicDiscoveryEnabled":true,"backplaneEnabled":false,"discoverySettingsUrl":"http://laracast.disqus.com/admin/settings/ads/","discoveryThumbnailsEnabled":false,"colorScheme":"light","sponsoredCommentsEnabled":false,"linkAffiliationEnabled":true},"url":"http://laracasts.com/","favicon":{"permalink":"https://disqus.com/api/forums/favicons/laracast.jpg","cache":"//a.disquscdn.com/1402432716/images/favicon-default.png"},"language":"en","avatar":{"small":{"permalink":"https://disqus.com/api/forums/avatars/laracast.jpg?size=32","cache":"//a.disquscdn.com/uploads/forums/251/5782/avatar32.jpg?1377372389"},"large":{"permalink":"https://disqus.com/api/forums/avatars/laracast.jpg?size=92","cache":"//a.disquscdn.com/uploads/forums/251/5782/avatar92.jpg?1377372389"}},"pk":2515782,"id":"laracast"}}</script>
+
+    
+    <script type="text/json" id="disqus-threadData">{"cursor":{"hasPrev":false,"prev":null,"total":24,"hasNext":false,"next":"1:0:0"},"code":0,"response":{"lastModified":1402604233,"posts":[{"isFlagged":false,"forum":"laracast","parent":null,"author":{"username":"garrettstjohn","about":"","name":"Garrett St. John","url":"http://garrettstjohn.com/","isAnonymous":false,"rep":1.235935,"profileUrl":"http://disqus.com/garrettstjohn/","reputation":1.235935,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2013-10-10T20:09:20","id":"76919635","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/garrettstjohn.jpg","cache":"//a.disquscdn.com/uploads/users/7691/9635/avatar32.jpg?1381435761"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/garrettstjohn.jpg","cache":"//a.disquscdn.com/uploads/users/7691/9635/avatar92.jpg?1381435761","large":{"permalink":"https://disqus.com/api/users/avatars/garrettstjohn.jpg","cache":"//a.disquscdn.com/uploads/users/7691/9635/avatar92.jpg?1381435761"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"There was this one guy that explained $.proxy() really well :)\n\nhttp://net.tutsplus.com/tutorials/javascript-ajax/quick-tip-learning-jquery-1-4s-proxy/","createdAt":"2013-10-10T20:09:54","id":"1078031601","thread":"1833135802","depth":0,"numReports":0,"likes":4,"isEdited":false,"message":"\u003cp>There was this one guy that explained $.proxy() really well :)\u003c/p>\u003cp>\u003ca href=\"http://net.tutsplus.com/tutorials/javascript-ajax/quick-tip-learning-jquery-1-4s-proxy/\" rel=\"nofollow\">http://net.tutsplus.com/tutori...\u003c/a>\u003c/p>","isSpam":false,"isHighlighted":false,"points":4},{"isFlagged":false,"forum":"laracast","parent":null,"author":{"username":"edzynda","about":"","name":"edzynda","url":"","isAnonymous":false,"rep":1.192283,"profileUrl":"http://disqus.com/edzynda/","reputation":1.192283,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2013-09-23T15:54:18","id":"74475980","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/edzynda.jpg","cache":"//a.disquscdn.com/uploads/users/7447/5980/avatar32.jpg?1402692798"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/edzynda.jpg","cache":"//a.disquscdn.com/uploads/users/7447/5980/avatar92.jpg?1402692798","large":{"permalink":"https://disqus.com/api/users/avatars/edzynda.jpg","cache":"//a.disquscdn.com/uploads/users/7447/5980/avatar92.jpg?1402692798"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"I just revisited this less and decided to code along. In billing.js, I had to place event.preventDefault() before Stripe.createToken() as the ajax request seemed to fire off pretty fast and the form ended up submitting. Just throwing that out there if anyone was having problems like I was.","createdAt":"2014-01-16T15:18:24","id":"1204265627","thread":"1833135802","depth":0,"numReports":0,"likes":2,"isEdited":false,"message":"\u003cp>I just revisited this less and decided to code along. In billing.js, I had to place event.preventDefault() before Stripe.createToken() as the ajax request seemed to fire off pretty fast and the form ended up submitting. Just throwing that out there if anyone was having problems like I was.\u003c/p>","isSpam":false,"isHighlighted":false,"points":2},{"isFlagged":false,"forum":"laracast","parent":1204265627,"author":{"username":"linktothepast","about":"","name":"linktothepast","url":"http://www.finaldeveloper.com/","isAnonymous":false,"rep":1.258022,"profileUrl":"http://disqus.com/linktothepast/","reputation":1.258022,"location":"Southern California","isPrivate":true,"isPrimary":true,"joinedAt":"2011-01-08T01:01:14","id":"6306853","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/linktothepast.jpg","cache":"//a.disquscdn.com/uploads/users/630/6853/avatar32.jpg?1401046923"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/linktothepast.jpg","cache":"//a.disquscdn.com/uploads/users/630/6853/avatar92.jpg?1401046923","large":{"permalink":"https://disqus.com/api/users/avatars/linktothepast.jpg","cache":"//a.disquscdn.com/uploads/users/630/6853/avatar92.jpg?1401046923"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"Had to do this too!","createdAt":"2014-04-21T04:46:05","id":"1348195908","thread":"1833135802","depth":1,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>Had to do this too!\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"laracast","parent":null,"author":{"username":"disqus_vaffzwiEUE","about":"","name":"Chris","url":"","isAnonymous":false,"rep":1.235174,"profileUrl":"http://disqus.com/disqus_vaffzwiEUE/","reputation":1.235174,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2013-08-28T18:27:29","id":"70254909","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_vaffzwiEUE.jpg","cache":"//a.disquscdn.com/uploads/users/7025/4909/avatar32.jpg?1395085065"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/disqus_vaffzwiEUE.jpg","cache":"//a.disquscdn.com/uploads/users/7025/4909/avatar92.jpg?1395085065","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_vaffzwiEUE.jpg","cache":"//a.disquscdn.com/uploads/users/7025/4909/avatar92.jpg?1395085065"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"Any specific reason why you stored the public key in a meta tag and not a hidden input field?","createdAt":"2013-10-10T16:38:53","id":"1077754447","thread":"1833135802","depth":0,"numReports":0,"likes":1,"isEdited":false,"message":"\u003cp>Any specific reason why you stored the public key in a meta tag and not a hidden input field?\u003c/p>","isSpam":false,"isHighlighted":false,"points":1},{"isFlagged":false,"forum":"laracast","parent":1077754447,"author":{"username":"jeff_way","about":"","name":"jeff_way","url":"","isAnonymous":false,"rep":2.563413,"profileUrl":"http://disqus.com/jeff_way/","reputation":2.563413,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2010-02-12T02:39:29","id":"1881344","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/jeff_way.jpg","cache":"//a.disquscdn.com/uploads/users/188/1344/avatar32.jpg?1403053910"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/jeff_way.jpg","cache":"//a.disquscdn.com/uploads/users/188/1344/avatar92.jpg?1403053910","large":{"permalink":"https://disqus.com/api/users/avatars/jeff_way.jpg","cache":"//a.disquscdn.com/uploads/users/188/1344/avatar92.jpg?1403053910"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"Either works. I might need the publishable key in others parts of my app. That's the only reason.","createdAt":"2013-10-10T18:35:24","id":"1077900301","thread":"1833135802","depth":1,"numReports":0,"likes":1,"isEdited":false,"message":"\u003cp>Either works. I might need the publishable key in others parts of my app. That's the only reason.\u003c/p>","isSpam":false,"isHighlighted":false,"points":1},{"isFlagged":false,"forum":"laracast","parent":null,"author":{"username":"Ardakilic","about":"","name":"Arda K\u0131l\u0131\u00e7da\u011f\u0131","url":"","isAnonymous":false,"rep":1.3887969999999998,"profileUrl":"http://disqus.com/Ardakilic/","reputation":1.3887969999999998,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2009-12-10T15:31:06","id":"1364557","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/Ardakilic.jpg","cache":"//a.disquscdn.com/uploads/users/136/4557/avatar32.jpg?1403075581"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/Ardakilic.jpg","cache":"//a.disquscdn.com/uploads/users/136/4557/avatar92.jpg?1403075581","large":{"permalink":"https://disqus.com/api/users/avatars/Ardakilic.jpg","cache":"//a.disquscdn.com/uploads/users/136/4557/avatar92.jpg?1403075581"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"I can't see the video neither from Chromium or Firefox, All other videos work for me (Shows me a black blank screen). Is there any chance that the embed code is broken?","createdAt":"2013-10-09T09:45:35","id":"1076059992","thread":"1833135802","depth":0,"numReports":0,"likes":1,"isEdited":false,"message":"\u003cp>I can't see the video neither from Chromium or Firefox, All other videos work for me (Shows me a black blank screen). Is there any chance that the embed code is broken?\u003c/p>","isSpam":false,"isHighlighted":false,"points":1},{"isFlagged":false,"forum":"laracast","parent":1076059992,"author":{"username":"jeff_way","about":"","name":"jeff_way","url":"","isAnonymous":false,"rep":2.563413,"profileUrl":"http://disqus.com/jeff_way/","reputation":2.563413,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2010-02-12T02:39:29","id":"1881344","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/jeff_way.jpg","cache":"//a.disquscdn.com/uploads/users/188/1344/avatar32.jpg?1403053910"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/jeff_way.jpg","cache":"//a.disquscdn.com/uploads/users/188/1344/avatar92.jpg?1403053910","large":{"permalink":"https://disqus.com/api/users/avatars/jeff_way.jpg","cache":"//a.disquscdn.com/uploads/users/188/1344/avatar92.jpg?1403053910"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"Ahh, just published before I had a chance to upload the video. Check back later today for the video.","createdAt":"2013-10-09T13:07:12","id":"1076203485","thread":"1833135802","depth":1,"numReports":0,"likes":2,"isEdited":false,"message":"\u003cp>Ahh, just published before I had a chance to upload the video. Check back later today for the video.\u003c/p>","isSpam":false,"isHighlighted":false,"points":2},{"isFlagged":false,"forum":"laracast","parent":null,"author":{"username":"hiswat","about":"","name":"hiswat","url":"http://sivaganesh.com/","isAnonymous":false,"rep":1.223612,"profileUrl":"http://disqus.com/hiswat/","reputation":1.223612,"location":"India","isPrivate":true,"isPrimary":true,"joinedAt":"2010-02-27T08:42:52","id":"2033833","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/hiswat.jpg","cache":"//a.disquscdn.com/uploads/users/203/3833/avatar32.jpg?1274432262"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/hiswat.jpg","cache":"//a.disquscdn.com/uploads/users/203/3833/avatar92.jpg?1274432262","large":{"permalink":"https://disqus.com/api/users/avatars/hiswat.jpg","cache":"//a.disquscdn.com/uploads/users/203/3833/avatar92.jpg?1274432262"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"I'm not getting any response from Stripe Server.. \nUsing the test publishable key ..","createdAt":"2014-06-12T16:41:59","id":"1432269793","thread":"1833135802","depth":0,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>I'm not getting any response from Stripe Server.. \u003cbr>Using the test publishable key ..\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"laracast","parent":1432269793,"author":{"username":"hiswat","about":"","name":"hiswat","url":"http://sivaganesh.com/","isAnonymous":false,"rep":1.223612,"profileUrl":"http://disqus.com/hiswat/","reputation":1.223612,"location":"India","isPrivate":true,"isPrimary":true,"joinedAt":"2010-02-27T08:42:52","id":"2033833","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/hiswat.jpg","cache":"//a.disquscdn.com/uploads/users/203/3833/avatar32.jpg?1274432262"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/hiswat.jpg","cache":"//a.disquscdn.com/uploads/users/203/3833/avatar92.jpg?1274432262","large":{"permalink":"https://disqus.com/api/users/avatars/hiswat.jpg","cache":"//a.disquscdn.com/uploads/users/203/3833/avatar92.jpg?1274432262"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"Edit: Fixed it..\n\n\nHave Jquery on the top of stripe.js & billing.js(or inside head tag to avoid any errors)..\nThen Stripe.js\nand finally billing.js...","createdAt":"2014-06-12T17:23:28","id":"1432336771","thread":"1833135802","depth":1,"numReports":0,"likes":1,"isEdited":false,"message":"\u003cp>Edit: Fixed it..\u003c/p>\u003cp>Have Jquery on the top of stripe.js &amp; billing.js(or inside head tag to avoid any errors)..\u003cbr>Then Stripe.js\u003cbr>and finally billing.js...\u003c/p>","isSpam":false,"isHighlighted":false,"points":1},{"isFlagged":false,"forum":"laracast","parent":null,"author":{"name":"mikenolimits","url":"","profileUrl":"","emailHash":"","avatar":{"small":{"permalink":"//a.disquscdn.com/uploads/forums/251/5782/avatar32.jpg?1377372389","cache":"//a.disquscdn.com/uploads/forums/251/5782/avatar32.jpg?1377372389"},"large":{"permalink":"//a.disquscdn.com/uploads/forums/251/5782/avatar92.jpg?1377372389","cache":"//a.disquscdn.com/uploads/forums/251/5782/avatar92.jpg?1377372389"},"permalink":"//a.disquscdn.com/uploads/forums/251/5782/avatar92.jpg?1377372389","cache":"//a.disquscdn.com/uploads/forums/251/5782/avatar92.jpg?1377372389"},"isAnonymous":true},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"Uncaught Error: You did not set a valid publishable key. Call Stripe.setPublishableKey() with your publishable key. For more info, see https://stripe.com/docs/stripe.js","createdAt":"2014-02-10T02:22:29","id":"1237581290","thread":"1833135802","depth":0,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>Uncaught Error: You did not set a valid publishable key. Call Stripe.setPublishableKey() with your publishable key. For more info, see \u003ca href=\"https://stripe.com/docs/stripe.js\" rel=\"nofollow\">https://stripe.com/docs/stripe...\u003c/a>\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"laracast","parent":null,"author":{"name":"mikenolimits","url":"","profileUrl":"","emailHash":"","avatar":{"small":{"permalink":"//a.disquscdn.com/uploads/forums/251/5782/avatar32.jpg?1377372389","cache":"//a.disquscdn.com/uploads/forums/251/5782/avatar32.jpg?1377372389"},"large":{"permalink":"//a.disquscdn.com/uploads/forums/251/5782/avatar92.jpg?1377372389","cache":"//a.disquscdn.com/uploads/forums/251/5782/avatar92.jpg?1377372389"},"permalink":"//a.disquscdn.com/uploads/forums/251/5782/avatar92.jpg?1377372389","cache":"//a.disquscdn.com/uploads/forums/251/5782/avatar92.jpg?1377372389"},"isAnonymous":true},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"I keep getting Uncaught TypeError: Object [object Object] has no method 'sttr'\n\nThis is my code.... \n\nhttp://prntscr.com/2r3yy1","createdAt":"2014-02-10T00:38:01","id":"1237512859","thread":"1833135802","depth":0,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>I keep getting Uncaught TypeError: Object [object Object] has no method 'sttr'\u003c/p>\u003cp>This is my code....\u003c/p>\u003cp>\u003ca href=\"http://prntscr.com/2r3yy1\" rel=\"nofollow\">http://prntscr.com/2r3yy1\u003c/a>\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"laracast","parent":null,"author":{"username":"chrisportela","about":"","name":"cmp","url":"http://twitter.com/cmpdev","isAnonymous":false,"rep":1.2456209999999999,"profileUrl":"http://disqus.com/chrisportela/","reputation":1.2456209999999999,"location":"","isPrivate":true,"isPrimary":true,"joinedAt":"2009-09-30T01:04:24","id":"895075","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/chrisportela.jpg","cache":"//a.disquscdn.com/uploads/users/89/5075/avatar32.jpg?1393607120"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/chrisportela.jpg","cache":"//a.disquscdn.com/uploads/users/89/5075/avatar92.jpg?1393607120","large":{"permalink":"https://disqus.com/api/users/avatars/chrisportela.jpg","cache":"//a.disquscdn.com/uploads/users/89/5075/avatar92.jpg?1393607120"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"Why do you put ':' after function names in the javascript?","createdAt":"2013-12-02T17:32:39","id":"1147547308","thread":"1833135802","depth":0,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>Why do you put ':' after function names in the javascript?\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"laracast","parent":1147547308,"author":{"username":"jeff_way","about":"","name":"jeff_way","url":"","isAnonymous":false,"rep":2.563413,"profileUrl":"http://disqus.com/jeff_way/","reputation":2.563413,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2010-02-12T02:39:29","id":"1881344","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/jeff_way.jpg","cache":"//a.disquscdn.com/uploads/users/188/1344/avatar32.jpg?1403053910"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/jeff_way.jpg","cache":"//a.disquscdn.com/uploads/users/188/1344/avatar92.jpg?1403053910","large":{"permalink":"https://disqus.com/api/users/avatars/jeff_way.jpg","cache":"//a.disquscdn.com/uploads/users/188/1344/avatar92.jpg?1403053910"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"Because that's how you declare methods on your JS objects.","createdAt":"2013-12-02T17:33:23","id":"1147548111","thread":"1833135802","depth":1,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>Because that's how you declare methods on your JS objects.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"laracast","parent":null,"author":{"username":"meetgodhani","about":"","name":"meetgodhani","url":"","isAnonymous":false,"rep":1.246235,"profileUrl":"http://disqus.com/meetgodhani/","reputation":1.246235,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2013-01-18T03:03:44","id":"41521330","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/meetgodhani.jpg","cache":"//a.disquscdn.com/uploads/users/4152/1330/avatar32.jpg?1400694202"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/meetgodhani.jpg","cache":"//a.disquscdn.com/uploads/users/4152/1330/avatar92.jpg?1400694202","large":{"permalink":"https://disqus.com/api/users/avatars/meetgodhani.jpg","cache":"//a.disquscdn.com/uploads/users/4152/1330/avatar92.jpg?1400694202"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"Hmm getting this unknown error when submitting form \nSymfony \\ Component \\ HttpKernel \\ Exception \\MethodNotAllowedHttpException","createdAt":"2013-10-14T20:41:35","id":"1082348128","thread":"1833135802","depth":0,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>Hmm getting this unknown error when submitting form \u003cbr>Symfony \\ Component \\ HttpKernel \\ Exception \\MethodNotAllowedHttpException\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"laracast","parent":1082348128,"author":{"username":"jeff_way","about":"","name":"jeff_way","url":"","isAnonymous":false,"rep":2.563413,"profileUrl":"http://disqus.com/jeff_way/","reputation":2.563413,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2010-02-12T02:39:29","id":"1881344","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/jeff_way.jpg","cache":"//a.disquscdn.com/uploads/users/188/1344/avatar32.jpg?1403053910"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/jeff_way.jpg","cache":"//a.disquscdn.com/uploads/users/188/1344/avatar92.jpg?1403053910","large":{"permalink":"https://disqus.com/api/users/avatars/jeff_way.jpg","cache":"//a.disquscdn.com/uploads/users/188/1344/avatar92.jpg?1403053910"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"I'd need to see your code, but it sounds like your form method and action attributes might be incorrect.","createdAt":"2013-10-14T20:49:02","id":"1082358136","thread":"1833135802","depth":1,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>I'd need to see your code, but it sounds like your form method and action attributes might be incorrect.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"laracast","parent":1082358136,"author":{"username":"meetgodhani","about":"","name":"meetgodhani","url":"","isAnonymous":false,"rep":1.246235,"profileUrl":"http://disqus.com/meetgodhani/","reputation":1.246235,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2013-01-18T03:03:44","id":"41521330","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/meetgodhani.jpg","cache":"//a.disquscdn.com/uploads/users/4152/1330/avatar32.jpg?1400694202"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/meetgodhani.jpg","cache":"//a.disquscdn.com/uploads/users/4152/1330/avatar92.jpg?1400694202","large":{"permalink":"https://disqus.com/api/users/avatars/meetgodhani.jpg","cache":"//a.disquscdn.com/uploads/users/4152/1330/avatar92.jpg?1400694202"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"Hi Jeff\n\nHere's the code you can see https://raw.github.com/mrgodhani/laravel-stripe/master/app/views/buy.blade.php.","createdAt":"2013-10-14T21:00:08","id":"1082370027","thread":"1833135802","depth":2,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>Hi Jeff\u003c/p>\u003cp>Here's the code you can see \u003ca href=\"https://raw.github.com/mrgodhani/laravel-stripe/master/app/views/buy.blade.php\" rel=\"nofollow\">https://raw.github.com/mrgodha...\u003c/a>.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"laracast","parent":1082370027,"author":{"username":"meetgodhani","about":"","name":"meetgodhani","url":"","isAnonymous":false,"rep":1.246235,"profileUrl":"http://disqus.com/meetgodhani/","reputation":1.246235,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2013-01-18T03:03:44","id":"41521330","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/meetgodhani.jpg","cache":"//a.disquscdn.com/uploads/users/4152/1330/avatar32.jpg?1400694202"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/meetgodhani.jpg","cache":"//a.disquscdn.com/uploads/users/4152/1330/avatar92.jpg?1400694202","large":{"permalink":"https://disqus.com/api/users/avatars/meetgodhani.jpg","cache":"//a.disquscdn.com/uploads/users/4152/1330/avatar92.jpg?1400694202"}}},"media":[{"forum":"laracast","thumbnailURL":"//a.disquscdn.com/uploads/mediaembed/images/655/9736/original.jpg","description":"","thread":"1833135802","title":"","url":"//a.disquscdn.com/uploads/mediaembed/images/655/9736/original.jpg","mediaType":"2","html":"","location":"//a.disquscdn.com/uploads/mediaembed/images/655/9736/original.jpg","resolvedUrl":"//a.disquscdn.com/uploads/mediaembed/images/655/9736/original.jpg","post":"1082409833","thumbnailUrl":"//a.disquscdn.com/uploads/mediaembed/images/655/9736/original.jpg","type":"5","metadata":{"create_method":"preview","thumbnail":"mediaembed/images/655/9736/original.jpg"}}],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"And following is what it generates as html source","createdAt":"2013-10-14T21:39:39","id":"1082409833","thread":"1833135802","depth":3,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>And following is what it generates as html source\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"laracast","parent":1082409833,"author":{"username":"jeff_way","about":"","name":"jeff_way","url":"","isAnonymous":false,"rep":2.563413,"profileUrl":"http://disqus.com/jeff_way/","reputation":2.563413,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2010-02-12T02:39:29","id":"1881344","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/jeff_way.jpg","cache":"//a.disquscdn.com/uploads/users/188/1344/avatar32.jpg?1403053910"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/jeff_way.jpg","cache":"//a.disquscdn.com/uploads/users/188/1344/avatar92.jpg?1403053910","large":{"permalink":"https://disqus.com/api/users/avatars/jeff_way.jpg","cache":"//a.disquscdn.com/uploads/users/188/1344/avatar92.jpg?1403053910"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"And you are responding with:\n\n\n\u003cpre>\u003ccode>\nRoute::post('buy', '...');\n\u003c/code>\u003c/pre>\n\n\n?? Can you go through the \"Whoops\" stack trace and pinpoint what's happening?","createdAt":"2013-10-14T22:21:20","id":"1082449788","thread":"1833135802","depth":4,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>And you are responding with:\u003c/p>\u003cp>\u003c/p>\u003cpre>\u003ccode>\u003cbr>Route::post('buy', '...');\u003cbr>\u003c/code>\u003c/pre>\u003cp>\u003c/p>\u003cp>?? Can you go through the \"Whoops\" stack trace and pinpoint what's happening?\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"laracast","parent":1082449788,"author":{"username":"meetgodhani","about":"","name":"meetgodhani","url":"","isAnonymous":false,"rep":1.246235,"profileUrl":"http://disqus.com/meetgodhani/","reputation":1.246235,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2013-01-18T03:03:44","id":"41521330","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/meetgodhani.jpg","cache":"//a.disquscdn.com/uploads/users/4152/1330/avatar32.jpg?1400694202"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/meetgodhani.jpg","cache":"//a.disquscdn.com/uploads/users/4152/1330/avatar92.jpg?1400694202","large":{"permalink":"https://disqus.com/api/users/avatars/meetgodhani.jpg","cache":"//a.disquscdn.com/uploads/users/4152/1330/avatar92.jpg?1400694202"}}},"media":[{"forum":"laracast","thumbnailURL":"//a.disquscdn.com/uploads/mediaembed/images/656/351/original.jpg","description":"","thread":"1833135802","title":"","url":"//a.disquscdn.com/uploads/mediaembed/images/656/351/original.jpg","mediaType":"2","html":"","location":"//a.disquscdn.com/uploads/mediaembed/images/656/351/original.jpg","resolvedUrl":"//a.disquscdn.com/uploads/mediaembed/images/656/351/original.jpg","post":"1082460905","thumbnailUrl":"//a.disquscdn.com/uploads/mediaembed/images/656/351/original.jpg","type":"5","metadata":{"create_method":"preview","thumbnail":"mediaembed/images/656/351/original.jpg"}}],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"Following to video I just have this as a route \nRoute::get('buy',function()\n{\n\treturn View::make('buy');\n});\n\n\n\nAnd attached is the stack trace in order","createdAt":"2013-10-14T22:33:46","id":"1082460905","thread":"1833135802","depth":5,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>Following to video I just have this as a route \u003cbr>Route::get('buy',function()\u003cbr>{\u003cbr>\treturn View::make('buy');\u003cbr>});\u003c/p>\u003cp>And attached is the stack trace in order\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"laracast","parent":1082460905,"author":{"username":"jeff_way","about":"","name":"jeff_way","url":"","isAnonymous":false,"rep":2.563413,"profileUrl":"http://disqus.com/jeff_way/","reputation":2.563413,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2010-02-12T02:39:29","id":"1881344","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/jeff_way.jpg","cache":"//a.disquscdn.com/uploads/users/188/1344/avatar32.jpg?1403053910"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/jeff_way.jpg","cache":"//a.disquscdn.com/uploads/users/188/1344/avatar92.jpg?1403053910","large":{"permalink":"https://disqus.com/api/users/avatars/jeff_way.jpg","cache":"//a.disquscdn.com/uploads/users/188/1344/avatar92.jpg?1403053910"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"You need to respond to when the form is posted. Sounds like you don't have that.\n\n\n\u003cpre>\u003ccode>\nRoute::post('buy', function()\n{\n    dd(Input::all());\n});\n\u003c/code>\u003c/pre>","createdAt":"2013-10-14T22:36:42","id":"1082463496","thread":"1833135802","depth":6,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>You need to respond to when the form is posted. Sounds like you don't have that.\u003c/p>\u003cp>\u003c/p>\u003cpre>\u003ccode>\u003cbr>Route::post('buy', function()\u003cbr>{\u003cbr>    dd(Input::all());\u003cbr>});\u003cbr>\u003c/code>\u003c/pre>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"laracast","parent":1082463496,"author":{"username":"meetgodhani","about":"","name":"meetgodhani","url":"","isAnonymous":false,"rep":1.246235,"profileUrl":"http://disqus.com/meetgodhani/","reputation":1.246235,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2013-01-18T03:03:44","id":"41521330","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/meetgodhani.jpg","cache":"//a.disquscdn.com/uploads/users/4152/1330/avatar32.jpg?1400694202"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/meetgodhani.jpg","cache":"//a.disquscdn.com/uploads/users/4152/1330/avatar92.jpg?1400694202","large":{"permalink":"https://disqus.com/api/users/avatars/meetgodhani.jpg","cache":"//a.disquscdn.com/uploads/users/4152/1330/avatar92.jpg?1400694202"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"Oh ye I think that was the problem. Post works now.","createdAt":"2013-10-14T22:39:31","id":"1082466032","thread":"1833135802","depth":7,"numReports":0,"likes":1,"isEdited":false,"message":"\u003cp>Oh ye I think that was the problem. Post works now.\u003c/p>","isSpam":false,"isHighlighted":false,"points":1},{"isFlagged":false,"forum":"laracast","parent":1082463496,"author":{"username":"tim_albert","about":"","name":"tim_albert","url":"","isAnonymous":false,"rep":1.2343089999999999,"profileUrl":"http://disqus.com/tim_albert/","reputation":1.2343089999999999,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2010-09-28T17:20:51","id":"4564039","avatar":{"small":{"permalink":"//a.disquscdn.com/uploads/forums/251/5782/avatar32.jpg?1377372389","cache":"//a.disquscdn.com/uploads/forums/251/5782/avatar32.jpg?1377372389"},"large":{"permalink":"//a.disquscdn.com/uploads/forums/251/5782/avatar92.jpg?1377372389","cache":"//a.disquscdn.com/uploads/forums/251/5782/avatar92.jpg?1377372389"},"permalink":"//a.disquscdn.com/uploads/forums/251/5782/avatar92.jpg?1377372389","cache":"//a.disquscdn.com/uploads/forums/251/5782/avatar92.jpg?1377372389"}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"is this part in the video?","createdAt":"2014-04-02T19:15:00","id":"1315454614","thread":"1833135802","depth":7,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>is this part in the video?\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"laracast","parent":null,"author":{"username":"disqus_vaffzwiEUE","about":"","name":"Chris","url":"","isAnonymous":false,"rep":1.235174,"profileUrl":"http://disqus.com/disqus_vaffzwiEUE/","reputation":1.235174,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2013-08-28T18:27:29","id":"70254909","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_vaffzwiEUE.jpg","cache":"//a.disquscdn.com/uploads/users/7025/4909/avatar32.jpg?1395085065"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/disqus_vaffzwiEUE.jpg","cache":"//a.disquscdn.com/uploads/users/7025/4909/avatar92.jpg?1395085065","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_vaffzwiEUE.jpg","cache":"//a.disquscdn.com/uploads/users/7025/4909/avatar92.jpg?1395085065"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"At 14:27 the video goes black.","createdAt":"2013-10-10T17:01:11","id":"1077781550","thread":"1833135802","depth":0,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>At 14:27 the video goes black.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"isFlagged":false,"forum":"laracast","parent":1077781550,"author":{"username":"jeff_way","about":"","name":"jeff_way","url":"","isAnonymous":false,"rep":2.563413,"profileUrl":"http://disqus.com/jeff_way/","reputation":2.563413,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2010-02-12T02:39:29","id":"1881344","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/jeff_way.jpg","cache":"//a.disquscdn.com/uploads/users/188/1344/avatar32.jpg?1403053910"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/jeff_way.jpg","cache":"//a.disquscdn.com/uploads/users/188/1344/avatar92.jpg?1403053910","large":{"permalink":"https://disqus.com/api/users/avatars/jeff_way.jpg","cache":"//a.disquscdn.com/uploads/users/188/1344/avatar92.jpg?1403053910"}}},"media":[],"isDeleted":false,"isApproved":true,"dislikes":0,"raw_message":"Ahh, forgot to cut off the end. Rest assured that was the end of the video. :) I'm re-exporting and will update the embed within the next hour.","createdAt":"2013-10-10T18:35:00","id":"1077899847","thread":"1833135802","depth":1,"numReports":0,"likes":0,"isEdited":false,"message":"\u003cp>Ahh, forgot to cut off the end. Rest assured that was the end of the video. :) I'm re-exporting and will update the embed within the next hour.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0}],"thread":{"feed":"http://laracast.disqus.com/laracasts_stripejs/latest.rss","uploadAdd":"//laracast.disqus.com/thread/laracasts_stripejs/async_media_upload/","identifiers":[],"dislikes":0,"likes":1,"message":"","id":"1833135802","createdAt":"2013-10-07T14:31:43","category":"2553658","clean_title":"Stripe.js","userScore":0,"moderators":[1881344],"isDeleted":false,"hasStreaming":false,"uploadRemove":"//laracast.disqus.com/thread/laracasts_stripejs/async_media_remove/","isClosed":false,"link":"https://www.laracasts.com/series/billing-with-stripe/episodes/3","slug":"laracasts_stripejs","forum":"laracast","author":"1881344","posts":24,"userSubscription":false,"title":"Laracasts | Stripe.js","highlightedPost":null}},"order":"popular"}</script>
+
+    
+
+    <div id="fixed-content"></div>
+
+    <script src="lounge.load.js"></script>
+    
+
+
+<div id="layout" data-tracking-area="layout">
+
+<div id="discovery-top" data-tracking-area="discovery-north"></div>
+
+<div id="onboard" data-tracking-area="onboard"></div>
+
+<div id="highlighted-post" data-tracking-area="highlighted" class="highlighted-post" style="display: none;"></div>
+
+<header id="main-nav" data-tracking-area="main-nav">
+
+<nav class="nav nav-primary">
+<ul>
+<li class="tab-conversation active">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-role="post-count" class="publisher-nav-color" data-nav="conversation">
+
+<span class="comment-count">
+
+24 comments
+
+</span>
+
+
+<span class="comment-count-placeholder">
+Comments
+</span>
+</a>
+</li>
+<li class="tab-community">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="publisher-nav-color" data-nav="community" id="community-tab">
+
+
+<span class="community-name">
+
+<strong>Laracasts</strong>
+
+</span>
+
+
+<strong class="community-name-placeholder">Community</strong>
+</a>
+</li>
+<li class="dropdown user-menu" data-role="logout">
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="dropdown-toggle" data-toggle="dropdown">
+<span class="dropdown-toggle-wrapper">
+
+
+<span>
+Login
+</span>
+
+
+</span> <span class="caret"></span>
+</a>
+
+<ul class="dropdown-menu">
+
+
+
+
+<li>
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="auth:disqus">Disqus</a>
+</li>
+<li>
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="auth:facebook">Facebook</a>
+</li>
+<li>
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="auth:twitter">Twitter</a>
+</li>
+<li>
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="auth:google">Google</a>
+</li>
+
+
+
+
+
+
+
+</ul>
+</li>
+<li class="notification-menu" data-role="notification-menu">
+
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="notification-container" data-action="auth:disqus">
+<span class="notification-icon icon-disqus"></span>
+
+
+</a></li>
+</ul>
+</nav>
+
+</header>
+
+
+
+
+<section id="conversation" data-role="main" data-tracking-area="main">
+
+<div class="nav nav-secondary" data-tracking-area="secondary-nav">
+<ul>
+
+<li data-role="post-sort" class="dropdown sorting">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="dropdown-toggle" data-nav="conversation" data-toggle="dropdown">
+Sort by Best
+
+
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+<li class="selected">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="sort" data-sort="popular">Best</a>
+</li>
+
+<li>
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="sort" data-sort="desc">Newest</a>
+</li>
+
+<li>
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="sort" data-sort="asc">Oldest</a>
+</li>
+</ul>
+</li>
+
+
+<li id="thread-votes" class="favorite pull-right">
+<!-- rendered dynamically -->
+<div class="thread-likes" data-role="vote-button">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="upvote" title="Favorite this discussion">
+<span class="label">Favorite</span>
+<span class="icon-star"></span>
+<span class="icon-check"></span>
+</a>
+</div></li>
+
+<li id="thread-share-menu" class="dropdown share-menu">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="dropdown-toggle" data-toggle="dropdown" title="Share">
+<span class="label">Share</span> <span class="icon-export"></span>
+</a>
+<ul class="share-menu dropdown-menu pull-right">
+<li class="share">Share this discussion on
+<ul>
+<li class="twitter">
+<a data-action="share:twitter" href="https://laracasts.com/series/billing-with-stripe/episodes/3#">Twitter</a>
+</li>
+<li class="facebook">
+<a data-action="share:facebook" href="https://laracasts.com/series/billing-with-stripe/episodes/3#">Facebook</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+<div id="posts">
+
+<div id="form"><form class="reply">
+<div class="alert error" style="display:none" role="alert">
+<a class="close" data-action="dismiss-alert" title="Dismiss">×</a>
+<span></span>
+</div>
+
+<div class="postbox">
+<div class="avatar">
+
+<span class="user">
+<img data-role="user-avatar" src="noavatar92.d1dee965677e7cc8d58afe004a6d8282.png">
+</span>
+
+</div>
+
+<div class="textarea-wrapper" data-role="textarea" dir="auto"><div><span class="placeholder">Join the discussion…</span><div class="textarea" tabindex="-1" role="textbox" aria-multiline="true" contenteditable="true" data-role="editable" aria-label="Join the discussion…" style="overflow: auto; max-height: 350px;"><p><br></p></div><div style="display: none;">
+<ul class="suggestions">
+<li class="header">
+<h5>in this conversation</h5>
+</li>
+</ul>
+</div></div>
+<div data-role="drag-drop-placeholder" class="media-drag-hover" style="display: none">
+<div class="drag-text">
+⬇ Drag and drop your images here to upload them.
+</div>
+</div>
+
+<div class="media-preview empty" data-role="media-preview">
+<ul data-role="media-legacy-list"></ul>
+<ul data-role="media-rich-list"></ul>
+<div class="media-expanded empty" data-role="media-preview-expanded">
+
+<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-role="media-preview-expanded-image">
+</div>
+</div>
+
+<div class="edit-alert" role="postbox-alert"></div>
+<div class="post-actions">
+<ul class="wysiwyg">
+
+<li>
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" tabindex="-1" data-action="attach" class="attach" title="Upload Images"><span>Attach</span></a>
+<input type="file" data-role="media-upload" tabindex="-1" class="regular" accept="image/*">
+</li>
+
+
+</ul>
+
+
+</div>
+</div>
+
+
+<div data-role="login-form"><div>
+
+<section class="auth-section logged-out">
+<div class="connect">
+<h6>Sign in with</h6>
+
+<ul data-role="login-menu" class="services login-buttons">
+
+
+
+<li class="auth-disqus">
+<button type="button" data-action="auth:disqus" title="Disqus"><i class="icon-disqus"></i></button>
+</li>
+<li class="auth-facebook">
+<button type="button" data-action="auth:facebook" title="Facebook"><i class="icon-facebook-circle"></i></button>
+</li>
+<li class="auth-twitter">
+<button type="button" data-action="auth:twitter" title="Twitter"><i class="icon-twitter-circle"></i></button>
+</li>
+<li class="auth-google">
+<button type="button" data-action="auth:google" title="Google"><i class="icon-google-plus-circle"></i></button>
+</li>
+<li class="auth-signup">
+<button type="button" data-action="auth:disqus" title="Disqus">Sign up for Disqus</button>
+</li>
+</ul>
+
+</div>
+
+<div class="guest">
+<h6 class="guest-form-title">
+
+or pick a name
+
+</h6>
+
+<div class="what-is-disqus help-icon">
+<div id="rules" class="tooltip show">
+<h3>Disqus is a conversation network</h3>
+<ul>
+<li><span>Disqus never moderates or censors. The rules on this community are its own.</span></li>
+<li><span>Your email is safe with us. It's only used for moderation and optional notifications.</span></li>
+<li><span>Don't be a jerk or do anything illegal. Everything is easier that way.</span></li>
+</ul>
+<p class="clearfix"><a href="http://docs.disqus.com/kb/terms-and-policies/" class="btn btn-small" target="_blank">Read full terms and conditions</a></p>
+</div>
+</div>
+
+<p class="input-wrapper">
+<input dir="auto" type="text" placeholder="Name" name="display_name" maxlength="30">
+</p>
+
+<div class="guest-details " data-role="guest-details">
+<p class="input-wrapper">
+<input dir="auto" type="email" placeholder="Email" name="email">
+</p>
+
+<p class="input-wrapper">
+<input dir="auto" type="password" placeholder="Password" name="password">
+</p>
+
+<div class="guest-checkbox">
+<label>
+<input type="checkbox" name="author-guest">
+I'd rather post as guest
+</label>
+</div>
+
+
+</div>
+</div>
+<div class="proceed">
+
+<button type="submit" class="btn submit" aria-label="Post"><span class="icon-proceed"></span></button>
+<button type="submit" class="btn next" aria-label="Next"><span class="icon-proceed"></span></button>
+
+</div>
+
+</section>
+
+
+
+
+</div></div>
+
+</div>
+</form></div>
+
+<button class="alert realtime" style="display: none;" data-role="realtime-notification">
+
+</button>
+
+
+<div id="no-posts" style="display: none;">Be the first to comment.</div>
+
+<ul id="post-list" class="post-list"><li class="post" id="post-1078031601">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/garrettstjohn/" class="user" data-action="profile" data-user="76919635">
+<img data-role="user-avatar" data-user="76919635" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="profile" data-user="76919635" data-role="username">Garrett St. John</a></span>
+
+
+
+
+
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1078031601" data-role="relative-time" class="time-ago" title="Thursday, October 10 2013 1:09 PM">8 months ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>There was this one guy that explained $.proxy() really well :)</p><p><a href="http://net.tutsplus.com/tutorials/javascript-ajax/quick-tip-learning-jquery-1-4s-proxy/" rel="nofollow">http://net.tutsplus.com/tutori...</a></p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-4" data-action="upvote" title="">
+<span class="updatable count" data-role="likes">4</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1078031601">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1078031601">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"></ul>
+
+
+</li><li class="post" id="post-1204265627">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/edzynda/" class="user" data-action="profile" data-user="74475980">
+<img data-role="user-avatar" data-user="74475980" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="profile" data-user="74475980" data-role="username">edzynda</a></span>
+
+
+
+
+
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1204265627" data-role="relative-time" class="time-ago" title="Thursday, January 16 2014 7:18 AM">5 months ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>I just revisited this less and decided to code along. In billing.js, I had to place event.preventDefault() before Stripe.createToken() as the ajax request seemed to fire off pretty fast and the form ended up submitting. Just throwing that out there if anyone was having problems like I was.</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-2" data-action="upvote" title="">
+<span class="updatable count" data-role="likes">2</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1204265627">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1204265627">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"><li class="post" id="post-1348195908">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/linktothepast/" class="user" data-action="profile" data-user="6306853">
+<img data-role="user-avatar" data-user="6306853" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="profile" data-user="6306853" data-role="username">linktothepast</a></span>
+
+
+
+
+
+
+<span><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1204265627" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> edzynda</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1348195908" data-role="relative-time" class="time-ago" title="Sunday, April 20 2014 9:46 PM">2 months ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>Had to do this too!</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1348195908">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1348195908">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"></ul>
+
+
+</li></ul>
+
+
+</li><li class="post" id="post-1077754447">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/disqus_vaffzwiEUE/" class="user" data-action="profile" data-user="70254909">
+<img data-role="user-avatar" data-user="70254909" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="profile" data-user="70254909" data-role="username">Chris</a></span>
+
+
+
+
+
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1077754447" data-role="relative-time" class="time-ago" title="Thursday, October 10 2013 9:38 AM">8 months ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>Any specific reason why you stored the public key in a meta tag and not a hidden input field?</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-1" data-action="upvote" title="">
+<span class="updatable count" data-role="likes">1</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1077754447">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1077754447">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"><li class="post" id="post-1077900301">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/jeff_way/" class="user" data-action="profile" data-user="1881344">
+<img data-role="user-avatar" data-user="1881344" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="profile" data-user="1881344" data-role="username">jeff_way</a></span>
+
+
+<span class="badge moderator">Mod</span>
+
+
+
+
+
+<span><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1077754447" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Chris</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1077900301" data-role="relative-time" class="time-ago" title="Thursday, October 10 2013 11:35 AM">8 months ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>Either works. I might need the publishable key in others parts of my app. That's the only reason.</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-1" data-action="upvote" title="">
+<span class="updatable count" data-role="likes">1</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1077900301">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1077900301">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"></ul>
+
+
+</li></ul>
+
+
+</li><li class="post" id="post-1076059992">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/Ardakilic/" class="user" data-action="profile" data-user="1364557">
+<img data-role="user-avatar" data-user="1364557" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="profile" data-user="1364557" data-role="username">Arda Kılıçdağı</a></span>
+
+
+
+
+
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1076059992" data-role="relative-time" class="time-ago" title="Wednesday, October 9 2013 2:45 AM">8 months ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>I can't see the video neither from Chromium or Firefox, All other videos work for me (Shows me a black blank screen). Is there any chance that the embed code is broken?</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-1" data-action="upvote" title="">
+<span class="updatable count" data-role="likes">1</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1076059992">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1076059992">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"><li class="post" id="post-1076203485">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/jeff_way/" class="user" data-action="profile" data-user="1881344">
+<img data-role="user-avatar" data-user="1881344" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="profile" data-user="1881344" data-role="username">jeff_way</a></span>
+
+
+<span class="badge moderator">Mod</span>
+
+
+
+
+
+<span><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1076059992" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Arda Kılıçdağı</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1076203485" data-role="relative-time" class="time-ago" title="Wednesday, October 9 2013 6:07 AM">8 months ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>Ahh, just published before I had a chance to upload the video. Check back later today for the video.</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-2" data-action="upvote" title="">
+<span class="updatable count" data-role="likes">2</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1076203485">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1076203485">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"></ul>
+
+
+</li></ul>
+
+
+</li><li class="post" id="post-1432269793">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/hiswat/" class="user" data-action="profile" data-user="2033833">
+<img data-role="user-avatar" data-user="2033833" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="profile" data-user="2033833" data-role="username">hiswat</a></span>
+
+
+
+
+
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1432269793" data-role="relative-time" class="time-ago" title="Thursday, June 12 2014 9:41 AM">6 days ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>I'm not getting any response from Stripe Server.. <br>Using the test publishable key ..</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1432269793">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1432269793">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"><li class="post" id="post-1432336771">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/hiswat/" class="user" data-action="profile" data-user="2033833">
+<img data-role="user-avatar" data-user="2033833" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="profile" data-user="2033833" data-role="username">hiswat</a></span>
+
+
+
+
+
+
+<span><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1432269793" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> hiswat</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1432336771" data-role="relative-time" class="time-ago" title="Thursday, June 12 2014 10:23 AM">6 days ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>Edit: Fixed it..</p><p>Have Jquery on the top of stripe.js &amp; billing.js(or inside head tag to avoid any errors)..<br>Then Stripe.js<br>and finally billing.js...</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-1" data-action="upvote" title="">
+<span class="updatable count" data-role="likes">1</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1432336771">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1432336771">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"></ul>
+
+
+</li></ul>
+
+
+</li><li class="post" id="post-1237581290">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar">
+
+<div class="user"><img src="avatar92.jpg" class="user" alt="Avatar"></div>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author">mikenolimits</span>
+
+
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1237581290" data-role="relative-time" class="time-ago" title="Sunday, February 9 2014 6:22 PM">4 months ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>Uncaught Error: You did not set a valid publishable key. Call Stripe.setPublishableKey() with your publishable key. For more info, see <a href="https://stripe.com/docs/stripe.js" rel="nofollow">https://stripe.com/docs/stripe...</a></p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1237581290">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1237581290">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"></ul>
+
+
+</li><li class="post" id="post-1237512859">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar">
+
+<div class="user"><img src="avatar92.jpg" class="user" alt="Avatar"></div>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author">mikenolimits</span>
+
+
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1237512859" data-role="relative-time" class="time-ago" title="Sunday, February 9 2014 4:38 PM">4 months ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>I keep getting Uncaught TypeError: Object [object Object] has no method 'sttr'</p><p>This is my code....</p><p><a href="http://prntscr.com/2r3yy1" rel="nofollow">http://prntscr.com/2r3yy1</a></p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1237512859">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1237512859">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"></ul>
+
+
+</li><li class="post" id="post-1147547308">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/chrisportela/" class="user" data-action="profile" data-user="895075">
+<img data-role="user-avatar" data-user="895075" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="profile" data-user="895075" data-role="username">cmp</a></span>
+
+
+
+
+
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1147547308" data-role="relative-time" class="time-ago" title="Monday, December 2 2013 9:32 AM">7 months ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>Why do you put ':' after function names in the javascript?</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1147547308">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1147547308">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"><li class="post" id="post-1147548111">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/jeff_way/" class="user" data-action="profile" data-user="1881344">
+<img data-role="user-avatar" data-user="1881344" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="profile" data-user="1881344" data-role="username">jeff_way</a></span>
+
+
+<span class="badge moderator">Mod</span>
+
+
+
+
+
+<span><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1147547308" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> cmp</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1147548111" data-role="relative-time" class="time-ago" title="Monday, December 2 2013 9:33 AM">7 months ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>Because that's how you declare methods on your JS objects.</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1147548111">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1147548111">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"></ul>
+
+
+</li></ul>
+
+
+</li><li class="post" id="post-1082348128">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/meetgodhani/" class="user" data-action="profile" data-user="41521330">
+<img data-role="user-avatar" data-user="41521330" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="profile" data-user="41521330" data-role="username">meetgodhani</a></span>
+
+
+
+
+
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082348128" data-role="relative-time" class="time-ago" title="Monday, October 14 2013 1:41 PM">8 months ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>Hmm getting this unknown error when submitting form <br>Symfony \ Component \ HttpKernel \ Exception \MethodNotAllowedHttpException</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082348128">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1082348128">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"><li class="post" id="post-1082358136">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/jeff_way/" class="user" data-action="profile" data-user="1881344">
+<img data-role="user-avatar" data-user="1881344" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="profile" data-user="1881344" data-role="username">jeff_way</a></span>
+
+
+<span class="badge moderator">Mod</span>
+
+
+
+
+
+<span><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082348128" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> meetgodhani</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082358136" data-role="relative-time" class="time-ago" title="Monday, October 14 2013 1:49 PM">8 months ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>I'd need to see your code, but it sounds like your form method and action attributes might be incorrect.</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082358136">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1082358136">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"><li class="post" id="post-1082370027">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/meetgodhani/" class="user" data-action="profile" data-user="41521330">
+<img data-role="user-avatar" data-user="41521330" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="profile" data-user="41521330" data-role="username">meetgodhani</a></span>
+
+
+
+
+
+
+<span><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082358136" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> jeff_way</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082370027" data-role="relative-time" class="time-ago" title="Monday, October 14 2013 2:00 PM">8 months ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>Hi Jeff</p><p>Here's the code you can see <a href="https://raw.github.com/mrgodhani/laravel-stripe/master/app/views/buy.blade.php" rel="nofollow">https://raw.github.com/mrgodha...</a>.</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082370027">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1082370027">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"><li class="post" id="post-1082409833">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/meetgodhani/" class="user" data-action="profile" data-user="41521330">
+<img data-role="user-avatar" data-user="41521330" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="profile" data-user="41521330" data-role="username">meetgodhani</a></span>
+
+
+
+
+
+
+<span><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082370027" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> meetgodhani</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082409833" data-role="relative-time" class="time-ago" title="Monday, October 14 2013 2:39 PM">8 months ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>And following is what it generates as html source</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"><li><div class="media-mode-deferred media-show-buttons">
+
+<div data-role="post-media">
+
+<a class="media-button media-button-expand publisher-color publisher-border-color" href="https://a.disquscdn.com/uploads/mediaembed/images/655/9736/original.jpg" rel="nofollow" target="_blank" data-action="expand" title="">
+<i class="icon-images publisher-background-color"></i>
+View
+</a>
+<a class="media-button media-button-contract publisher-color publisher-border-color" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" target="_blank" data-action="contract">
+<i class="icon-cancel publisher-background-color"></i> Hide
+</a>
+
+<div class="media-content-loader" data-role="content-loader"></div>
+
+<div data-role="content-placeholder" class="media-content-placeholder" style="height: auto;">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="media-force-load" data-action="force-load"><i class="icon-images"></i></a>
+</div>
+</div>
+</div></li></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082409833">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1082409833">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"><li class="post" id="post-1082449788">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/jeff_way/" class="user" data-action="profile" data-user="1881344">
+<img data-role="user-avatar" data-user="1881344" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="profile" data-user="1881344" data-role="username">jeff_way</a></span>
+
+
+<span class="badge moderator">Mod</span>
+
+
+
+
+
+<span><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082409833" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> meetgodhani</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082449788" data-role="relative-time" class="time-ago" title="Monday, October 14 2013 3:21 PM">8 months ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>And you are responding with:</p><p></p><pre><code class="undefined">Route::post('buy', '...');
+</code></pre><p></p><p>?? Can you go through the "Whoops" stack trace and pinpoint what's happening?</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082449788">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1082449788">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"><li class="post" id="post-1082460905">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/meetgodhani/" class="user" data-action="profile" data-user="41521330">
+<img data-role="user-avatar" data-user="41521330" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="profile" data-user="41521330" data-role="username">meetgodhani</a></span>
+
+
+
+
+
+
+<span><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082449788" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> jeff_way</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082460905" data-role="relative-time" class="time-ago" title="Monday, October 14 2013 3:33 PM">8 months ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>Following to video I just have this as a route <br>Route::get('buy',function()<br>{<br>	return View::make('buy');<br>});</p><p>And attached is the stack trace in order</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"><li><div class="media-mode-deferred media-show-buttons">
+
+<div data-role="post-media">
+
+<a class="media-button media-button-expand publisher-color publisher-border-color" href="https://a.disquscdn.com/uploads/mediaembed/images/656/351/original.jpg" rel="nofollow" target="_blank" data-action="expand" title="">
+<i class="icon-images publisher-background-color"></i>
+View
+</a>
+<a class="media-button media-button-contract publisher-color publisher-border-color" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" target="_blank" data-action="contract">
+<i class="icon-cancel publisher-background-color"></i> Hide
+</a>
+
+<div class="media-content-loader" data-role="content-loader"></div>
+
+<div data-role="content-placeholder" class="media-content-placeholder" style="height: auto;">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="media-force-load" data-action="force-load"><i class="icon-images"></i></a>
+</div>
+</div>
+</div></li></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082460905">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1082460905">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"><li class="post" id="post-1082463496">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/jeff_way/" class="user" data-action="profile" data-user="1881344">
+<img data-role="user-avatar" data-user="1881344" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="profile" data-user="1881344" data-role="username">jeff_way</a></span>
+
+
+<span class="badge moderator">Mod</span>
+
+
+
+
+
+<span><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082460905" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> meetgodhani</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082463496" data-role="relative-time" class="time-ago" title="Monday, October 14 2013 3:36 PM">8 months ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>You need to respond to when the form is posted. Sounds like you don't have that.</p><p></p><pre><code class="javascript">Route::post(<span class="string">'buy'</span>, <span class="keyword">function</span>()
+{
+    dd(Input::all());
+});
+</code></pre>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082463496">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1082463496">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"><li class="post" id="post-1082466032">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/meetgodhani/" class="user" data-action="profile" data-user="41521330">
+<img data-role="user-avatar" data-user="41521330" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="profile" data-user="41521330" data-role="username">meetgodhani</a></span>
+
+
+
+
+
+
+<span><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082463496" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> jeff_way</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082466032" data-role="relative-time" class="time-ago" title="Monday, October 14 2013 3:39 PM">8 months ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>Oh ye I think that was the problem. Post works now.</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-1" data-action="upvote" title="">
+<span class="updatable count" data-role="likes">1</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082466032">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1082466032">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"></ul>
+
+
+</li><li class="post" id="post-1315454614">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/tim_albert/" class="user" data-action="profile" data-user="4564039">
+<img data-role="user-avatar" data-user="4564039" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="profile" data-user="4564039" data-role="username">tim_albert</a></span>
+
+
+
+
+
+
+<span><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1082463496" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> jeff_way</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1315454614" data-role="relative-time" class="time-ago" title="Wednesday, April 2 2014 12:15 PM">3 months ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>is this part in the video?</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1315454614">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1315454614">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"></ul>
+
+
+</li></ul>
+
+
+</li></ul>
+
+
+</li></ul>
+
+
+</li></ul>
+
+
+</li></ul>
+
+
+</li></ul>
+
+
+</li></ul>
+
+
+</li><li class="post" id="post-1077781550">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/disqus_vaffzwiEUE/" class="user" data-action="profile" data-user="70254909">
+<img data-role="user-avatar" data-user="70254909" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="profile" data-user="70254909" data-role="username">Chris</a></span>
+
+
+
+
+
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1077781550" data-role="relative-time" class="time-ago" title="Thursday, October 10 2013 10:01 AM">8 months ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>At 14:27 the video goes black.</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1077781550">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1077781550">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"><li class="post" id="post-1077899847">
+<div role="alert"></div>
+
+<div data-role="post-content" class="post-content">
+
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+
+<li class="" role="menu">
+
+
+<a class="dropdown-toggle" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+
+
+</li>
+
+</ul>
+
+<div class="indicator"></div>
+
+
+
+
+<div class="avatar hovercard">
+<a href="http://disqus.com/jeff_way/" class="user" data-action="profile" data-user="1881344">
+<img data-role="user-avatar" data-user="1881344" src="avatar92.jpg" alt="Avatar">
+</a>
+</div>
+
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+
+<span class="author publisher-anchor-color"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="profile" data-user="1881344" data-role="username">jeff_way</a></span>
+
+
+<span class="badge moderator">Mod</span>
+
+
+
+
+
+<span><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1077781550" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Chris</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1077899847" data-role="relative-time" class="time-ago" title="Thursday, October 10 2013 11:35 AM">8 months ago</a>
+
+</span>
+
+
+</header>
+
+
+<div class="post-body-inner">
+
+<div class="post-message-container" data-role="message-container">
+
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+
+<p>Ahh, forgot to cut off the end. Rest assured that was the end of the video. :) I'm re-exporting and will update the embed within the next hour.</p>
+
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+
+<menu>
+
+<li class="voting" data-role="voting">
+
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+
+<span class="tooltip">You must sign in to down-vote this post.</span>
+
+</span>
+
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="https://laracasts.com/series/billing-with-stripe/episodes/3#comment-1077899847">Link</a></li>
+</ul>
+</li>
+
+
+
+<li class="realtime" data-role="realtime-notification:1077899847">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://laracasts.com/series/billing-with-stripe/episodes/3#" class="btn btn-small"></a>
+
+</li>
+
+
+
+</menu>
+
+</footer>
+</div>
+
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+
+<ul data-role="children" class="children"></ul>
+
+
+</li></ul>
+
+
+</li></ul>
+
+<div class="load-more" data-role="more" style="display: none;">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="more-posts" class="btn">Load more comments</a>
+</div>
+</div>
+
+</section>
+
+<section id="community" data-tracking-area="main" style="display:none" data-role="main" data-outbound-link="embed:community" class="loading">
+
+</section>
+
+<section id="dashboard" style="display:none" data-role="main" data-tracking-area="main">
+
+
+<p style="line-height: 1.4">Nothing for you here ... yet. But as you comment with Disqus and follow
+other Disqus users, you will start to receive notifications here, as well as a personalized
+feed of activity by you and the people you follow. So get out there and participate in
+some discussions!</p>
+</section>
+
+<section id="profile" style="display:none" data-role="main" data-tracking-area="main">
+</section>
+
+<div id="discovery" data-tracking-area="discovery-south" style="position: static; visibility: visible; display: block; width: 100%;">
+<div id="discovery-main-c419" class="discovery-main style-variant-default">
+<div id="discovery-note" class="discovery-note">
+
+<div class="alert">
+<button class="close" data-action="discovery-help-close" title="Close this box">×</button>
+Disqus helps you find new and interesting content, discussions and products. Some sponsors and ecommerce sites may pay us for these recommendations and links. 
+<a href="http://help.disqus.com/customer/portal/articles/666278-introducing-promoted-discovery-and-f-a-q-" target="_blank">Learn more</a>
+ or 
+<a href="https://www.surveymonkey.com/s/GHK872T" target="_blank">
+give us feedback</a>.
+
+</div>
+
+</div>
+
+<div class="discovery-options">
+<button class="discovery-help" data-action="discovery-help">
+What's this?
+</button>
+</div>
+
+
+
+<section id="col-organic-c419" class="col-organic discovery-col-0 ">
+<header class="discovery-col-header">
+
+
+<h2>Also on 
+<strong>Laracasts</strong>
+</h2>
+
+
+
+
+</header>
+<ul class="discovery-posts">
+
+<li class="discovery-post post-0" id="discovery-link-organic-2724752495" data-role="discovery-post">
+<a href="http://redirect.disqus.com/url?url=https%3A%2F%2Flaracasts.com%2Fseries%2Fcommands-and-domain-events%2Fepisodes%2F4%3AlCE3zLv8rqUrFtighe7Sx32H0p0&imp=2q9jm3j26n094d&prev_imp=2q9iobd5305p2&forum_id=2515782&forum=laracast&thread_id=1833135802&major_version=metadata&thread=2724752495&zone=internal_discovery" class="publisher-anchor-color">
+
+
+<header class="discovery-post-header">
+<h3 title="Clean Event Listeners">
+<span data-role="discovery-thread-title" class="title line-truncate" data-line-truncate="2">
+Clean Event Listeners
+</span>
+
+
+
+</h3>
+
+
+<ul class="meta">
+
+<li class="comments">
+
+
+28 comments
+
+
+</li>
+
+
+<li class="time">19 days ago</li>
+
+</ul>
+
+</header>
+
+
+
+</a><a href="http://redirect.disqus.com/url?url=https%3A%2F%2Flaracasts.com%2Fseries%2Fcommands-and-domain-events%2Fepisodes%2F4%3AlCE3zLv8rqUrFtighe7Sx32H0p0&imp=2q9jm3j26n094d&prev_imp=2q9iobd5305p2&forum_id=2515782&forum=laracast&thread_id=1833135802&major_version=metadata&thread=2724752495&zone=internal_discovery" class="top-comment" data-role="discovery-top-comment">
+<img alt="Avatar" data-role="discovery-avatar">
+<p><span class="user" data-role="discovery-top-comment-author">Adam Engebretson</span> — <span data-role="discovery-top-comment-snippet" class="line-truncate" data-line-truncate="3">Laravel has a helper method called `class_basename($object)` that you can use instead of Reflection! :)</span></p>
+</a>
+
+
+
+
+</li>
+
+<li class="discovery-post post-1" id="discovery-link-organic-2716680811" data-role="discovery-post">
+<a href="http://redirect.disqus.com/url?url=https%3A%2F%2Flaracasts.com%2Fseries%2Fcommands-and-domain-events%2Fepisodes%2F1%3A0bzLqRXNQc5Ie79M1cm_H_UI-mM&imp=2q9jm3j26n094d&prev_imp=2q9iobd5305p2&forum_id=2515782&forum=laracast&thread_id=1833135802&major_version=metadata&thread=2716680811&zone=internal_discovery" class="publisher-anchor-color">
+
+
+<header class="discovery-post-header">
+<h3 title="Command Objects">
+<span data-role="discovery-thread-title" class="title line-truncate" data-line-truncate="2">
+Command Objects
+</span>
+
+
+
+</h3>
+
+
+<ul class="meta">
+
+<li class="comments">
+
+
+40 comments
+
+
+</li>
+
+
+<li class="time">22 days ago</li>
+
+</ul>
+
+</header>
+
+
+
+</a><a href="http://redirect.disqus.com/url?url=https%3A%2F%2Flaracasts.com%2Fseries%2Fcommands-and-domain-events%2Fepisodes%2F1%3A0bzLqRXNQc5Ie79M1cm_H_UI-mM&imp=2q9jm3j26n094d&prev_imp=2q9iobd5305p2&forum_id=2515782&forum=laracast&thread_id=1833135802&major_version=metadata&thread=2716680811&zone=internal_discovery" class="top-comment" data-role="discovery-top-comment">
+<img alt="Avatar" data-role="discovery-avatar">
+<p><span class="user" data-role="discovery-top-comment-author">Richard Bagshaw</span> — <span data-role="discovery-top-comment-snippet" class="line-truncate" data-line-truncate="3">I love this type of stuff, I mean, clearly the basics of Laravel are important, but I think it's this kind of architecture stuff that makes great developers.</span></p>
+</a>
+
+
+
+
+</li>
+
+<li class="discovery-post post-2" id="discovery-link-organic-2750389250" data-role="discovery-post">
+<a href="http://redirect.disqus.com/url?url=https%3A%2F%2Flaracasts.com%2Fseries%2Fhow-to-be-awesome-in-phpstorm%2Fepisodes%2F19%3ASW3B76BMa33ivq_5zPrGVr_V1uQ&imp=2q9jm3j26n094d&prev_imp=2q9iobd5305p2&forum_id=2515782&forum=laracast&thread_id=1833135802&major_version=metadata&thread=2750389250&zone=internal_discovery" class="publisher-anchor-color">
+
+
+<header class="discovery-post-header">
+<h3 title="Xdebug">
+<span data-role="discovery-thread-title" class="title line-truncate" data-line-truncate="2">
+Xdebug
+</span>
+
+
+
+</h3>
+
+
+<ul class="meta">
+
+<li class="comments">
+
+
+20 comments
+
+
+</li>
+
+
+<li class="time">9 days ago</li>
+
+</ul>
+
+</header>
+
+
+
+</a><a href="http://redirect.disqus.com/url?url=https%3A%2F%2Flaracasts.com%2Fseries%2Fhow-to-be-awesome-in-phpstorm%2Fepisodes%2F19%3ASW3B76BMa33ivq_5zPrGVr_V1uQ&imp=2q9jm3j26n094d&prev_imp=2q9iobd5305p2&forum_id=2515782&forum=laracast&thread_id=1833135802&major_version=metadata&thread=2750389250&zone=internal_discovery" class="top-comment" data-role="discovery-top-comment">
+<img alt="Avatar" data-role="discovery-avatar">
+<p><span class="user" data-role="discovery-top-comment-author">jeff_way</span> — <span data-role="discovery-top-comment-snippet" class="line-truncate" data-line-truncate="3">Absolutely. "Xdebug and Vagrant" is in the schedule.</span></p>
+</a>
+
+
+
+
+</li>
+
+<li class="discovery-post post-3" id="discovery-link-organic-2772955565" data-role="discovery-post">
+<a href="http://redirect.disqus.com/url?url=https%3A%2F%2Flaracasts.com%2Fseries%2Fcommands-and-domain-events%2Fepisodes%2F6%3AHhPGGGy7nUSmOnMRfCS3h5j0pRM&imp=2q9jm3j26n094d&prev_imp=2q9iobd5305p2&forum_id=2515782&forum=laracast&thread_id=1833135802&major_version=metadata&thread=2772955565&zone=internal_discovery" class="publisher-anchor-color">
+
+
+<header class="discovery-post-header">
+<h3 title="Validation and Decorators">
+<span data-role="discovery-thread-title" class="title line-truncate" data-line-truncate="2">
+Validation and Decorators
+</span>
+
+
+
+</h3>
+
+
+<ul class="meta">
+
+<li class="comments">
+
+
+10 comments
+
+
+</li>
+
+
+<li class="time">16 hours ago</li>
+
+</ul>
+
+</header>
+
+
+
+</a><a href="http://redirect.disqus.com/url?url=https%3A%2F%2Flaracasts.com%2Fseries%2Fcommands-and-domain-events%2Fepisodes%2F6%3AHhPGGGy7nUSmOnMRfCS3h5j0pRM&imp=2q9jm3j26n094d&prev_imp=2q9iobd5305p2&forum_id=2515782&forum=laracast&thread_id=1833135802&major_version=metadata&thread=2772955565&zone=internal_discovery" class="top-comment" data-role="discovery-top-comment">
+<img alt="Avatar" data-role="discovery-avatar">
+<p><span class="user" data-role="discovery-top-comment-author">jeff_way</span> — <span data-role="discovery-top-comment-snippet" class="line-truncate" data-line-truncate="3">I can do a dedicated lesson on decorators in PHP, if it would help.</span></p>
+</a>
+
+
+
+
+</li>
+
+</ul>
+</section>
+
+
+</div>
+</div>
+
+<div id="footer" data-tracking-area="footer">
+<ul>
+<li class="logo"><a href="http://disqus.com/" title="Powered by Disqus">Powered by Disqus</a></li>
+<li id="thread-subscribe-button" class="email"> 
+<div class="default">
+<a href="https://laracasts.com/series/billing-with-stripe/episodes/3#" data-action="subscribe" title="Subscribe and get email updates from this discussion"><i aria-hidden="true" class="icon-mail"></i><span class="clip">Subscribe</span> <i aria-hidden="true" class="icon-checkmark"></i></a>
+</div>
+<div class="form">
+<div class="input-wrapper"><input id="thread-subscribe-email" type="email" placeholder="yourname@email.com"></div>
+</div>
+</li>
+<li class="install">
+<a href="https://disqus.com/websites/?utm_source=laracast&utm_medium=Disqus-Footer" target="_blank">
+<i aria-hidden="true" class="icon-disqus"></i>
+<span class="clip">Add Disqus to your site</span>
+</a>
+</li>
+</ul>
+</div>
+</div></body></html>
