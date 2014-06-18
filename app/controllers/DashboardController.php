@@ -10,6 +10,8 @@ class DashboardController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('dashboard.index');
+		$active = Yardsale::where('user_id', Sentry::getUser()->id)->pluck('active');
+
+		return View::make('dashboard.index')->with('active', $active);
 	}
 }

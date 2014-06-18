@@ -56,6 +56,9 @@ Route::group(['before' => 'auth'], function()
     Route::post('/blueimp', 'ImageController@index');
     Route::get('/blueimp', 'ImageController@index');
     Route::delete('/blueimp', 'ImageController@index');
+
+    Route::get('/payment', 'PaymentController@create');
+
 });
 
 
