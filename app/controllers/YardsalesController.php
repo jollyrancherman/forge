@@ -19,6 +19,7 @@ class YardsalesController extends \BaseController {
 
 		    $email = Sentry::getUser()->email;
 		    $id = Sentry::getUser()->id;
+		    
 		    //send email
 				Mail::send('emails.paid', $data, function($message) use ($email)
 				{

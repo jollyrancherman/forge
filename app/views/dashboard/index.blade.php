@@ -13,7 +13,8 @@
 
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2">
-								@if($active == '0')
+								@if($active->lat == '')
+
 									<div class="alert alert-danger">
 										<h3 style="margin-top: 0;"><i class="fa fa-exclamation-circle"></i> 
 											You have not created a yardsale yet!
@@ -34,12 +35,14 @@
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2">
 
-								<div class="alert alert-danger">
-									<h3 style="margin-top: 0;"><i class="fa fa-exclamation-circle"></i> 
-										You have not paid for registration yet
-									</h3>
-									<p>{{ link_to('/payment', 'Click here') }} to pay for registration. Registration is $12.</p>
-								</div>
+								@if($active->active == '0')
+									<div class="alert alert-danger">
+										<h3 style="margin-top: 0;"><i class="fa fa-exclamation-circle"></i> 
+											You have not paid for registration yet
+										</h3>
+										<p>{{ link_to('/payment', 'Click here') }} to pay for registration. Registration is $12.</p>
+									</div>								
+								@endif
 
 							</div>
 						</div>
