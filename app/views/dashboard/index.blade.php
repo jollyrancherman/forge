@@ -13,7 +13,7 @@
 
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2">
-								@if($active->lat == '')
+								@if(!$data['yardsale'] || $data['yardsale'] == '')
 
 									<div class="alert alert-danger">
 										<h3 style="margin-top: 0;"><i class="fa fa-exclamation-circle"></i> 
@@ -35,7 +35,7 @@
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2">
 
-								@if($active->active == '0')
+								@if($data['active'] == '0')
 									<div class="alert alert-danger">
 										<h3 style="margin-top: 0;"><i class="fa fa-exclamation-circle"></i> 
 											You have not paid for registration yet

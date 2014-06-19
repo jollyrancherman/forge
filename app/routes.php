@@ -7,8 +7,7 @@ Route::get('/email', function(){
 });
 
 Route::get('/test',function() {
-	echo $_ENV['BLUEIMP_DIR'];
-	echo $_ENV['CURRENT_BASE_ADDRESS'];
+	$total = array_count_values(Yardsale::all()->lists('area'));
 });
 
 /*==================================
@@ -76,7 +75,17 @@ Route::group(['before' => 'auth'], function()
 Route::group(['before' => 'guest'], function()
 {
 	Route::get('/home', function(){
-		return View::make('homepage.create');
+		$total = array_count_values(Yardsale::all()->lists('area'));
+
+		// dd(array_key_exists('carson', $total));
+		$data = [
+			'carson' => 80 - (array_key_exists('carson', $total)? $total['carson'] : 0),
+			'douglas' => 80 - (array_key_exists('douglas', $total)? $total['douglas'] : 0),
+			'sparks' => 80 - (array_key_exists('sparks', $total)? $total['sparks'] : 0),
+			'reno' => 80 - (array_key_exists('reno', $total)? $total['reno'] : 0)
+		];
+
+		return View::make('homepage.create')->with('data', $data);
 	});
 	
 	/*====================================

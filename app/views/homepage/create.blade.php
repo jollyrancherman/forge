@@ -25,15 +25,7 @@
                 <div class="city-tile text-center">
                   <h3>Carson City</h3>
                   <p class="lead">July 19, 2014</p>
-                  <p>Available Spots (80)</p>
-                  <p class="text-left">An all day event, where you choose your open hours, and share what precious items you will be selling. Sign up today, while spots are available. Thanks in advance for supporting Big Brothers Big Sisters of Northern Nevada.</p>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="city-tile text-center">
-                  <h3>Reno</h3>
-                  <p class="lead">August 9, 2014</p>
-                  <p>Available Spots (80)</p>
+                  <p>Available Spots ({{ $data['carson'] }})</p>
                   <p class="text-left">An all day event, where you choose your open hours, and share what precious items you will be selling. Sign up today, while spots are available. Thanks in advance for supporting Big Brothers Big Sisters of Northern Nevada.</p>
                 </div>
               </div>
@@ -41,7 +33,7 @@
                 <div class="city-tile text-center">
                   <h3>Minden / Gardnerville</h3>
                   <p class="lead">July 26, 2014</p>
-                  <p>Available Spots (80)</p>
+                  <p>Available Spots ({{ $data['douglas'] }})</p>
                   <p class="text-left">An all day event, where you choose your open hours, and share what precious items you will be selling. Sign up today, while spots are available. Thanks in advance for supporting Big Brothers Big Sisters of Northern Nevada.</p>
                 </div>
               </div>
@@ -49,7 +41,15 @@
                 <div class="city-tile text-center">
                   <h3>Sparks</h3>
                   <p class="lead">July 26, 2014</p>
-                  <p>Available Spots (80)</p>
+                  <p>Available Spots ({{ $data['sparks'] }})</p>
+                  <p class="text-left">An all day event, where you choose your open hours, and share what precious items you will be selling. Sign up today, while spots are available. Thanks in advance for supporting Big Brothers Big Sisters of Northern Nevada.</p>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="city-tile text-center">
+                  <h3>Reno</h3>
+                  <p class="lead">August 9, 2014</p>
+                  <p>Available Spots ({{ $data['reno'] }})</p>
                   <p class="text-left">An all day event, where you choose your open hours, and share what precious items you will be selling. Sign up today, while spots are available. Thanks in advance for supporting Big Brothers Big Sisters of Northern Nevada.</p>
                 </div>
               </div>
