@@ -12,7 +12,7 @@
 
 								<div class="col-sm-8">
 									{{ Form::open(['class' => 'form-horizontal', 'id' => 'billing-form']) }}
-										<div class="payment-errors col-sm-offset-3"></div>
+										<div class="error-msg col-sm-offset-3"></div>
 										<!-- CARD Number -->
 									  <div class="form-group">
 									    <label for="card_number" class="col-sm-3 control-label">Card Number</label>

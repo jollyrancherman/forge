@@ -1,5 +1,7 @@
 <?php
 
+App::bind('Acme\Billing\BillingInterface', 'Acme\Billing\StripeBilling');
+
 Route::get('/email', function(){
 	return View::make('emails.activation');
 });
@@ -60,7 +62,31 @@ Route::group(['before' => 'auth'], function()
     Route::get('/payment', 'PaymentController@create');
     Route::post('/payment', function()
 		{
-	    dd(Input::all());
+	    $billing = App::make('Acme\Billing\BillingInterface');
+
+	    try {
+		    $results = $billing->charge([
+		    	'email' => Sentry::getUser()->email,
+		    	'token' => Input::get('stripe-token'),
+		    ]);
+
+		    //check if success
+		    if ($results->paid) {
+			    
+			    //send email
+			    
+			    //redirect with message
+			    return Redirect::refresh()->withMessage('You were successfully billed $12. A receipt will be sent to you.')->with('messageType', 'bs-callout bs-callout-success');  
+			    
+		    }else{
+		    	return Redirect::refresh()->withInput()->withMessage('An error occurred. Your account was not billed. Please contact us if you continue to receive this error.')->with('messageType', 'bs-callout bs-callout-danger');  
+		    }
+	    	
+	    } catch (Exception $e) {
+	    	//redirect with message
+	    	return Redirect::refresh()->withInput()->withMessage($e->getMessage())->with('messageType', 'bs-callout bs-callout-danger');  
+	    }
+
 		});
 
 });

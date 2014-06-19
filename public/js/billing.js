@@ -27,13 +27,13 @@
 		stripeResponseHandler: function (status, response) {	
 
 			if (response.error) {
-				this.form.find('.payment-errors').show().text(response.error.message);
+				this.form.find('.error-msg').show().text(response.error.message);
 				return this.submitButton.prop('disabled', false).val(this.submitButtonValue);
 			}
 
 			$('<input>',{
 				type: 'hidden',
-				name: 'stripeToken',
+				name: 'stripe-token',
 				value: response.id
 			}).appendTo(this.form);
 
