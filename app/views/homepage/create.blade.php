@@ -9,7 +9,7 @@
               </div>
               <div class="col-md-10 col-md-offset-1">
                 <p>Find your city below to sign up as a host. Registration is $12 per house participating. $10 of the registration goes to the Big Brothers and Big Sisters of Northern Nevada and $2 goes towards yard sale signs.</p>
-                <p>Shoppers, to stay hip with the news and maps of participants, click on "Sign up".</p>
+                <p>Shoppers, to stay hip with the news and maps of participants, click on "Email Updates".</p>
               </div>
             </div>
             <div class="row">

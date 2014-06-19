@@ -257,7 +257,7 @@
         {{ Form::open(['id'=>'submit_email']) }}
       <div class="modal-body">
         <p class="lead">Be an Insider!</p>
-        <p> Sign up now to become one of the privileged. Thinking about shopping the yard sale event or can’t yet commit to hosting? We will keep you up to date with everything FraucCityWide, including maps, news, and donating information. We’ll catch you on the flip side."</p>
+        <p> Sign up now to become one of the privileged. Thinking about shopping the yard sale event or can’t yet commit to hosting? We will keep you up to date with everything FraucCityWide, including maps, news, and donating information. We’ll catch you on the flip side.</p>
           <!-- FIELD -->
           <div class="form-group">
             {{ Form::label('city', 'Select Your City', ['class' => 'control_label']) }}
