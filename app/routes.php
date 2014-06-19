@@ -60,6 +60,8 @@ Route::group(['before' => 'auth'], function()
     Route::delete('/blueimp', 'ImageController@index');
 
     Route::get('/payment', 'PaymentController@create');
+
+});
     Route::post('/payment', function()
 		{
 	    $billing = App::make('Acme\Billing\BillingInterface');
@@ -88,8 +90,6 @@ Route::group(['before' => 'auth'], function()
 	    }
 
 		});
-
-});
 
 
 
