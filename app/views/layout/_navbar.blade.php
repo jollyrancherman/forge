@@ -19,6 +19,7 @@
                 <li><a href="/yardsale/find/sparks">Sparks</a></li>
                 <hr />
 
+                <li><a href="/tos">Terms and Conditions</a></li>
                 <li><a href="http://frauc.com">frauc.com</a></li>
                 <li><a href="http://www.bbbsnn.org/site/c.aiINI5NMKeKYF/b.7529395/k.F024/Home_Page.htm">BigBrothersBigSisters</a></li>
                 <li style="margin-bottom:20px;"><a href="#contactModal" role="button" data-toggle="modal">Contact Us</a></li>
