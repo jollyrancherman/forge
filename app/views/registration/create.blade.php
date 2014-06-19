@@ -9,7 +9,7 @@
                 <h2>Host a Yard Sale </h2>
               </div>
               <div class="col-md-8 col-md-offset-2">
-                <p class="lead">It seems you are ready to commit to a yard sale in your city! Register by entering your email and create a password below. We will send you a confirmation email to finish up this easy process."</p>
+                <p class="lead">It seems you are ready to commit to a yard sale in your city! Register by entering your email and create a password below. We will send you a confirmation email to finish up this easy process.</p>
               </div>
             </div>
             <div class="row">
