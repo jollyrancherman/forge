@@ -2,6 +2,48 @@
 
 class YardsalesController extends \BaseController {
 
+	public function completePayment()
+	{
+    $billing = App::make('Acme\Billing\BillingInterface');
+
+    try {
+	    $results = $billing->charge([
+	    	'email' => Sentry::getUser()->email,
+	    	'token' => Input::get('stripe-token'),
+	    ]);
+
+	    //check if success
+	    if ($results->paid) {
+		    
+		    $data = [];
+
+		    $email = Sentry::getUser()->email;
+		    $id = Sentry::getUser()->id;
+		    //send email
+				Mail::send('emails.paid', $data, function($message) use ($email)
+				{
+					$message->from('contactus@frauc.com', 'FraucCityWide.com');
+			  	$message->to($email, $email)
+			      ->subject('Payment Recieved.');		
+				});	  
+
+				$yardsale = Yardsale::where('user_id' , $id)->first();
+				$yardsale->active = '1';
+				$yardsale->save();
+
+		    //redirect with message
+		    return Redirect::to('/dashboard')->withMessage('You were successfully billed $12. A receipt will be sent to you.')->with('messageType', 'bs-callout bs-callout-success');  
+		    
+	    }else{
+	    	return Redirect::refresh()->withInput()->withMessage('An error occurred. Your account was not billed. Please contact us if you continue to receive this error.')->with('messageType', 'bs-callout bs-callout-danger');  
+	    }
+    	
+    } catch (Exception $e) {
+    	//redirect with message
+    	return Redirect::refresh()->withInput()->withMessage($e->getMessage())->with('messageType', 'bs-callout bs-callout-danger');  
+    }
+	}
+
 	public function listView($city = '')
 	{
 		$yardsale = Yardsale::where('area', '=', $city)->get();

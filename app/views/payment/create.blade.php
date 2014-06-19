@@ -13,6 +13,15 @@
 								<div class="col-sm-8">
 									{{ Form::open(['class' => 'form-horizontal', 'id' => 'billing-form']) }}
 										<div class="error-msg col-sm-offset-3"></div>
+
+										<!-- Name -->
+									  <div class="form-group">
+									    <label for="cardholder_name" class="col-sm-3 control-label">Cardholders Name</label>
+									    <div class="col-sm-9">
+									      <input type="text" name="name" class="form-control" id="cardholder_name" placeholder="Cardholders Name" data-stripe="name">
+									    </div>
+									  </div>
+
 										<!-- CARD Number -->
 									  <div class="form-group">
 									    <label for="card_number" class="col-sm-3 control-label">Card Number</label>
@@ -21,7 +30,7 @@
 									    </div>
 									  </div>
 										
-										<!-- CARD Number -->
+										<!-- CVC Number -->
 									  <div class="form-group">
 									    <label for="CVC" class="col-sm-3 control-label">CVC</label>
 									    <div class="col-sm-4">
