@@ -8,7 +8,6 @@ class Yardsale extends \Elegant {
 		"area" => 'required',
 		"address" => 'required',
 		"title" => 'required',
-		"description" => 'required',
 	];
 
 	public $table = 'Yardsales';

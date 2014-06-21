@@ -47,19 +47,35 @@ Route::get('/tos', ['as' => 'tos', 'uses' => 'PagesController@tos']);
 =================================*/
 Route::group(['before' => 'auth'], function()
 {
-    Route::get('/dashboard', ['as' => 'dash', 'uses' => 'DashboardController@index']);
+	if(Sentry::getUser())
+	{
 
-		Route::get('/logout', ['as' => 'logout', 'uses' => 'SessionController@destroy']);
+		$record = Yardsale::where('user_id', Sentry::getUser()->id)->first();
 
-    Route::get('/dashboard/yardsale', 'YardsalesController@create');
-    Route::post('/dashboard/yardsale', 'YardsalesController@store');
+		if($record == NULL){
+			Session::put('yardsale.created', false);
+			Session::put('yardsale.active', false);
+		}else{	
+			Session::put('yardsale.created', $record->lat);
+			Session::put('yardsale.active', $record->active);
+		}
+	}
 
-    Route::post('/blueimp', 'ImageController@index');
-    Route::get('/blueimp', 'ImageController@index');
-    Route::delete('/blueimp', 'ImageController@index');
 
-    Route::get('/payment', 'PaymentController@create');
-    Route::post('/payment', 'YardsalesController@completePayment');
+
+  Route::get('/dashboard', ['as' => 'dash', 'uses' => 'DashboardController@index']);
+
+	Route::get('/logout', ['as' => 'logout', 'uses' => 'SessionController@destroy']);
+
+  Route::get('/dashboard/yardsale', 'YardsalesController@create');
+  Route::post('/dashboard/yardsale', 'YardsalesController@store');
+
+  Route::post('/blueimp', 'ImageController@index');
+  Route::get('/blueimp', 'ImageController@index');
+  Route::delete('/blueimp', 'ImageController@index');
+
+  Route::get('/payment', 'PaymentController@create');
+  Route::post('/payment', 'YardsalesController@completePayment');
 
 });
 

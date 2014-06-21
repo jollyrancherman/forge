@@ -8,7 +8,18 @@
                     <li><a href="#myModal" role="button" data-toggle="modal">Email Updates!</a></li>
                 @else
                     <li><a href="/dashboard">Dashboard</a></li>
-                    <li><a href="/dashboard/yardsale">My Yardsale</a></li>
+                    @if(!Session::get('yardsale.created'))
+                        <li ><a href="/dashboard/yardsale">
+                            Create Yardsale<i class="fa fa-exclamation-triangle" style="color: red;"></i>
+                        </a></li>
+                    @else
+                        <li><a href="/dashboard/yardsale">My Yardsale</a></li>
+                    @endif
+                    @if(!Session::get('yardsale.active'))
+                        <li ><a href="/payment">
+                            Pay Registration<i class="fa fa-exclamation-triangle" style="color: red;"></i>
+                        </a></li>
+                    @endif
                     <li><a href="/logout">Logout</a></li>
                 @endif
 
