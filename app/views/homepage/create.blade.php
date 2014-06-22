@@ -22,6 +22,7 @@
                 
                 <div class="col-lg-3">
                   <div class="city-tile text-center">
+                    <img src="/img/homepage-carson-banner.jpg" class="img-responsive" alt="Responsive image">
                     <h3>Carson City</h3>
                     <p class="lead">July 19, 2014</p>
                     <p>Available Spots ({{ $data['carson'] }})</p>
@@ -30,6 +31,7 @@
                 </div>
                 <div class="col-lg-3">
                   <div class="city-tile text-center">
+                    <img src="/img/homepage-minden-banner.jpg" class="img-responsive" alt="Responsive image">
                     <h3>Minden / Gardnerville</h3>
                     <p class="lead">July 26, 2014</p>
                     <p>Available Spots ({{ $data['douglas'] }})</p>
@@ -38,6 +40,7 @@
                 </div>
                 <div class="col-lg-3">
                   <div class="city-tile text-center">
+                    <img src="/img/homepage-sparks-banner.jpg" class="img-responsive" alt="Responsive image">
                     <h3>Sparks</h3>
                     <p class="lead">July 26, 2014</p>
                     <p>Available Spots ({{ $data['sparks'] }})</p>
@@ -46,6 +49,7 @@
                 </div>
                 <div class="col-lg-3">
                   <div class="city-tile text-center">
+                    <img src="/img/homepage-reno-banner.jpg" class="img-responsive" alt="Responsive image">
                     <h3>Reno</h3>
                     <p class="lead">August 9, 2014</p>
                     <p>Available Spots ({{ $data['reno'] }})</p>
