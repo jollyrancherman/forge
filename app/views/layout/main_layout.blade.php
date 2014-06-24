@@ -212,11 +212,8 @@
               </div>
               <div class="col-xs-2">
               <div class="row">
-                <p class="small" style="margin: 5px; line-height: 12px;">Brought to you by:</p>
-              </div>
-              <div class="row">
                 <a href="http://frauc.com/" target="_blank">
-                  {{ HTML::image("img/logoPlusText.png", "Email Header",['class' => 'img-responsive', 'width' => '200', 'style' => 'display: inlne-block;']) }}
+                  {{ HTML::image("img/fraucComAndBBBSLogo2.png", "Email Header",['class' => 'img-responsive', 'width' => '200', 'style' => 'display: inlne-block;']) }}
                 </a>                                 
               </div>
               </div>
