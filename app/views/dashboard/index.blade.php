@@ -38,9 +38,9 @@
 								@if(!Session::get('yardsale.active'))
 									<div class="alert alert-danger">
 										<h3 style="margin-top: 0;"><i class="fa fa-exclamation-circle"></i> 
-											You have not paid for registration yet
+											You have not yet paid for registration. No worries, easy fix.
 										</h3>
-										<p>{{ link_to('/payment', 'Click here') }} to pay for registration. Registration is $12.</p>
+										<p>{{ link_to('/payment', 'Click here') }} to pay the $12 (and make your yard sale visible to shoppers).</p>
 									</div>								
 								@endif
 

@@ -1,7 +1,7 @@
 @extends('emails.template')
 
 @section('catchPhrase')
-Payment recieved! Thank you!
+FraucCityWide payment received 
 @stop
 
 @section('content')
@@ -30,11 +30,11 @@ Payment recieved! Thank you!
                               </tr>
                               <!-- END OF IMAGE--> <!-- START OF HEADING--> 
                               <tr>
-                                <td class="featured" align="center" style="padding-top: 20px ; padding-right: 20px ; padding-bottom: 5px ; padding-left: 20px ; text-transform: uppercase; font-family: 'PT Sans', Helvetica, Arial, sans-serif; color:#ffffff; font-size:18px; line-height:24px; mso-line-height-rule: exactly;"> <span> Payment Recieved </span> </td>
+                                <td class="featured" align="center" style="padding-top: 20px ; padding-right: 20px ; padding-bottom: 5px ; padding-left: 20px ; text-transform: uppercase; font-family: 'PT Sans', Helvetica, Arial, sans-serif; color:#ffffff; font-size:18px; line-height:24px; mso-line-height-rule: exactly;"> <span>Your payment of $12 was received!</span> </td>
                               </tr>
                               <!-- END OF HEADING--> <!-- START OF TEXT--> 
                               <tr>
-                                <td class="featured" align="center" style="padding-top: 0px ; padding-right: 20px ; padding-bottom: 20px ; padding-left: 20px ; margin: 0; font-size:13px ; color:#ffffff; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> Anything else we want to say about payment. </span> </td>
+                                <td class="featured" align="center" style="padding-top: 0px ; padding-right: 20px ; padding-bottom: 20px ; padding-left: 20px ; margin: 0; font-size:13px ; color:#ffffff; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> Thank you for supporting a great cause. </span> </td>
                               </tr>
                               <!-- END OF TEXT--> 
                             </table>
@@ -80,7 +80,7 @@ Payment recieved! Thank you!
                               </tr>
                               <!-- END OF HEADING--> <!-- START OF TEXT--> 
                               <tr>
-                                <td class="center" align="left" style="margin: 0; font-size:13px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> Registration fee is $12 per household. $10 goes to Big Brothers Big Sisters of Northern Nevada. $2 goes to yard sale signs. </span> </td>
+                                <td class="center" align="left" style="margin: 0; font-size:13px ; color:#aaaaaa; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> Just a reminder, you can make changes to your yard sale profile by signing into your account.</span> </td>
                               </tr>
                               <!-- END OF TEXT--> <!-- START BUTTON--> 
                               <tr>

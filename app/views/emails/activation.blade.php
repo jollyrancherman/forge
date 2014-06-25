@@ -1,7 +1,7 @@
 @extends('emails.template')
 
 @section('catchPhrase')
-Yo! This is your activation email!
+Oh hey! Here is the email we promised you.
 @stop
 
 @section('content')
@@ -22,11 +22,11 @@ Yo! This is your activation email!
                             <table class="full" bgcolor="#3399CC" align="left" width="540" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
                               <!-- START OF HEADING--> 
                               <tr>
-                                <td class="featured" align="center" style="padding-top: 20px ; padding-right: 20px ; padding-bottom: 5px ; padding-left: 20px ; text-transform: uppercase; font-family: 'PT Sans', Helvetica, Arial, sans-serif; color:#ffffff; font-size:18px; line-height:24px; mso-line-height-rule: exactly;"> <span> This is it....</span> </td>
+                                <td class="featured" align="center" style="padding-top: 20px ; padding-right: 20px ; padding-bottom: 5px ; padding-left: 20px ; text-transform: uppercase; font-family: 'PT Sans', Helvetica, Arial, sans-serif; color:#ffffff; font-size:18px; line-height:24px; mso-line-height-rule: exactly;"> <span> This is the start of something good ... </span> </td>
                               </tr>
                               <!-- END OF HEADING--> <!-- START OF TEXT--> 
                               <tr>
-                                <td class="featured" align="center" style="padding-top: 0px ; padding-right: 20px ; padding-bottom: 20px ; padding-left: 20px ; margin: 0; font-size:13px ; color:#ffffff; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> Blah blah blah activation.</span> </td>
+                                <td class="featured" align="center" style="padding-top: 0px ; padding-right: 20px ; padding-bottom: 20px ; padding-left: 20px ; margin: 0; font-size:13px ; color:#ffffff; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span>Just click the link below to start setting up your yard sale profile.</span> </td>
                               </tr>
                               <!-- END OF TEXT--> 
                             </table>

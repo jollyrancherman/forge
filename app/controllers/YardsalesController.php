@@ -25,7 +25,7 @@ class YardsalesController extends \BaseController {
 				{
 					$message->from('contactus@frauc.com', 'FraucCityWide.com');
 			  	$message->to($email, $email)
-			      ->subject('Payment Recieved.');		
+			      ->subject('FraucCityWide payment received.');		
 				});	  
 
 				$yardsale = Yardsale::where('user_id' , $id)->first();

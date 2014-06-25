@@ -8,7 +8,7 @@
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2">
 								<h2>Payment</h2>
-								<p>This is some text about payment, what it does, where it goes. </p>
+								<p>You’ve made it to the final step. Registration is $12, with $10 going to Big Brothers Big Sisters of Northern Nevada and $2 going to yard sale signs. Enter your credit card information to finalize (registration is nonrefundable).</p>
 
 								<div class="col-sm-8">
 									{{ Form::open(['class' => 'form-horizontal', 'id' => 'billing-form']) }}
