@@ -26,7 +26,7 @@
 										<h3 style="margin-top: 0;"><i class="fa fa-check"></i> 
 											You have set up your yardsale.
 										</h3>
-										<p>{{ link_to('/dashboard/yardsale', 'Click here') }} to edit your yardsale.</p>
+										<p style="margin-bottom: 5px;">{{ link_to('/dashboard/yardsale', 'Click here') }} to edit your yardsale.</p>
 										Your yardsale is: <button class="btn btn-primary" value='{{ $visible->visible }}' id="toggleVisible">Visible</button>
 									</div>								
 								@endif

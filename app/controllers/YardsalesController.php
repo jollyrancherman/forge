@@ -83,7 +83,10 @@ class YardsalesController extends \BaseController {
 
 	public function findByCity($city = '')
 	{
-		$yardsale = Yardsale::where('area', '=', $city)->get();
+		$yardsale = Yardsale::where('area', '=', $city)
+													->where('active', '=', '1')
+													->where('visible', '=', '1')
+													->get();
 
 		return View::make('yardsale.find')->with('data', $yardsale)->with('city', $city);
 	}
