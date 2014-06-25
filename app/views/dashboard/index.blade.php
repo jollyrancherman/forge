@@ -22,11 +22,12 @@
 										<p>{{ link_to('/dashboard/yardsale', 'Click here') }} to create a new yardsale!</p>
 									</div>
 								@else
-									<div class="alert alert-success">
+									<div class="alert alert-success clearfix">
 										<h3 style="margin-top: 0;"><i class="fa fa-check"></i> 
 											You have set up your yardsale.
 										</h3>
 										<p>{{ link_to('/dashboard/yardsale', 'Click here') }} to edit your yardsale.</p>
+										Your yardsale is: <button class="btn btn-primary" value='{{ $visible->visible }}' id="toggleVisible">Visible</button>
 									</div>								
 								@endif
 							</div>
@@ -49,4 +50,34 @@
 
           </div>
         </div>
+@stop
+
+@section('scripts-bot')
+<script>
+function toggleYardsale (data) {
+	if(data == '1'){
+		btnState.val('0').addClass('btn-danger').removeClass('btn-primary').text('hidden (click to show)');
+	}else{
+		btnState.val('1').addClass('btn-primary').removeClass('btn-danger').text('visible (click to hide)');
+	}
+}
+
+var btnState = $('#toggleVisible');
+
+toggleYardsale(btnState.val());
+
+btnState.on('click',function () {
+
+ 	$.ajax({
+		url: '/yardsale/hide',
+		type: 'POST',
+		dataType: 'json',
+		data:{visible:btnState.val()},
+		success: function(data){
+			toggleYardsale(data);
+    }
+  });
+});
+
+</script>
 @stop

@@ -53,12 +53,14 @@ Route::group(['before' => 'auth'], function()
 		$record = Yardsale::where('user_id', Sentry::getUser()->id)->first();
 
 		if($record == NULL){
-			Session::put('yardsale.created', false);
 			Session::put('yardsale.active', false);
+			Session::put('yardsale.created', false);
 		}else{	
-			Session::put('yardsale.created', $record->lat);
 			Session::put('yardsale.active', $record->active);
+			$record->lat > 0 ? Session::put('yardsale.created', true) : Session::put('yardsale.created', false);
 		}
+
+
 	}
 
 
@@ -84,10 +86,6 @@ Route::group(['before' => 'auth'], function()
 /*==================================
 =            Guest Only            =
 ==================================*/
-
-
-
-
 Route::group(['before' => 'guest'], function()
 {
 	Route::get('/home', function(){
@@ -129,6 +127,13 @@ Route::group(['before' => 'guest'], function()
 	Route::post('/resetpassword/{resetcode}', 'PagesController@resetPasswordPost');
 
 });
+
+
+/*=====================================
+=            AJAX Requests            =
+=====================================*/
+//Change Active
+Route::post('/yardsale/hide', 'YardsalesController@ToggleHide');
 
 
 

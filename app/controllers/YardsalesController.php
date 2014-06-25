@@ -2,6 +2,20 @@
 
 class YardsalesController extends \BaseController {
 
+
+	public function toggleHide()
+	{
+   	if(Input::get('visible') === '1' || Input::get('visible') == '0'){
+	    Yardsale::where('user_id','=',Sentry::getUser()->id)->update(['visible' => Input::get('visible')]);
+	    $visible = Yardsale::where('user_id', '=', Sentry::getUser()->id)->firstOrFail();
+	    return $visible->visible;
+
+   	}else{
+   		return false;
+   	}
+	}
+
+
 	public function completePayment()
 	{
     $billing = App::make('Acme\Billing\BillingInterface');

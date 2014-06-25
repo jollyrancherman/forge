@@ -10,20 +10,8 @@ class DashboardController extends \BaseController {
 	 */
 	public function index()
 	{
-		// $record = Yardsale::where('user_id', Sentry::getUser()->id)->first();
+		$visible = Yardsale::where('user_id', '=', Sentry::getUser()->id)->firstOrFail();
 
-		// if($record == NULL){
-		// 	$data = [
-		// 		'active' => 0,
-		// 		'yardsale' => ''
-		// 	];
-		// }else{	
-		// 	$data = [
-		// 		'active' => $record->active,
-		// 		'yardsale' => $record->lat
-		// 	];
-		// }
-
-		return View::make('dashboard.index');
+		return View::make('dashboard.index')->with('visible', $visible);
 	}
 }
