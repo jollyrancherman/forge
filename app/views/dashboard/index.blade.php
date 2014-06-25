@@ -56,9 +56,9 @@
 <script>
 function toggleYardsale (data) {
 	if(data == '1'){
-		btnState.val('0').addClass('btn-danger').removeClass('btn-primary').text('hidden (click to show)');
-	}else{
 		btnState.val('1').addClass('btn-primary').removeClass('btn-danger').text('visible (click to hide)');
+	}else{
+		btnState.val('0').addClass('btn-danger').removeClass('btn-primary').text('hidden (click to show)');
 	}
 }
 
