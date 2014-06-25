@@ -12,7 +12,7 @@ class AddVisibleToYardsalesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('yardsales', function(Blueprint $table)
+		Schema::table('Yardsales', function(Blueprint $table)
 		{
 			$table->boolean('visible');
 		});
@@ -26,7 +26,7 @@ class AddVisibleToYardsalesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('yardsales', function(Blueprint $table)
+		Schema::table('Yardsales', function(Blueprint $table)
 		{
 			$table->dropColumn('visible');
 		});
