@@ -11,4 +11,10 @@ class Yardsale extends \Elegant {
 	];
 
 	public $table = 'Yardsales';
+
+	protected function getVisibility($id)
+	{
+		$visible = Yardsale::where('user_id', '=', $id)->first();
+		return !is_null($visible) ? $visible : 0 ;
+	}
 }
