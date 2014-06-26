@@ -26,8 +26,11 @@
 										<h3 style="margin-top: 0;"><i class="fa fa-check"></i> 
 											You have set up your yardsale.
 										</h3>
-										<p style="margin-bottom: 5px;">{{ link_to('/dashboard/yardsale', 'Click here') }} to edit your yardsale.</p>
-										Your yardsale is: <button class="btn btn-primary" value='{{ $visible->visible }}' id="toggleVisible">Visible</button>
+										<p style="margin-bottom: 5px;" class="lead">{{ link_to('/dashboard/yardsale', 'Click here') }} to edit your yardsale.</p>
+										<p>"Hiding" your yard sale prevents it from being listed for shoppers to see. You may find this useful if you no longer can participate in the sale or don't want your yard sale listed for whatever reason. Change your mind? No problem, you can make it visible again.</p>
+										<p>
+											<button class="btn btn-primary" value='{{ $visible->visible }}' id="toggleVisible"></button>
+										</p>
 									</div>								
 								@endif
 							</div>
@@ -56,9 +59,9 @@
 <script>
 function toggleYardsale (data) {
 	if(data == '1'){
-		btnState.val('0').addClass('btn-primary').removeClass('btn-danger').text('visible (click to hide)');
+		btnState.val('0').addClass('btn-danger').removeClass('btn-success').text('Hide my yard sale');
 	}else{
-		btnState.val('1').addClass('btn-danger').removeClass('btn-primary').text('hidden (click to show)');
+		btnState.val('1').addClass('btn-success').removeClass('btn-danger').text('Show my yard sale');
 	}
 }
 
