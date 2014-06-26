@@ -124,7 +124,7 @@ class YardsalesController extends \BaseController {
 			$dataArray['carson'] = 'Carson City ('.$data['carson'].' available)';
 		}
 		if($data['reno'] > 0){
-			$dataArray['reno'] = 'Reno('.$data['reno'].' available)';
+			$dataArray['reno'] = 'Reno ('.$data['reno'].' available)';
 		}
 		if($data['sparks'] > 0){
 			$dataArray['sparks'] = 'Sparks ('.$data['sparks'].' available)';
