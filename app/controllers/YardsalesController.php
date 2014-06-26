@@ -105,8 +105,46 @@ class YardsalesController extends \BaseController {
 			$yardsale->save();
 		}
 
+		$total = array_count_values(DB::table('Yardsales')->where('active','1')->lists('area'));
+
+		// dd(array_key_exists('carson', $total));
+		$data = [
+			'carson' => 68 - (array_key_exists('carson', $total)? $total['carson'] : 0),
+			'douglas' => 66 - (array_key_exists('douglas', $total)? $total['douglas'] : 0),
+			'sparks' => 72 - (array_key_exists('sparks', $total)? $total['sparks'] : 0),
+			'reno' => 75 - (array_key_exists('reno', $total)? $total['reno'] : 0)
+		];		
+
+		$dataArray = ['' => 'Please select a city'];
+
+		if($data['douglas'] > 0){
+			$dataArray['douglas'] = 'Minden/Gardnerville ('.$data['douglas'].' available)';
+		}
+		if($data['carson'] > 0){
+			$dataArray['carson'] = 'Carson City ('.$data['carson'].' available)';
+		}
+		if($data['reno'] > 0){
+			$dataArray['reno'] = 'Reno('.$data['reno'].' available)';
+		}
+		if($data['sparks'] > 0){
+			$dataArray['sparks'] = 'Sparks ('.$data['sparks'].' available)';
+		}
+
+		                  //   if($data['douglas'] < 80){
+                    //   'douglas' => 'Minden/Gardnerville ({{$data['douglas']}} available)',
+                    // }
+                    // @if($data['douglas'] =< 80) 
+                    //   'carson' => 'Carson City ({{$data['carson']}} available)',
+                    // @endif
+                    // @if($data['douglas'] =< 80) 
+                    //   'reno' => 'Reno ({{$data['reno']}} available)',
+                    // @endif
+                    // @if($data['douglas'] =< 80) 
+                    //   'sparks' => 'Sparks ({{$data['sparks']}} available)',
+                    // @endif
+
 		Session::put('folder.id', $userid);
-		return View::make('yardsale.create')->with('postID',$userid)->with('yardsale', $yardsale);		
+		return View::make('yardsale.create')->with('postID',$userid)->with('yardsale', $yardsale)->with('dataArray',$dataArray);		
 	}
 
 	public function store()

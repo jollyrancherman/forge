@@ -10,10 +10,10 @@
                     <li><a href="/dashboard">Dashboard</a></li>
                     @if(!Session::get('yardsale.created'))
                         <li ><a href="/dashboard/yardsale">
-                            Create Yardsale<i class="fa fa-exclamation-triangle" style="color: red;"></i>
+                            Create yard sale<i class="fa fa-exclamation-triangle" style="color: red;"></i>
                         </a></li>
                     @else
-                        <li><a href="/dashboard/yardsale">My Yardsale</a></li>
+                        <li><a href="/dashboard/yardsale">My yard sale</a></li>
                     @endif
                     @if(!Session::get('yardsale.active'))
                         <li ><a href="/payment">

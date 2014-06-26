@@ -6,8 +6,8 @@
 						
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2">
-								<h2>Create your post here</h2>
-								<p>optional text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, dolor, quisquam eligendi commodi ipsa dolore quasi totam quae corporis! Eum quam deserunt est sequi hic adipisci alias veniam sed recusandae.</p>
+								<h2>Create your yard sale.</h2>
+								<p>This is where the fun begins! Just enter all pertinent information below. The description will be where you share with potential shoppers why they want to stop by your yard sale. Maybe you are selling antiques, or great furniture and appliances; whatever it is, be sure to let them know, along with the time your yard sale will be open to the pubilc. The photo upload is available to give shoppers a preview of items you will be selling. </p>
 							</div>
 						</div>	
 
@@ -19,13 +19,7 @@
                 <!-- FIELD -->
                 <div class="form-group">
                   {{ Form::label('city', 'Select Your City', ['class' => 'control_label']) }}
-                  {{ Form::select('area', [
-                    '' => 'Please select a city', 
-                    'douglas' => 'Minden/Gardnerville', 
-                    'carson' => 'Carson City', 
-                    'reno' => 'Reno',
-                    'sparks' => 'Sparks',
-                    ],null, ['class' => 'form-control','id' => 'city']); 
+                  {{ Form::select('area', $dataArray, null, ['class' => 'form-control','id' => 'city']); 
                   }}
                   {{ $errors->first('area', '<p class="error-msg">:message</p>'); }} 
                 </div> 
@@ -46,14 +40,14 @@
 								</div>
 								<!-- Title -->
 								<div class="form-group">
-								  {{ Form::label('title', 'Title', ['class' => 'control_label']) }}
+								  {{ Form::label('title', 'Title (yard sale, estate sale, ect)', ['class' => 'control_label']) }}
 								  {{ Form::text('title', null, ['class' => 'form-control']) }}
                   {{ $errors->first('title', '<p class="error-msg">:message</p>'); }}
 								</div>
 								
 								<!-- Description -->
 								<div class="form-group">
-								  {{ Form::label('description', 'Description', ['class' => 'control_label']) }}
+								  {{ Form::label('description', 'Description (include details on items and hours.)', ['class' => 'control_label']) }}
 								  {{ Form::textarea('description', null, ['class' => 'form-control', 'id' => 'textarea-return']) }}
                   {{ $errors->first('description', '<p class="error-msg">:message</p>'); }}
 								</div>
