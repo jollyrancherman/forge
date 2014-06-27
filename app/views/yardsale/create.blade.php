@@ -92,8 +92,9 @@
 				        <!-- The table listing the files available for upload/download -->
 				        <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
 
-								<p>By clicking submit you are agreeing to our {{ link_to_route('tos', 'terms and conditions') }}. Uploading this form does not register your yard sale. In order for your yardsale to be registered, you must pay the registration fee. All proceeds go to Big Brothers, Big Sisters of Northern Nevada. </p>
-
+                <p>By clicking submit you are agreeing to host a righteous yard sale... and to our {{ link_to_route('tos', 'terms and conditions') }}.</p> 
+                <p>Uploading this form does not yet register your yard sale; you must also pay the $12 registration fee.</p>
+                <p><strong>We can't help to mention that Big Brothers Big Sisters of Northern Nevada receives $10 from each yard sale registered.</strong></p>
 								
 								<!-- HIDDEN -->
                 {{ Form::hidden('lng', $yardsale->lng , ['class' => 'form-control', 'id' => 'lng']) }}
