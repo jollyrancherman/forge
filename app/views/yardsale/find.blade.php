@@ -53,7 +53,7 @@ function initialize() {
           '<div id="content" style="height: 400px;">'+
           '<div id="siteNotice">'+
           '</div>'+
-          '<h3 id="firstHeading" class="firstHeading">'+value.address+'</h3>'+
+          '<h3 id="firstHeading" class="firstHeading">(#'+value.id+') '+value.address+'</h3>'+
           '<div id="bodyContent">'+
           '<p>'+value.description+'</p>'+
           '<img class="img-responsive" src="http://maps.google.com/maps/api/staticmap?center='+value.lat+','+value.lng+'&markers=icon:/img/signWithShadowMarker.png|'+value.lat+','+value.lng+'&zoom=17&size=500x300&sensor=false" alt="" />'+

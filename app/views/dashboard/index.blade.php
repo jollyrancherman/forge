@@ -7,7 +7,7 @@
 						
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2">
-								<h2>You have been logged in!</h2>
+								<h2>Hey, it worked! <span class="small"> You're logged in.</span></h2>
 							</div>
 						</div>	
 
@@ -23,11 +23,8 @@
 									</div>
 								@else
 									<div class="alert alert-success clearfix">
-										<h3 style="margin-top: 0;"><i class="fa fa-check"></i> 
-											You have set up your yardsale.
-										</h3>
-										<p style="margin-bottom: 5px;" class="lead">{{ link_to('/dashboard/yardsale', 'Click here') }} to edit your yardsale.</p>
-										<p>"Hiding" your yard sale prevents it from being listed for shoppers to see. You may find this useful if you no longer can participate in the sale or don't want your yard sale listed for whatever reason. Change your mind? No problem, you can make it visible again.</p>
+										<p style="margin-bottom: 20px;" class="lead"><strong><i class="fa fa-check"></i> Your yard sale has been set up.</strong> {{ link_to('/dashboard/yardsale', 'Click here') }} to edit it.</p>
+										<p  style="margin-bottom: 10px;" >"Hiding" your yard sale prevents it from being listed for shoppers to see. You may find this useful if you no longer can participate in the sale or don't want your yard sale listed for whatever reason. Change your mind? No problem, you can make it visible again.</p>
 										<p>
 											<button class="btn btn-primary" value='{{ $visible->visible }}' id="toggleVisible"></button>
 										</p>

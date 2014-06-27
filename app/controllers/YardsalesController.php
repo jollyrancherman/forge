@@ -61,7 +61,10 @@ class YardsalesController extends \BaseController {
 
 	public function listView($city = '')
 	{
-		$yardsale = Yardsale::where('area', '=', $city)->get();
+		$yardsale = Yardsale::where('area', '=', $city)
+													->where('active', '=', '1')
+													->where('visible', '=', '1')
+													->get();
 
 		return View::make('yardsale.listview')->with('data', $yardsale);
 	}

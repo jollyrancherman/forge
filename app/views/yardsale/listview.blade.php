@@ -11,15 +11,16 @@
     <title>FraucCityWide.com</title>
 
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
   <div class="container">
+    <h2>Printer Friendly List View and Check List</h2>
     <div class="row"><a href="{{ URL::previous() }}"><i class="fa fa-arrow-left"></i> Go Back</a><br /></div>
     @foreach($data as $yardsale)
       <div class="row" style="border-bottom:thin solid #DDD;">
-        <span class="lead">{{ $yardsale->address }}</span>
+        <i class="fa fa-square-o fa-lg"></i><span class="lead"> (#{{ $yardsale->id }}) {{ $yardsale->address }}</span>
       </div>
     @endforeach
   </div>  

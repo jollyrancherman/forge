@@ -7,7 +7,7 @@
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2">
               <a href="{{ URL::previous() }}"><i class="fa fa-arrow-left"></i> Go Back</a><br />
-								<h2>{{ $data->title }}</h2>
+								<h2>(#{{ $data->id }}) {{ $data->title }}</h2>
 								<p class="lead">{{ $data->address }}</p>
 								<p>{{nl2br($data->description)}}</p>
 								<div id="yardsale-map" style="height: 400px; margin-bottom:20px;"></div>
