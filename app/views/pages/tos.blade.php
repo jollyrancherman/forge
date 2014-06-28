@@ -17,7 +17,7 @@
 	First and foremost, act as a responsible and respectful adult, and we will all be fine.
 </h3>
 <br /><br /><br /><br />
-<p class="lead">
+<p>
 	Frauc.com and fraucCityWide ("Frauc") provides services through its website and computer servers, including but not limited to classified advertising and messaging service. (All such services are referred to collectively as "frauc"). By accessing or using frauc, you are a "user" and you accept and agree to the terms below (the "Terms of Use" or "TOU") as a legal contract between you and frauc. The TOU include and incorporate additional terms ("guidelines") applicable to particular categories or services available on frauc as set forth to users upon access to such categories or services. Frauc may post changes to the TOU at any time, and any such changes will be applicable to all subsequent access to or use of frauc.
 </p>
 

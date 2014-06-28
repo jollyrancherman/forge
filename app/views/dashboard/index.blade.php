@@ -8,7 +8,6 @@
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2">
 								<h2>Hey, it worked! <span class="small"> You're logged in.</span></h2>
-								<p class="lead">Now you can create and update your yard sale information, just clicking "{{ link_to('/dashboard/yardsale', 'My yard sale') }}" to the left. </p>
 							</div>
 						</div>	
 

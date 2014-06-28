@@ -16,7 +16,7 @@
 @section('scripts-top')
 <!-- GOOGLE MAPS API -->
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
-
+<script src="http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.9/src/markerwithlabel.js"></script>
 <!-- BLUEIMP FILE UPLOAD -->
 <link rel="stylesheet" href="/css/style.css">
 <!-- blueimp Gallery styles -->
@@ -27,11 +27,24 @@
 <!-- CSS adjustments for browsers with JavaScript disabled -->
 <noscript><link rel="stylesheet" href="/css/jquery.fileupload-noscript.css"></noscript>
 <noscript><link rel="stylesheet" href="/css/jquery.fileupload-ui-noscript.css"></noscript>
+
+<style>
+   .labels {
+     color: white;
+     padding: 4px;
+     background-color: #3399CC;
+     border-radius: 12px;
+     font-family: "Lucida Grande", "Arial", sans-serif;
+     font-size: 1.2em;
+     font-weight: bold;
+     text-align: center;
+     white-space: nowrap;
+   }  
+
+</style>
 @stop
 
-<!-- Scripts -->
-<!-- Google Maps Scripts-->
-<!-- Blue Imp File upload scripts -->
+
 @section('scripts-bot')
 <script>
 
@@ -43,6 +56,7 @@ function initialize() {
   var htmlContent = [];
   var iterator = 0;
   var markers = [];
+  var markerID = [];
 
   $.each(addresses, function(key, value){
     // locations.push([this.address, this.lat, this.lng, this.id]);
@@ -60,7 +74,7 @@ function initialize() {
           '</div>'+
           '</div>'+       
           '</a>';
-
+    markerID.push('#'+value.id)
     htmlContent.push(title);
   });
 
@@ -77,12 +91,15 @@ function initialize() {
     }
   }
 
-  function addMarker() {
-      console.log(locations[iterator].lng);           
-      markers.push( marker = new google.maps.Marker({
+  function addMarker() {         
+      markers.push( marker =  new MarkerWithLabel({
       position: locations[iterator],
       map: map,
       draggable: false,
+      labelContent:markerID[iterator],
+      labelAnchor: new google.maps.Point(0,90),
+      labelClass: "labels", // the CSS class for the label
+      labelInBackground: false,      
       animation: google.maps.Animation.DROP
     }));
 
