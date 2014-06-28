@@ -41,6 +41,24 @@ Route::get('/', function(){
 ========================================*/
 Route::get('/tos', ['as' => 'tos', 'uses' => 'PagesController@tos']);
 
+/*=================================
+=            Home Page            =
+=================================*/
+
+Route::get('/home', function(){
+	// $total = array_count_values(Yardsale::all()->lists('area'));
+	$total = array_count_values(DB::table('Yardsales')->where('active','1')->lists('area'));
+
+	// dd(array_key_exists('carson', $total));
+	$data = [
+		'carson' => 68 - (array_key_exists('carson', $total)? $total['carson'] : 0),
+		'douglas' => 65 - (array_key_exists('douglas', $total)? $total['douglas'] : 0),
+		'sparks' => 72 - (array_key_exists('sparks', $total)? $total['sparks'] : 0),
+		'reno' => 75 - (array_key_exists('reno', $total)? $total['reno'] : 0)
+	];
+
+	return View::make('homepage.create')->with('data', $data);
+});
 
 /*=================================
 =            LOGGED IN            =
@@ -88,20 +106,7 @@ Route::group(['before' => 'auth'], function()
 ==================================*/
 Route::group(['before' => 'guest'], function()
 {
-	Route::get('/home', function(){
-		// $total = array_count_values(Yardsale::all()->lists('area'));
-		$total = array_count_values(DB::table('Yardsales')->where('active','1')->lists('area'));
 
-		// dd(array_key_exists('carson', $total));
-		$data = [
-			'carson' => 68 - (array_key_exists('carson', $total)? $total['carson'] : 0),
-			'douglas' => 65 - (array_key_exists('douglas', $total)? $total['douglas'] : 0),
-			'sparks' => 72 - (array_key_exists('sparks', $total)? $total['sparks'] : 0),
-			'reno' => 75 - (array_key_exists('reno', $total)? $total['reno'] : 0)
-		];
-
-		return View::make('homepage.create')->with('data', $data);
-	});
 	
 	/*====================================
 	=            REGISTRATION            =

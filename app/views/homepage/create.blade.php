@@ -12,9 +12,14 @@
                 <p class="lead">A community yard sale is like a flea market meets treasure hunt (with map, of course). Our plan is to make a shockingly useful community event out of yard sales, where hosts receive more foot traffic, and shoppers have more stopping points. </p>
                 <p>Find your city below to sign up as a host. Registration is $12 per house participating. $10 of the registration goes to the Big Brothers and Big Sisters of Northern Nevada and $2 goes towards yard sale signs.</p>
                 <p>Shoppers, to stay hip with the news and maps of participants, click on "Email Updates".</p>
-                <div class="col-md-12" style="margin-bottom: 20px; margin-top: 20px;">
-                  <a href="/signup" class="btn btn-lg btn-primary btn-block">Sign up and list your yard sale.</a>
-                </div>
+
+                @if(! Sentry::check())
+                  <div class="col-md-12" style="margin-bottom: 20px; margin-top: 20px;">
+                    <a href="/signup" class="btn btn-lg btn-primary btn-block">Sign up and list your yard sale.</a>
+                  </div>
+                  @endif
+              
+
               </div>
             </div>
             <div class="row">

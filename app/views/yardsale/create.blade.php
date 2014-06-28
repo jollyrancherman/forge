@@ -8,6 +8,7 @@
 							<div class="col-md-8 col-md-offset-2">
 								<h2>Create your yard sale.</h2>
 								<p>This is where the fun begins! Just enter all pertinent information below. The description will be where you share with potential shoppers why they want to stop by your yard sale. Maybe you are selling antiques, or great furniture and appliances; whatever it is, be sure to let them know, along with the time your yard sale will be open to the pubilc. The photo upload is available to give shoppers a preview of items you will be selling. </p>
+                <p><span class="error-msg">* Required Fields.</span></p>
 							</div>
 						</div>	
 
@@ -18,19 +19,17 @@
 
                 <!-- FIELD -->
                 <div class="form-group">
-                  {{ Form::label('city', 'Select Your City', ['class' => 'control_label']) }}
+                  <span class="error-msg">*</span>{{ Form::label('city', 'Select Your City', ['class' => 'control_label']) }}
                   {{ Form::select('area', $dataArray, null, ['class' => 'form-control','id' => 'city']); 
                   }}
                   {{ $errors->first('area', '<p class="error-msg">:message</p>'); }} 
                 </div> 
-
-								<p>Dropdown</p>
 									
 								<!-- Google Maps -->
 								<div class="form-group">
 									<div id="yardsale-map" style="height: 300px;"></div>
 
-                  <label for="address" class="control_label">Address
+                  <label for="address" class="control_label"><span class="error-msg">*</span>Address
                     <span class="small">
                       (Type in and pick your address from the dropdown menu)
                     </span>
@@ -40,7 +39,7 @@
 								</div>
 								<!-- Title -->
 								<div class="form-group">
-								  {{ Form::label('title', 'Title (yard sale, estate sale, ect)', ['class' => 'control_label']) }}
+								  <span class="error-msg">*</span>{{ Form::label('title', 'Title (yard sale, estate sale, ect)', ['class' => 'control_label']) }}
 								  {{ Form::text('title', null, ['class' => 'form-control']) }}
                   {{ $errors->first('title', '<p class="error-msg">:message</p>'); }}
 								</div>
@@ -56,11 +55,12 @@
 				        <noscript><input type="hidden" name="redirect" value="http://blueimp.github.io/jQuery-File-Upload/"></noscript>
 				        <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
 				        <div class="row fileupload-buttonbar">
-				            <div class="col-lg-7">
+                    <div class="col-md-12">
+                    <h4>Upload Images</h4>
 				                <!-- The fileinput-button span is used to style the file input field as button -->
 				                <span class="btn btn-success fileinput-button">
 				                    <i class="glyphicon glyphicon-plus"></i>
-				                    <span>Add files...</span>
+				                    <span>Add Images...</span>
 				                    <input type="file" name="files[]" multiple>
 				                </span>
 				                <button type="submit" class="btn btn-primary start">
