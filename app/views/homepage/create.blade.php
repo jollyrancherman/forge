@@ -5,7 +5,7 @@
           <div class="page-content inset">
             <div class="row">
               <div class="col-md-3 col-md-offset-1 text-center">
-              <img src="/img/homepage-header.jpg" class="img-responsive" alt="Responsive image" style="margin-top: 20px;">
+              <img src="/img/homepage-header-new.png" class="img-responsive" alt="Responsive image" style="margin-top: 20px;">
               </div>
               <div class="col-md-7">
                 <h2>Community yard sale for Northern Nevadans</h2>
