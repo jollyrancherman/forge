@@ -8,7 +8,7 @@
 							<div class="col-md-8 col-md-offset-2">
 								<h2>Create your yard sale.</h2>
 								<p>This is where the fun begins! Just enter all pertinent information below. The description will be where you share with potential shoppers why they want to stop by your yard sale. Maybe you are selling antiques, or great furniture and appliances; whatever it is, be sure to let them know, along with the time your yard sale will be open to the pubilc. The photo upload is available to give shoppers a preview of items you will be selling. </p>
-                <p><span class="error-msg">* Required Fields.</span></p>
+                <p><span class="error-msg">* Required Fields.s</span></p>
 							</div>
 						</div>	
 
@@ -19,29 +19,33 @@
 
                 <!-- FIELD -->
                 <div class="form-group">
-                  <span class="error-msg">*</span>{{ Form::label('city', 'Select Your City', ['class' => 'control_label']) }}
-                  {{ Form::select('area', $dataArray, null, ['class' => 'form-control','id' => 'city']); 
-                  }}
-                  {{ $errors->first('area', '<p class="error-msg">:message</p>'); }} 
+                  <span class="error-msg">*</span>
+                  {{ Form::label('city', 'Select Your City', ['class' => 'control_label']) }}
+                  {{ Form::select('area', $dataArray, null, ['class' => 'form-control','id' => 'city'])}}
+                  {{ $errors->first('area', '<p class="error-msg">:message</p>') }} 
                 </div> 
 									
 								<!-- Google Maps -->
 								<div class="form-group">
 									<div id="yardsale-map" style="height: 300px;"></div>
 
-                  <label for="address" class="control_label"><span class="error-msg">*</span>Address
+                  <label for="address" class="control_label">
+                    <span class="error-msg">*</span>Address
                     <span class="small">
                       (Type in and pick your address from the dropdown menu)
                     </span>
                   </label>
 								  {{ Form::text('address', null, ['class' => 'form-control', 'id' => 'pac-input']) }}
-                  {{ $errors->first('address', '<p class="error-msg">:message</p>'); }}
+                  {{ $errors->first('address', '<p class="error-msg">:message</p>') }}
 								</div>
+
+
 								<!-- Title -->
 								<div class="form-group">
-								  <span class="error-msg">*</span>{{ Form::label('title', 'Title (yard sale, estate sale, ect)', ['class' => 'control_label']) }}
+								  <span class="error-msg">*</span>
+                  {{ Form::label('title', 'Title (yard sale, estate sale, ect)', ['class' => 'control_label']) }}
 								  {{ Form::text('title', null, ['class' => 'form-control']) }}
-                  {{ $errors->first('title', '<p class="error-msg">:message</p>'); }}
+                  {{ $errors->first('title', '<p class="error-msg">:message</p>') }}
 								</div>
 								
 								<!-- Description -->
@@ -108,7 +112,6 @@
 						</div>
 
           </div>
-        </div>
         
         <!-- The blueimp Gallery widget -->
         <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-filter=":even">
