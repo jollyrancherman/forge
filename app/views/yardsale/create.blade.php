@@ -126,6 +126,17 @@
 @stop
 
 @section('scripts-top')
+
+<!-- BLUEIMP FILE UPLOAD -->
+<link rel="stylesheet" href="/css/style.css">
+<!-- blueimp Gallery styles -->
+<link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+<!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+<link rel="stylesheet" href="/css/jquery.fileupload.css">
+<link rel="stylesheet" href="/css/jquery.fileupload-ui.css">
+<!-- CSS adjustments for browsers with JavaScript disabled -->
+<noscript><link rel="stylesheet" href="/css/jquery.fileupload-noscript.css"></noscript>
+<noscript><link rel="stylesheet" href="/css/jquery.fileupload-ui-noscript.css"></noscript>
 <!-- GOOGLE MAPS API -->
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 @stop
