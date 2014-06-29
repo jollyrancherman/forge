@@ -8,7 +8,7 @@
 							<div class="col-md-8 col-md-offset-2">
 								<h2>Create your yard sale.</h2>
 								<p>This is where the fun begins! Just enter all pertinent information below. The description will be where you share with potential shoppers why they want to stop by your yard sale. Maybe you are selling antiques, or great furniture and appliances; whatever it is, be sure to let them know, along with the time your yard sale will be open to the pubilc. The photo upload is available to give shoppers a preview of items you will be selling. </p>
-                <p><span class="error-msg">* Required Fields.s</span></p>
+                <p><span class="error-msg">* Required Fields</span></p>
 							</div>
 						</div>	
 

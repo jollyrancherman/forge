@@ -195,51 +195,54 @@
 
     <div id="wrapper">
 
-        <!-- Sidebar -->
-        @include('layout._navbar')
+      <!-- Sidebar -->
+      @include('layout._navbar')
 
-        <!-- Page content -->
-        <div id="page-content-wrapper">
-          <div class="content-header">
-            <div class="row">
-              <div class="col-xs-2" style="line-height: 0;">
-                <a id="menu-toggle" href="#" class="btn btn-primary btn-xs">Menu</i></a>
-              </div>
-              <div class="col-xs-7">
-                {{ HTML::image("img/logoWithShadowLarge.png", "Email Header",['class' => 'img-responsive pull-left', 'width' => '600', 'style' => 'display: inlne-block;']) }}                  
+      <!-- Page content -->
+      <div id="page-content-wrapper">
+        <div class="content-header">
+          <div class="row">
 
-            
-              </div>
-              <div class="col-xs-2">
+            <div class="col-xs-2" style="line-height: 0;">
+              <a id="menu-toggle" href="#" class="btn btn-primary btn-xs">Menu</i></a>
+            </div>
+
+            <div class="col-xs-7">
+              {{ HTML::image("img/logoWithShadowLarge.png", "Email Header",['class' => 'img-responsive pull-left', 'width' => '600', 'style' => 'display: inlne-block;']) }}                         
+            </div>
+
+            <div class="col-xs-2">
               <div class="row">
                 <a href="http://frauc.com/" target="_blank">
                   {{ HTML::image("img/fraucComAndBBBSLogo2.png", "Email Header",['class' => 'img-responsive', 'width' => '200', 'style' => 'display: inlne-block;']) }}
                 </a>                                 
               </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="content-header">
-
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1">
-                @if(Session::has('message'))         
-                    <div  class="{{ Session::get('messageType') }} ">
-                      <h4>
-                        {{ Session::get('message') }}
-                      </h4>
-                      @if(Session::get('message2'))
-                        <p>{{ Session::get('message2') }}</p>
-                      @endif
-                    </div>
-                @endif               
-              </div>
             </div>
 
           </div>
+        </div>
 
-        @yield('content')
+        <div class="content-header">
+
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              @if(Session::has('message'))         
+                  <div  class="{{ Session::get('messageType') }} ">
+                    <h4>
+                      {{ Session::get('message') }}
+                    </h4>
+                    @if(Session::get('message2'))
+                      <p>{{ Session::get('message2') }}</p>
+                    @endif
+                  </div>
+              @endif               
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      @yield('content')
 
     </div>
 
