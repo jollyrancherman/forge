@@ -27,15 +27,6 @@
                 
                 <div class="col-lg-3">
                   <div class="city-tile text-center">
-                    <img src="/img/homepage-carson-banner.jpg" class="img-responsive" alt="Responsive image">
-                    <h3>Carson City</h3>
-                    <p class="lead">July 19, 2014</p>
-                    <p>Available Spots ({{ $data['carson'] }})</p>
-                    <p class="text-left">An all day event, where you choose your open hours, and share what precious items you will be selling. Sign up today, while spots are available. Thanks in advance for supporting Big Brothers Big Sisters of Northern Nevada.</p>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="city-tile text-center">
                     <img src="/img/homepage-minden-banner.jpg" class="img-responsive" alt="Responsive image">
                     <h3>Minden / Gardnerville</h3>
                     <p class="lead">July 26, 2014</p>
