@@ -122,7 +122,6 @@ function initialize() {
     }); 
     var myLatLng = new google.maps.LatLng(locations[iterator]);
     bounds.extend(marker.getPosition());
-    console.log(bounds);
     map.fitBounds(bounds);
     iterator++;
   }
