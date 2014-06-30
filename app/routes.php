@@ -75,6 +75,7 @@ Route::group(['before' => 'auth'], function()
 			Session::put('yardsale.created', false);
 		}else{	
 			Session::put('yardsale.active', $record->active);
+			Session::put('yardsale.id', $record->id);
 			$record->lat > 0 ? Session::put('yardsale.created', true) : Session::put('yardsale.created', false);
 		}
 

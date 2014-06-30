@@ -62,6 +62,9 @@ function initialize() {
     // locations.push([this.address, this.lat, this.lng, this.id]);
     locations.push(new google.maps.LatLng(value.lat, value.lng));
 
+    var desc = value.description
+    if(desc.length > 255) desc = desc.substring(0,255);
+
 		var title = 
           '<a href="/yardsale/'+value.id+'">'+
           '<div id="content" style="height: 400px;">'+
@@ -69,7 +72,8 @@ function initialize() {
           '</div>'+
           '<h3 id="firstHeading" class="firstHeading">(#'+value.id+') '+value.address+'</h3>'+
           '<div id="bodyContent">'+
-          '<p>'+value.description+'</p>'+
+          '<p>Details: '+desc+'</p>'+
+          '<p><strong>more info...</strong></p>'+
           '<img class="img-responsive" src="http://maps.google.com/maps/api/staticmap?center='+value.lat+','+value.lng+'&markers=icon:/img/signWithShadowMarker.png|'+value.lat+','+value.lng+'&zoom=17&size=500x300&sensor=false" alt="" />'+
           '</div>'+
           '</div>'+       

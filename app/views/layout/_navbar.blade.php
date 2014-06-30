@@ -13,7 +13,8 @@
                             Create my yard sale<i class="fa fa-exclamation-triangle" style="color: red;"></i>
                         </a></li>
                     @else
-                        <li><a href="/dashboard/yardsale">My yard sale</a></li>
+                        <li><a href="/dashboard/yardsale">Edit my yard sale</a></li>
+                        <li><a href="/yardsale/{{Session::get('yardsale.id')}}">View my yard sale</a></li>
                     @endif
                     @if(!Session::get('yardsale.active'))
                         <li ><a href="/payment">

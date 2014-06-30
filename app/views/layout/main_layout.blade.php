@@ -14,6 +14,7 @@
     <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Add custom CSS here -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
     @yield('scripts-top')
     <style>
@@ -224,10 +225,10 @@
 
         <div class="content-header">
 
-          <div class="row">
+          <div class="row" id="flash-message">
             <div class="col-md-10 col-md-offset-1">
               @if(Session::has('message'))         
-                  <div  class="{{ Session::get('messageType') }} ">
+                  <div  class="{{ Session::get('messageType') }}  ">
                     <h4>
                       {{ Session::get('message') }}
                     </h4>
@@ -235,6 +236,7 @@
                       <p>{{ Session::get('message2') }}</p>
                     @endif
                   </div>
+
               @endif               
             </div>
           </div>

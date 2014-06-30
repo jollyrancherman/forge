@@ -11,7 +11,7 @@
 								<p>There is a $12 registration fee; proceeds go to Big Brothers Big Sisters of Northern Nevada. Each host will also receive two yard sale signs (pickup information TBA).</p>
 
 								<div class="col-sm-8">
-									{{ Form::open(['class' => 'form-horizontal', 'id' => 'billing-form']) }}
+									{{ Form::open(['class' => 'form-horizontal', 'id' => 'billing-form', 'style' => 'display:block;']) }}
 										<div class="error-msg col-sm-offset-3"></div>
 
 										<!-- Name -->
@@ -52,10 +52,16 @@
 
 									  <!-- SUBMIT -->
 									  {{ Form::submit('Pay for Registration!', array('class' => 'btn btn-primary col-sm-offset-3 col-sm-9')) }}
-									  
 
 									{{ Form::close() }}
+
 								</div>
+							  <div class="row text-right">
+								  <div class="col-sm-8" style="margin-top: 10px;">							  	
+								  	<p style="margin-bottom: 0px;">Trusted payments powered by stripe.</p>
+								  	<img src="/img/big.png" alt="Payment powered by stripe">
+								  </div>
+							  </div>
 
 							</div>
 						</div>	

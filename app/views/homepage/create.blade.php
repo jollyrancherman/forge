@@ -30,7 +30,7 @@
                     <img src="/img/homepage-minden-banner.jpg" class="img-responsive" alt="Responsive image">
                     <h3>Minden / Gardnerville</h3>
                     <p class="lead">July 26, 2014</p>
-                    <p>Available Spots ({{ $data['douglas'] }})</p>
+                    <p>(<strong>{{ $data['douglas'] }}</strong>) spots available</p>
                     <p class="text-left">An all day event, where you choose your open hours, and share what precious items you will be selling. Sign up today, while spots are available. Thanks in advance for supporting Big Brothers Big Sisters of Northern Nevada.</p>
                   </div>
                 </div>
@@ -39,7 +39,7 @@
                     <img src="/img/homepage-sparks-banner.jpg" class="img-responsive" alt="Responsive image">
                     <h3>Sparks</h3>
                     <p class="lead">July 26, 2014</p>
-                    <p>Available Spots ({{ $data['sparks'] }})</p>
+                    <p>(<strong>{{ $data['sparks'] }}</strong>) spots available</p>
                     <p class="text-left">An all day event, where you choose your open hours, and share what precious items you will be selling. Sign up today, while spots are available. Thanks in advance for supporting Big Brothers Big Sisters of Northern Nevada.</p>
                   </div>
                 </div>
@@ -48,7 +48,7 @@
                     <img src="/img/homepage-reno-banner.jpg" class="img-responsive" alt="Responsive image">
                     <h3>Reno</h3>
                     <p class="lead">August 9, 2014</p>
-                    <p>Available Spots ({{ $data['reno'] }})</p>
+                    <p>(<strong>{{ $data['reno'] }}</strong>) spots available</p>
                     <p class="text-left">An all day event, where you choose your open hours, and share what precious items you will be selling. Sign up today, while spots are available. Thanks in advance for supporting Big Brothers Big Sisters of Northern Nevada.</p>
                   </div>
                 </div>
@@ -57,7 +57,7 @@
                     <img src="/img/homepage-carson-banner.jpg" class="img-responsive" alt="Responsive image">
                     <h3>Carson City</h3>
                     <p class="lead">August 16, 2014</p>
-                    <p>Available Spots ({{ $data['carson'] }})</p>
+                    <p>(<strong>{{ $data['carson'] }}</strong>) spots available</p>
                     <p class="text-left">An all day event, where you choose your open hours, and share what precious items you will be selling. Sign up today, while spots are available. Thanks in advance for supporting Big Brothers Big Sisters of Northern Nevada.</p>
                   </div>
                 </div>

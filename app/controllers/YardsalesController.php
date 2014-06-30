@@ -121,30 +121,17 @@ class YardsalesController extends \BaseController {
 		$dataArray = ['' => 'Please select a city'];
 
 		if($data['douglas'] > 0){
-			$dataArray['douglas'] = 'Minden/Gardnerville ('.$data['douglas'].' available)';
+			$dataArray['douglas'] = 'Minden/Gardnerville - July 26th ('.$data['douglas'].' spots available)';
 		}
 		if($data['carson'] > 0){
-			$dataArray['carson'] = 'Carson City ('.$data['carson'].' available)';
+			$dataArray['carson'] = 'Carson City - August 17th ('.$data['carson'].' spots available)';
 		}
 		if($data['reno'] > 0){
-			$dataArray['reno'] = 'Reno ('.$data['reno'].' available)';
+			$dataArray['reno'] = 'Reno - August 9th ('.$data['reno'].' spots available)';
 		}
 		if($data['sparks'] > 0){
-			$dataArray['sparks'] = 'Sparks ('.$data['sparks'].' available)';
+			$dataArray['sparks'] = 'Sparks - July 26th ('.$data['sparks'].' spots available)';
 		}
-
-		                  //   if($data['douglas'] < 80){
-                    //   'douglas' => 'Minden/Gardnerville ({{$data['douglas']}} available)',
-                    // }
-                    // @if($data['douglas'] =< 80) 
-                    //   'carson' => 'Carson City ({{$data['carson']}} available)',
-                    // @endif
-                    // @if($data['douglas'] =< 80) 
-                    //   'reno' => 'Reno ({{$data['reno']}} available)',
-                    // @endif
-                    // @if($data['douglas'] =< 80) 
-                    //   'sparks' => 'Sparks ({{$data['sparks']}} available)',
-                    // @endif
 
 		Session::put('folder.id', $userid);
 		return View::make('yardsale.create')->with('postID',$userid)->with('yardsale', $yardsale)->with('dataArray',$dataArray);		
@@ -188,15 +175,24 @@ class YardsalesController extends \BaseController {
 			$yardsale->description = Input::get('description');
 			$yardsale->lat = Input::get('lat');
 			$yardsale->lng = Input::get('lng');
+			$yardsale->visible = 1;
 			$yardsale->user_id = Sentry::getUser()->id;
 			$yardsale->folder_id = Sentry::getUser()->id;
 
 			$yardsale->save();
 
-			return Redirect::to('/dashboard/yardsale')
-	    	->withMessage('You have successfully entered your yardsale information!')
-	    	->withMessage2('If you have not paid your registration, please do so.')
-	    	->with('messageType', 'bs-callout bs-callout-success');
+			if($yardsale->active == 1){
+				return Redirect::to('/dashboard')
+		    	->withMessage('You have successfully entered your yardsale information!')
+		    	->withMessage2('If you have not paid your registration, please do so.')
+		    	->with('messageType', 'bs-callout bs-callout-success');	
+			}else{
+				return Redirect::to('/payment')
+		    	->withMessage('You have successfully entered your yardsale information!')
+		    	->withMessage2('If you have not paid your registration, please do so.')
+		    	->with('messageType', 'bs-callout bs-callout-success');					
+			}
+
 
 		}else{
 			$yardsale->errors()->add('address', 'Please select an address from the dropdown menu');
