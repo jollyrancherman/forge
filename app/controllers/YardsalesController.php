@@ -42,9 +42,13 @@ class YardsalesController extends \BaseController {
 			      ->subject('FraucCityWide payment received.');		
 				});	  
 
-				$yardsale = Yardsale::where('user_id' , $id)->first();
+				// $yardsale = Yardsale::where('user_id' , $id)->first();
+				// $yardsale->active = '1';
+				// $yardsale->save();
+
+				$yardsale = Yardsale::firstOrNew(array('user_id' => $id));
 				$yardsale->active = '1';
-				$yardsale->save();
+				$user->save();
 
 		    //redirect with message
 		    return Redirect::to('/dashboard')->withMessage('You were successfully billed $12. A receipt will be sent to you.')->with('messageType', 'bs-callout bs-callout-success');  
