@@ -47,6 +47,7 @@ class YardsalesController extends \BaseController {
 				// $yardsale->save();
 
 				$yardsale = Yardsale::firstOrNew(array('user_id' => $id));
+				$yardsale->user_id = $id;
 				$yardsale->active = '1';
 				$yardsale->save();
 
