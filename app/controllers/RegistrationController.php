@@ -76,7 +76,7 @@ class RegistrationController extends \BaseController {
 	    //redirect user to homepage
 	    return Redirect::to('/home')
 	    	->withMessage('Thanks for registering!')
-	    	->withMessage2('One more step...check your email and activate your account...you know the drill.')
+	    	->withMessage2('One more step...check your email to activate your account...you know the drill.')
 	    	->with('messageType', 'bs-callout bs-callout-success');
     } else {
         // validation has failed, display error messages

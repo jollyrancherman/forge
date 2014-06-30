@@ -14,7 +14,7 @@
                     <li class="lead">1) awesome, and</li>
                     <li class="lead">2) in the right place.</li>
                   </ul>
-              <p  class="lead">If you want to change any of your information, then you came to the right place. You know what to do. Thanks again for supporting the event and the Big Brothers Big Sisters of Northern Nevada.</p>
+              <p  class="lead">Once signed in, you will be able to update your yard sale information and pay for registration. You know what to do. Thanks again for supporting the event and the Big Brothers Big Sisters of Northern Nevada.</p>
               </div>
             </div>
             <div class="row">

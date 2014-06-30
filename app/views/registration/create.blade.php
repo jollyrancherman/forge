@@ -32,7 +32,7 @@
                 </div>
                 
                 <!-- SUBMIT -->
-                {{ Form::submit('Submit', array('class' => 'btn btn-primary')) }}
+                {{ Form::submit('create my account', array('class' => 'btn btn-primary')) }}
 
                 {{ Form::close() }}
               </div>
