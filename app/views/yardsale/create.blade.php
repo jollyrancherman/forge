@@ -43,7 +43,7 @@
 								<!-- Title -->
 								<div class="form-group">
 								  <span class="error-msg">*</span>
-                  {{ Form::label('title', 'Title (yard sale, estate sale, ect)', ['class' => 'control_label']) }}
+                  {{ Form::label('title', 'Title (yard sale, estate sale, etc...)', ['class' => 'control_label']) }}
 								  {{ Form::text('title', null, ['class' => 'form-control']) }}
                   {{ $errors->first('title', '<p class="error-msg">:message</p>') }}
 								</div>
