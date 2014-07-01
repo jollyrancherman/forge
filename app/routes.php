@@ -32,7 +32,7 @@ Route::get('/comingsoon', ['as' => 'comingsoon', 'uses' => 'ComingSoonController
 Route::post('/comingsoon', ['as' => 'comingsoon.store', 'uses' => 'ComingSoonController@store']);
 
 Route::get('/', function(){
-	return Redirect::to('comingsoon');
+	return Redirect::to('/home');
 });
 
 
