@@ -27,14 +27,10 @@
 									
 								<!-- Google Maps -->
 								<div class="form-group">
-									<div id="yardsale-map" style="height: 300px;"></div>
+									<div id="yardsale-map" style="height: 300px;margin-bottom: 20px;"></div>
 
-                  <label for="address" class="control_label">
-                    <span class="error-msg">*</span>Address
-                    <span class="small">
-                      (Type in and pick your address from the dropdown menu)
-                    </span>
-                  </label>
+                  <span class="error-msg">*</span>
+                  {{ Form::label('address', 'Address (Type in and pick your address from the dropdown menu)', ['class' => 'control_label']) }}
 								  {{ Form::text('address', null, ['class' => 'form-control', 'id' => 'pac-input']) }}
                   {{ $errors->first('address', '<p class="error-msg">:message</p>') }}
 								</div>
@@ -43,7 +39,7 @@
 								<!-- Title -->
 								<div class="form-group">
 								  <span class="error-msg">*</span>
-                  {{ Form::label('title', 'Title (yard sale, estate sale, etc...)', ['class' => 'control_label']) }}
+                  {{ Form::label('title', 'Title (Type in and pick your address from the dropdown menu)', ['class' => 'control_label']) }}
 								  {{ Form::text('title', null, ['class' => 'form-control']) }}
                   {{ $errors->first('title', '<p class="error-msg">:message</p>') }}
 								</div>
