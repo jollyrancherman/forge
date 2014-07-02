@@ -35,7 +35,7 @@ class PagesController extends \BaseController {
 				{
 					$message->from('contactus@frauc.com', 'FraucCityWide.com');
 			  	$message->to(Input::get('email'), Input::get('email'))
-			      ->subject('fraucCityWide - Password Reset');		
+			      ->subject('FraucCityWide - Password Reset');		
 				});
 
 				return Redirect::to('/home')

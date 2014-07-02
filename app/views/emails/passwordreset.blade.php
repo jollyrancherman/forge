@@ -1,7 +1,7 @@
 @extends('emails.template')
 
 @section('catchPhrase')
-Don't feel bad, forgetting is a human thing.
+Don't feel bad, to err is to be human.
 @stop
 
 @section('content')
@@ -26,7 +26,7 @@ Don't feel bad, forgetting is a human thing.
                               </tr>
                               <!-- END OF HEADING--> <!-- START OF TEXT--> 
                               <tr>
-                                <td class="featured" align="center" style="padding-top: 0px ; padding-right: 20px ; padding-bottom: 20px ; padding-left: 20px ; margin: 0; font-size:13px ; color:#ffffff; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> Click the link below and it will take you to a screen where you can reset your password. If you have any question. Just let us know.</span> </td>
+                                <td class="featured" align="center" style="padding-top: 0px ; padding-right: 20px ; padding-bottom: 20px ; padding-left: 20px ; margin: 0; font-size:13px ; color:#ffffff; font-family: 'PT Sans', Helvetica, Arial, sans-serif; line-height: 23px;mso-line-height-rule: exactly;"> <span> Oh, hey! Mnemonic devices are helpful to in remembering passwords...or you can write it down.</span> </td>
                               </tr>
                               <!-- END OF TEXT--> 
                             </table>
@@ -73,7 +73,7 @@ Don't feel bad, forgetting is a human thing.
                               <!-- END OF HEADING--> <!-- START BUTTON--> 
                               <tr>
                                 <td bgcolor="#ffffff" align="left" valign="top" style="padding-top: 20px;">
-                                  <table border="0" align="left" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="margin: 0;">
+                                  <table border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="margin: 0;">
                                     <tr>
                                       <td align="center" valign="middle" bgcolor="#ffffff" style="border: 2px solid #3399CC; padding: 5px 20px; text-transform: uppercase; font-size: 12px; line-height: 18px; font-family: 'PT Sans', Helvetica, Arial, sans-serif; color:#3399CC; margin: 0 !important; "> <a href="{{ $activationLink }}" style="border: none; font-weight: bold; font-style: normal; color:#3399CC; text-decoration: none;">Click here to reset your password!</a> </td>
                                     </tr>
