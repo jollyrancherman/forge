@@ -1,7 +1,7 @@
 @extends('emails.template')
 
 @section('catchPhrase')
-FraucCityWide payment received 
+FraucCityWide donation received 
 @stop
 
 @section('content')
@@ -30,7 +30,7 @@ FraucCityWide payment received
                               </tr>
                               <!-- END OF IMAGE--> <!-- START OF HEADING--> 
                               <tr>
-                                <td class="featured" align="center" style="padding-top: 20px ; padding-right: 20px ; padding-bottom: 5px ; padding-left: 20px ; text-transform: uppercase; font-family: 'PT Sans', Helvetica, Arial, sans-serif; color:#ffffff; font-size:18px; line-height:24px; mso-line-height-rule: exactly;"> <span>Your payment of $12 was received!</span> </td>
+                                <td class="featured" align="center" style="padding-top: 20px ; padding-right: 20px ; padding-bottom: 5px ; padding-left: 20px ; text-transform: uppercase; font-family: 'PT Sans', Helvetica, Arial, sans-serif; color:#ffffff; font-size:18px; line-height:24px; mso-line-height-rule: exactly;"> <span>Your donation of $12 was received!</span> </td>
                               </tr>
                               <!-- END OF HEADING--> <!-- START OF TEXT--> 
                               <tr>

@@ -37,11 +37,11 @@
 							<div class="col-md-8 col-md-offset-2">
 
 								@if(!Session::get('yardsale.active'))
-									<div class="alert alert-danger">
-										<h3 style="margin-top: 0;"><i class="fa fa-exclamation-circle"></i> 
-											You have not yet paid for registration. No worries, easy fix.
+									<div class="alert alert-success">
+										<h3 style="margin-top: 0;"> 
+											Would you like to donate to Big Brothers Big Sisters of Northern Nevada?
 										</h3>
-										<p>{{ link_to('/payment', 'Click here') }} to pay the $12 (and make your yard sale visible to shoppers).</p>
+										<p>{{ link_to('/payment', 'Click here') }} to donate $12 and help the youth in your community!</p>
 									</div>								
 								@endif
 

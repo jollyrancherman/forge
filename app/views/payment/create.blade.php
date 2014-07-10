@@ -7,8 +7,8 @@
 						
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2">
-								<h2>Final Step: Payment</h2>
-								<p>There is a $12 registration fee; proceeds go to Big Brothers Big Sisters of Northern Nevada. Each host will also receive two yard sale signs (pickup information TBA).</p>
+								<h2>Helping others is amazing!</h2>
+								<p>Donate $12 to Big Brothers Big Sisters of Northern Nevada and we will give you some free signs to advertise your yard sale. (pickup information TBA).</p>
 
 								<div class="col-sm-8">
 									{{ Form::open(['class' => 'form-horizontal', 'id' => 'billing-form', 'style' => 'display:block;']) }}
@@ -51,14 +51,14 @@
 									  <input type="hidden" id="publishable-key" value="{{ Config::get('stripe.publishable_key') }}" >
 
 									  <!-- SUBMIT -->
-									  {{ Form::submit('Pay for Registration!', array('class' => 'btn btn-primary col-sm-offset-3 col-sm-9')) }}
+									  {{ Form::submit('Donate to the cause!', array('class' => 'btn btn-primary col-sm-offset-3 col-sm-9')) }}
 
 									{{ Form::close() }}
 
 								</div>
 							  <div class="row text-right">
 								  <div class="col-sm-8" style="margin-top: 10px;">							  	
-								  	<p style="margin-bottom: 0px;">Trusted payments powered by stripe.</p>
+								  	<p style="margin-bottom: 0px;">Trusted donations powered by stripe.</p>
 								  	<img src="/img/big.png" alt="Payment powered by stripe">
 								  </div>
 							  </div>

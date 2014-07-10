@@ -10,7 +10,7 @@
               <div class="col-md-7">
                 <h2>Community yard sale for Northern Nevadans</h2>
                 <p class="lead">A community yard sale is like a flea market meets treasure hunt (with map, of course). Our plan is to make a shockingly useful community event out of yard sales, where hosts receive more foot traffic, and shoppers have more stopping points. </p>
-                <p>Find your city below to sign up as a host. Registration is $12 per house participating. $10 of the registration goes to the Big Brothers and Big Sisters of Northern Nevada and $2 goes towards yard sale signs.</p>
+                <p>We will be organizing city-wide yard sales in the areas listed below. To register your yardsale, all you need to do is sign up for an account. Donations(optional) to Big Brothers Big Sisters of Northern Nevada can be made once you are registered inside the site. Everyone who donates will receive free yardsale signs to post up in your area.</p>
                 <p>Shoppers, to stay hip with the news and maps of participants, click on "Email Updates".</p>
 
                 @if(! Sentry::check())

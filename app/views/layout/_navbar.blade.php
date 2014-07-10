@@ -16,19 +16,20 @@
                         <li><a href="/dashboard/yardsale">Edit my yard sale</a></li>
                         <li><a href="/yardsale/{{Session::get('yardsale.id')}}">View my yard sale</a></li>
                     @endif
-                    @if(!Session::get('yardsale.active'))
-                        <li ><a href="/payment">
-                            Pay Registration<i class="fa fa-exclamation-triangle" style="color: red;"></i>
-                        </a></li>
-                    @endif
+
+                    <li ><a href="/payment">
+                        Make Donation<i class="fa fa-smile-o"></i>
+                    </a></li>
+
                     <li><a href="/logout">Logout</a></li>
                 @endif
 
                 <hr />
-                <li><a href="/yardsale/find/douglas">Gardnerville/Minden</a></li>
+                <li><a href="#">Maps Coming Soon!</a></li>
+<!--                 <li><a href="/yardsale/find/douglas">Gardnerville/Minden</a></li>
                 <li><a href="/yardsale/find/carson">Carson</a></li>
                 <li><a href="/yardsale/find/reno">Reno</a></li>
-                <li><a href="/yardsale/find/sparks">Sparks</a></li>
+                <li><a href="/yardsale/find/sparks">Sparks</a></li> -->
                 <hr />
 
                 <li><a href="/tos">Terms and Conditions</a></li>

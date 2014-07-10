@@ -67,7 +67,6 @@ class YardsalesController extends \BaseController {
 	public function listView($city = '')
 	{
 		$yardsale = Yardsale::where('area', '=', $city)
-													->where('active', '=', '1')
 													->where('visible', '=', '1')
 													->get();
 
@@ -92,7 +91,6 @@ class YardsalesController extends \BaseController {
 	public function findByCity($city = '')
 	{
 		$yardsale = Yardsale::where('area', '=', $city)
-													->where('active', '=', '1')
 													->where('visible', '=', '1')
 													->get();
 
@@ -151,8 +149,6 @@ class YardsalesController extends \BaseController {
 		$userid = Sentry::getUser()->id;
 
 		$yardsale = Yardsale::where('user_id', '=', $userid)->first();
-
-		// dd($yardsale->first());
 
 		if($yardsale == null){
 			$yardsale = new Yardsale();
