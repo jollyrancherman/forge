@@ -10,8 +10,8 @@
               <div class="col-md-7">
                 <h2>Community yard sale for Northern Nevadans</h2>
                 <p class="lead">A community yard sale is like a flea market meets treasure hunt (with map, of course). Our plan is to make a shockingly useful community event out of yard sales, where hosts receive more foot traffic, and shoppers have more stopping points. </p>
-                <p>We will be organizing city-wide yard sales in the areas listed below. To register your yardsale, all you need to do is sign up for an account. Donations(optional) to Big Brothers Big Sisters of Northern Nevada can be made once you are registered inside the site. Everyone who donates will receive free yardsale signs to post up in your area.</p>
-                <p>Shoppers, to stay hip with the news and maps of participants, click on "Email Updates".</p>
+                <p>We will be organizing city-wide yard sales in the areas listed below. To register your yardsale, all you need to do is sign up for an account. Donations(optional) to Big Brothers Big Sisters of Northern Nevada can be made once you are registered and inside the site. Everyone who donates will receive free yardsale signs to post up in your area.</p>
+                <p>Shoppers, to stay hip with the news and maps of participants, click on <a href="#myModal" role="button" data-toggle="modal">Email Updates!</a>.</p>
 
                 @if(! Sentry::check())
                   <div class="col-md-12" style="margin-bottom: 20px; margin-top: 20px;">
