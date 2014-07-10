@@ -171,9 +171,9 @@ class YardsalesController extends \BaseController {
 			}
  
 			$yardsale->area = Input::get('area');
-			$yardsale->address = Input::get('address');
-			$yardsale->title = Input::get('title');
-			$yardsale->description = Input::get('description');
+			$yardsale->address = strip_tags(Input::get('address'));
+			$yardsale->title = strip_tags(Input::get('title'));
+			$yardsale->description = strip_tags(Input::get('description'));
 			$yardsale->lat = Input::get('lat');
 			$yardsale->lng = Input::get('lng');
 			$yardsale->visible = 1;
