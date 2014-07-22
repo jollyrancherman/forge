@@ -91,7 +91,7 @@ function initialize() {
     for (var i = 0; i < addresses.length; i++) {
       setTimeout(function() {
         addMarker();
-      }, i * 500);
+      }, i * 100);
     }
   }
 
