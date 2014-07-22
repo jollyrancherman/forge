@@ -1,5 +1,7 @@
 <?php
 
+
+
 class YardsalesController extends \BaseController {
 
 
@@ -140,6 +142,43 @@ class YardsalesController extends \BaseController {
 		return View::make('yardsale.create')->with('postID',$userid)->with('yardsale', $yardsale)->with('dataArray',$dataArray);		
 	}
 
+	public function createNew()
+	{
+		$userid = Sentry::getUser()->id;
+
+		//create a unique ID from the current timestamp.
+		if(!Session::has('UniqueIDForFolder')){
+			$timestamp = \Carbon\Carbon::now()->timestamp;
+			Session::set('UniqueIDForFolder', $timestamp);
+		}
+
+		$total = array_count_values(DB::table('Yardsales')->where('active','1')->lists('area'));
+
+		$data = [
+			'carson' => 68 - (array_key_exists('carson', $total)? $total['carson'] : 0),
+			'douglas' => 66 - (array_key_exists('douglas', $total)? $total['douglas'] : 0),
+			'sparks' => 72 - (array_key_exists('sparks', $total)? $total['sparks'] : 0),
+			'reno' => 75 - (array_key_exists('reno', $total)? $total['reno'] : 0)
+		];		
+
+		$dataArray = ['' => 'Please select a city'];
+
+		if($data['douglas'] > 0){
+			$dataArray['douglas'] = 'Minden/Gardnerville - July 26th ('.$data['douglas'].' spots available)';
+		}
+		if($data['carson'] > 0){
+			$dataArray['carson'] = 'Carson City - August 17th ('.$data['carson'].' spots available)';
+		}
+		if($data['reno'] > 0){
+			$dataArray['reno'] = 'Reno - August 9th ('.$data['reno'].' spots available)';
+		}
+		if($data['sparks'] > 0){
+			$dataArray['sparks'] = 'Sparks - July 26th ('.$data['sparks'].' spots available)';
+		}
+
+		return View::make('adminAdd.create')->with('dataArray',$dataArray);			
+	}
+
 	public function store()
 	{
 		$input = Input::all();
@@ -185,12 +224,12 @@ class YardsalesController extends \BaseController {
 			if($yardsale->active == 1){
 				return Redirect::to('/dashboard')
 		    	->withMessage('You have successfully entered your yardsale information!')
-		    	->withMessage2('If you have not paid your registration, please do so.')
+		    	->withMessage2('Don\'t forget to donate to Big Brothers Big Sisters! (only if you want to)')
 		    	->with('messageType', 'bs-callout bs-callout-success');	
 			}else{
 				return Redirect::to('/payment')
 		    	->withMessage('You have successfully entered your yardsale information!')
-		    	->withMessage2('If you have not paid your registration, please do so.')
+		    	->withMessage2('Don\'t forget to donate to Big Brothers Big Sisters! (only if you want to)')
 		    	->with('messageType', 'bs-callout bs-callout-success');					
 			}
 
@@ -201,5 +240,70 @@ class YardsalesController extends \BaseController {
       return Redirect::to('/dashboard/yardsale')->withMessage('The following errors occurred')->with('messageType', 'bs-callout bs-callout-danger')->withErrors($yardsale->errors())->withInput();   			
 		}
 	}
+
+
+	public function storeNew()
+	{
+		$input = Input::all();
+		$error = false;
+		$yardsale = '';
+
+		$userid = Session::get('UniqueIDForFolder');
+
+		$yardsale = Yardsale::where('user_id', '=', $userid)->first();
+
+		if($yardsale == null){
+			$yardsale = new Yardsale();
+		}
+
+		if($yardsale->validate($input)){
+			$messageBag = new Illuminate\Support\MessageBag;
+
+			if((Input::get('lat') == '' || Input::get('lng') == '')){
+				$messageBag->add('address', 'Please select an address from the dropdown menu');
+				$error = true;
+				return Redirect::to('/addSales')->withMessage('The following errors occurred')->with('messageType', 'bs-callout bs-callout-danger')->withErrors($messageBag)->withInput();  
+			}
+			if(Input::get('area') == null){
+				$messageBag->add('area', 'Please select an area.');
+				$error = true;
+			}
+			if($error == true){
+				return Redirect::to('/addSales')->withMessage('The following errors occurred')->with('messageType', 'bs-callout bs-callout-danger')->withErrors($messageBag)->withInput();  
+			}
+ 
+			$yardsale->area = Input::get('area');
+			$yardsale->address = strip_tags(Input::get('address'));
+			$yardsale->title = strip_tags(Input::get('title'));
+			$yardsale->description = strip_tags(Input::get('description'));
+			$yardsale->lat = Input::get('lat');
+			$yardsale->lng = Input::get('lng');
+			$yardsale->visible = 1;
+			$yardsale->user_id = $userid;
+			$yardsale->folder_id = $userid;
+
+			$yardsale->save();
+
+			Session::forget('UniqueIDForFolder');
+
+			if($yardsale->active == 1){
+				return Redirect::to('/dashboard')
+		    	->withMessage('You have successfully entered your yardsale information!')
+		    	->withMessage2('Don\'t forget to donate to Big Brothers Big Sisters! (only if you want to)')
+		    	->with('messageType', 'bs-callout bs-callout-success');	
+			}else{
+				return Redirect::to('/payment')
+		    	->withMessage('You have successfully entered your yardsale information!')
+		    	->withMessage2('Don\'t forget to donate to Big Brothers Big Sisters! (only if you want to)')
+		    	->with('messageType', 'bs-callout bs-callout-success');					
+			}
+
+
+		}else{
+			$yardsale->errors()->add('address', 'Please select an address from the dropdown menu');
+
+      return Redirect::to('/dashboard/yardsale')->withMessage('The following errors occurred')->with('messageType', 'bs-callout bs-callout-danger')->withErrors($yardsale->errors())->withInput();   			
+		}
+	}	
 
 }

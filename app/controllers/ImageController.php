@@ -12,7 +12,11 @@ class ImageController extends \BaseController {
 	 */
 	public function index()
 	{
-		$userid = Sentry::getUser()->id;
+		if(Session::has('UniqueIDForFolder')){
+			$userid = Session::get('UniqueIDForFolder');
+		}else{
+			$userid = Sentry::getUser()->id;
+		}
 
 		$options = [
 			//production

@@ -98,6 +98,10 @@ Route::group(['before' => 'auth'], function()
   Route::get('/payment', 'PaymentController@create');
   Route::post('/payment', 'YardsalesController@completePayment');
 
+
+  //add yardsales without account. 
+  Route::get('/addSales', 'YardsalesController@createNew');
+  Route::post('/addSales', 'YardsalesController@storeNew');
 });
 
 
