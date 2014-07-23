@@ -129,7 +129,7 @@ class YardsalesController extends \BaseController {
 			$dataArray['douglas'] = 'Minden/Gardnerville - July 26th ('.$data['douglas'].' spots available)';
 		}
 		if($data['carson'] > 0){
-			$dataArray['carson'] = 'Carson City - August 17th ('.$data['carson'].' spots available)';
+			$dataArray['carson'] = 'Carson City - August 16th ('.$data['carson'].' spots available)';
 		}
 		if($data['reno'] > 0){
 			$dataArray['reno'] = 'Reno - August 9th ('.$data['reno'].' spots available)';
@@ -167,7 +167,7 @@ class YardsalesController extends \BaseController {
 			$dataArray['douglas'] = 'Minden/Gardnerville - July 26th ('.$data['douglas'].' spots available)';
 		}
 		if($data['carson'] > 0){
-			$dataArray['carson'] = 'Carson City - August 17th ('.$data['carson'].' spots available)';
+			$dataArray['carson'] = 'Carson City - August 16th ('.$data['carson'].' spots available)';
 		}
 		if($data['reno'] > 0){
 			$dataArray['reno'] = 'Reno - August 9th ('.$data['reno'].' spots available)';
