@@ -21,7 +21,6 @@ class GenerateLetterController extends \BaseController {
 	 */
 	public function create()
 	{
-		return 'ok';
 
 		$newGreeting = '';
 
@@ -29,36 +28,51 @@ class GenerateLetterController extends \BaseController {
 
 		$greeting = ['Hi', 'hi', 'Hello', 'hello', 'Hey', 'hey', 'How\'s it going', 'Howdy', 'Greetings', 'Hi there', 'Hello there', 'Hey there'];
 
-		$punc = ['. ', '! '];
+		$punc = ['! '];
 
 		$intro = [
 			'I\'m ',
 			'My name is ',
-			'My friends call me '
+			'My name\'s '
 		];
 
 		$sent1 = [
-			'Not to bug you but ',
 			'I saw your post on Craigslist and ',
-			'This is out of no where, ',
-			'I wish someone told me earlier but '
+			'I know this is coming out of no where, ',
+			'I wish someone told me earlier told me earlier about it but '
 		];
 
 		$sent2 = [
 			'have you tried frauc.com? ',
 			'you might have better luck selling on frauc.com. ',
-			'there is a new local site called frauc.com I think people should check out. ',
-			'i\'ve had had an easier time selling on frauc.com. ',
-			'frauc.com is awesome. ',
+			'there is a new local site called frauc.com I think you might want to check out. ',
+			'I\'ve had an easier time selling on frauc.com. ',
+			'I have just gotta say frauc.com is awesome for selling things. ',
+		];
+
+		$sent4 = [
+			'It really is an amazing site. ',
+			'I feel more secure buying and selling there. ',
+			'It has a lot of helpful features that classified sites dont offer. ',
+			'Someone told me about it so I\'m spreading the love. ',
+			'I feel its important to share sites I support. ',
 		];
 
 		$sent3 = [
-			'It is free, local and you can auction. ',
-			'You are able to rate and leave feedback on other buyers and sellers to make a better buying and selling community. ',
-			'It is really worth checking out. ',
-			'It keeps all your offers and messages in spot so you do not have to dig through emails for information. ',
-			'It has helped me make more money because it makes a price war with the buyers. ',
+			'It is free, local(northern NV) and you can auction. ',
+			'You are able to rate and leave feedback on other buyers and sellers to make a better buying and selling community (Local Northern Nevada and free). ',
+			'They is really worth checking out since your in northern Nevada. ',
+			'The keeps all your offers and messages in spot so you do not have to dig through emails for information. ',
+			'They have helped me make more money because their site makes buyers bid and make offers against each other (Northern Nevada only). ',
 			'You can leave your posts up until you get an offer you are happy with. '
+		];
+
+		$sent5 = [
+			'Check it out if you have time. ',
+			'Doesn\'t hurt to look, right.',
+			'Scope them out on facebook, google, youtube if you\'re the research type. ',
+			'Hit me back if you have questions, just supporting a local start-up. ',
+			'If you like them, spread the love too! ',
 		];
 
 		$closure = [
@@ -109,12 +123,14 @@ class GenerateLetterController extends \BaseController {
 
 		$newGreeting = 
 			$greeting[array_rand($greeting)].
-			// str_repeat($punc[array_rand($punc), $rand)].
+			$punc[array_rand($punc)].
 			$intro[array_rand($intro)].
 			$username.'. '.
 			$sent1[array_rand($sent1)].
 			$sent2[array_rand($sent2)].
+			$sent4[array_rand($sent4)].
 			$sent3[array_rand($sent3)].
+			$sent5[array_rand($sent5)].
 			$closure[array_rand($closure)].
 			$username;
 

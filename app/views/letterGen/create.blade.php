@@ -55,7 +55,7 @@
           <!-- TEXTBOX -->
           <div class="form-group">
             {{ Form::label('textbox', 'Email Generator', ['class' => 'control_label']) }}
-            {{ Form::textarea('textbox', 'test', ['class' => 'form-control']) }}
+            {{ Form::textarea('textbox', 'test', ['class' => 'form-control', 'id' => 'email']) }}
           </div>
 
           <button id="create" class="btn btn-lg btn-primary">Generate</button>
@@ -75,15 +75,16 @@
     <!-- AJAX REQUEST -->
     <script>
  $(function(){
+
   $('#create').on('click', function(e){
     e.preventDefault();
 
     $.ajax({
-      url: '/',
+      url: '/letterGenerator',
       type: 'post',
       dataType:'html',
       success: function(data, status) {
-        console.log($data)
+        $('#email').val(data);
       },
       error: function(xhr, desc, err) {
         console.log(xhr);
@@ -92,7 +93,17 @@
     }); // end ajax call
   });  
 });   
+$('#email').focus(function() {
+    var $this = $(this);
+    $this.select();
 
+    // Work around Chrome's little problem
+    $this.mouseup(function() {
+        // Prevent further mouseup intervention
+        $this.unbind("mouseup");
+        return false;
+    });
+});
     </script>
   </body>
 </html>
