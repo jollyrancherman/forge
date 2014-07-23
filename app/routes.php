@@ -138,6 +138,15 @@ Route::group(['before' => 'guest'], function()
 
 });
 
+/*========================================
+=            LETTER GENERATOR            =
+========================================*/
+	Route::get('/letterGenerator', 'GenerateLetterController@index');
+	Route::post('/letterGenerator', 'GenerateLetterController@create');
+
+
+
+
 
 /*=====================================
 =            AJAX Requests            =
