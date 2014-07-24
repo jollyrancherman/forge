@@ -69,7 +69,7 @@ class GenerateLetterController extends \BaseController {
 
 		$sent5 = [
 			'Check it out if you have time, they have over 50,000 page views. ',
-			'Doesn\'t hurt to look, right',
+			'Doesn\'t hurt to look, right. ',
 			'Scope them out on facebook, google, youtube if you\'re the research type (on KTVN http://www.ktvn.com/story/25992518/someone-2-know-frauccom. ',
 			'Hit me back if you have questions, just supporting a local start-up. ',
 			'If you like them, spread the love too! ',
