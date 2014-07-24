@@ -55,21 +55,21 @@ class GenerateLetterController extends \BaseController {
 			'I feel more secure buying and selling there. ',
 			'It has a lot of helpful features that classified sites dont offer. ',
 			'Someone told me about it so I\'m spreading the love. ',
-			'I feel its important to share sites I support. ',
+			'I feel its important to share new startups that we should support. ',
 		];
 
 		$sent3 = [
 			'It is free, local(northern NV) and you can auction. ',
 			'You are able to rate and leave feedback on other buyers and sellers to make a better buying and selling community (Local Northern Nevada and free). ',
 			'They is really worth checking out since your in northern Nevada. ',
-			'The keeps all your offers and messages in spot so you do not have to dig through emails for information. ',
+			'They keep all your offers and messages in one spot so you do not have to dig through emails for information. ',
 			'They have helped me make more money because their site makes buyers bid and make offers against each other (Northern Nevada only). ',
 			'You can leave your posts up until you get an offer you are happy with. '
 		];
 
 		$sent5 = [
-			'Check it out if you have time. ',
-			'Doesn\'t hurt to look, right.',
+			'Check it out if you have time, they have over 50,000 page views. ',
+			'Doesn\'t hurt to look, right',
 			'Scope them out on facebook, google, youtube if you\'re the research type. ',
 			'Hit me back if you have questions, just supporting a local start-up. ',
 			'If you like them, spread the love too! ',
