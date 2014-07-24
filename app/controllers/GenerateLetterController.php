@@ -39,7 +39,7 @@ class GenerateLetterController extends \BaseController {
 		$sent1 = [
 			'I saw your post on Craigslist and ',
 			'I know this is coming out of no where, ',
-			'I wish someone told me earlier told me earlier about it but '
+			'I wish someone told me about frauc earlier but '
 		];
 
 		$sent2 = [
@@ -55,22 +55,22 @@ class GenerateLetterController extends \BaseController {
 			'I feel more secure buying and selling there. ',
 			'It has a lot of helpful features that classified sites dont offer. ',
 			'Someone told me about it so I\'m spreading the love. ',
-			'I feel its important to share new startups that we should support. ',
+			'I feel its important to share new startups that are local. ',
 		];
 
 		$sent3 = [
-			'It is free, local(northern NV) and you can auction. ',
+			'It is free, local(northern NV) and you can auction items(also free). ',
 			'You are able to rate and leave feedback on other buyers and sellers to make a better buying and selling community (Local Northern Nevada and free). ',
 			'They is really worth checking out since your in northern Nevada. ',
 			'They keep all your offers and messages in one spot so you do not have to dig through emails for information. ',
-			'They have helped me make more money because their site makes buyers bid and make offers against each other (Northern Nevada only). ',
+			'They have helped me make more money because their site makes buyers bid and compete against each other (Northern Nevada only). ',
 			'You can leave your posts up until you get an offer you are happy with. '
 		];
 
 		$sent5 = [
 			'Check it out if you have time, they have over 50,000 page views. ',
 			'Doesn\'t hurt to look, right',
-			'Scope them out on facebook, google, youtube if you\'re the research type. ',
+			'Scope them out on facebook, google, youtube if you\'re the research type (on KTVN http://www.ktvn.com/story/25992518/someone-2-know-frauccom. ',
 			'Hit me back if you have questions, just supporting a local start-up. ',
 			'If you like them, spread the love too! ',
 		];
