@@ -27,8 +27,8 @@
                 <hr />
                 <!-- <li><a href="#">Maps Coming Soon!</a></li> -->
                 <!-- <li><a href="/yardsale/find/douglas">Gardnerville/Minden</a></li> -->
-                <!-- <li><a href="/yardsale/find/carson">Carson</a></li> -->
-                <li><a href="/yardsale/find/reno">Reno</a></li>
+                <li><a href="/yardsale/find/carson">Carson</a></li>
+                <!-- <li><a href="/yardsale/find/reno">Reno</a></li> -->
                 <!-- <li><a href="/yardsale/find/sparks">Sparks</a></li> -->
                 <hr />
 
